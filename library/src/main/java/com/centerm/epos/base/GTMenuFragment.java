@@ -185,10 +185,7 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
                         mainThread.post(new Runnable() {
                             @Override
                             public void run() {
-                                if(!isGoto){
-                                    isGoto = true;
-                                    presenter.beginOnlineProcess(TransCode.SALE, "gt_sale.xml");
-                                }
+                                presenter.beginOnlineProcess(TransCode.SALE, "gt_sale.xml");
                             }
                         });
                         return;
@@ -356,10 +353,7 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
                     if("0".equals(bean.getCode())){//需授权
                         showAuthDialog();
                     }else if("12".equals(bean.getCode())){//不需要授权
-                        if(!isGoto){
-                            isGoto = true;
-                            presenter.beginOnlineProcess(TransCode.SALE, "gt_sale_other_no_auth.xml");
-                        }
+                        presenter.beginOnlineProcess(TransCode.SALE, "gt_sale_other_no_auth.xml");
                     }else {
                         popToast(bean.getMsg());
                     }
@@ -464,13 +458,17 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
     public void jumpToTrade(String transCode, TradeProcess process) {
         if (checkTradeState(transCode)) return;
 
-        Intent intent = new Intent(getContext(), TradeFragmentContainer.class);
-        intent.putExtra(BaseActivity.KEY_TRANSCODE, transCode);
-        intent.putExtra(BaseActivity.KEY_PROCESS, process);
-        ITradeParameter parameter = (ITradeParameter) ConfigureManager.getSubPrjClassInstance(new BaseTradeParameter());
-        if (parameter.getParam(transCode) != null)
-            intent.putExtra(ITradeParameter.KEY_TRANS_PARAM, parameter.getParam(transCode));
-        startActivityForResult(intent, REQ_TRANSACTION);
+        if(!isGoto){
+            isGoto = true;
+            Intent intent = new Intent(getContext(), TradeFragmentContainer.class);
+            intent.putExtra(BaseActivity.KEY_TRANSCODE, transCode);
+            intent.putExtra(BaseActivity.KEY_PROCESS, process);
+            ITradeParameter parameter = (ITradeParameter) ConfigureManager.getSubPrjClassInstance(new BaseTradeParameter());
+            if (parameter.getParam(transCode) != null)
+                intent.putExtra(ITradeParameter.KEY_TRANS_PARAM, parameter.getParam(transCode));
+            startActivityForResult(intent, REQ_TRANSACTION);
+        }
+
     }
 
     /**
@@ -530,7 +528,7 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
             else if (BusinessConfig.getInstance().getFlag(getContext(), BusinessConfig.Key.FLAG_ESIGN_STORAGE_WARNING))
                 tipInfo = "签名图片已满,请结算后继续交易";
             if (!TextUtils.isEmpty(tipInfo)) {
-                DialogFactory.showSelectDialog(getContext(), null, tipInfo, new AlertDialog
+                DialogFactory.showSelectDialogNoCancel(getContext(), null, tipInfo, new AlertDialog
                         .ButtonClickListener() {
                     @Override
                     public void onClick(AlertDialog.ButtonType button, View v) {
