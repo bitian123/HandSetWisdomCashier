@@ -42,19 +42,26 @@ public class BaseField3 implements I8583Field {
             XLogUtil.e(TAG, "^_^ encode 输入参数 tradeInfo 为空 ^_^");
             return null;
         }
+        String tradeName = getTradeName();
         //先从输入参数中获取交易处理码
         String processCode = (String) tradeInfo.get(TradeInformationTag.TRANSACTION_PROCESS_CODE);
         if (!TextUtils.isEmpty(processCode)){
+            if (!TextUtils.isEmpty(tradeName)){
+                if( tradeName.equals(TransCode.SETTLEMENT_INFO_QUERY)){
+                    processCode = "000000";
+                }
+            }
             XLogUtil.d(TAG, "^_^ encode: "+TradeInformationTag.TRANSACTION_PROCESS_CODE+"="+processCode+" ^_^");
             return processCode;
         }
         //输入参数中无交易处理码，再通过交易名称获取交易处理码
-        String tradeName = getTradeName();
         if (!TextUtils.isEmpty(tradeName)){
             if( tradeName.equals(TransCode.UPLOAD_SCRIPT_RESULT) ){
                 processCode = (String)tradeInfo.get(TransDataKey.iso_f3);
             }else if(tradeName.equals(TransCode.SALE_RESULT_QUERY)){
                 processCode = "000010";
+            }else if(tradeName.equals(TransCode.SETTLEMENT_INFO_QUERY)){
+                processCode = "000000";
             } else {
                 processCode = getProcessCodeByName(tradeName);
             }

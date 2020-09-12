@@ -73,8 +73,8 @@ public class ReadIdCardPresent extends BaseTradePresent {
 //                        tipError(i);
 //                        gotoNextStep("99");
                         // todo 临时写死数据
-                        transDatas.put(JsonKeyGT.idNo, "340828199010052912");
-                        transDatas.put(JsonKeyGT.name, "刘嘉");
+                        transDatas.put(JsonKeyGT.idNo, "410523199001016039");
+                        transDatas.put(JsonKeyGT.name, "刘艳伟");
                         transDatas.put(JsonKeyGT.idType, "0");
                         gotoNextStep("1");
                     }

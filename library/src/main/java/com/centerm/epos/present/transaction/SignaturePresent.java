@@ -270,9 +270,10 @@ public class SignaturePresent extends BaseTradePresent {
             tradeInfoRecord.setSettlementInfo(field62);
             tradeDao.update(tradeInfoRecord);
         }
-
-        tradeInfo.setSettlementInfo(field62);
-        transDatas.put(JsonKeyGT.curTradeInfo,tradeInfo);
+        if(tradeInfo!=null){
+            tradeInfo.setSettlementInfo(field62);
+            transDatas.put(JsonKeyGT.curTradeInfo,tradeInfo);
+        }
         XLogUtil.d("settlementInfo", (String)transDatas.get(TradeInformationTag.SETTLEMENT_INFO));
 
     }
