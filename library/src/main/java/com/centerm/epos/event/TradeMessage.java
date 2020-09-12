@@ -27,4 +27,7 @@ public class TradeMessage {
 
     public static final int MAG_LOAD_TASK_CONTINUE = 14;/*磁条卡交易是否继续*/
     public static final int MAG_LOAD_CONFIRM = 15;/*磁条卡充值确认*/
+
+    public static final int GO_LOGIN = 16;/*回到登录界面*/
+    public static final int EXIT = 17;/*退出界面*/
 }

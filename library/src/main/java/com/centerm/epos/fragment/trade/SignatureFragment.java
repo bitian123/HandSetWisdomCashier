@@ -65,6 +65,7 @@ public class SignatureFragment extends BaseTradeFragment {
     private Gson gson = new Gson();
     private int isPay = 0;//是否代付标识 0代付 1不代付
     private  TextView  positive_btn;
+    private boolean isConfirm = false;//是否点击确定
 
     @Override
     public int onLayoutId() {
@@ -371,7 +372,10 @@ public class SignatureFragment extends BaseTradeFragment {
                 return;
             }
             if (writePad.getStrokeNumber() != 0){
-                mTradePresent.onConfirm(writePad.getCachebBitmapWithCode());
+                if(!isConfirm){
+                    isConfirm = true;
+                    mTradePresent.onConfirm(writePad.getCachebBitmapWithCode());
+                }
             }
             else{
                 //getHostActivity().clearPageTimeout();
@@ -396,6 +400,7 @@ public class SignatureFragment extends BaseTradeFragment {
     public void onResume() {
         super.onResume();
         setTitle("签名");
+        isConfirm = false;
     }
 
     @Override

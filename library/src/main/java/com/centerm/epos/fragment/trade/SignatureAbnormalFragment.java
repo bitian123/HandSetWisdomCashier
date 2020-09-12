@@ -63,6 +63,7 @@ public class SignatureAbnormalFragment extends BaseTradeFragment {
     private Gson gson = new Gson();
     private int isPay = 1;//是否代付标识 0代付 1不代付
     Map<String, Object> map = new HashMap<>();
+    private boolean isConfirm = false;//是否点击确定
 
     @Override
     public int onLayoutId() {
@@ -392,7 +393,10 @@ public class SignatureAbnormalFragment extends BaseTradeFragment {
             writePad.clear();
         } else if (id == R.id.positive_btn) {
             if (writePad.getStrokeNumber() != 0)
-                mTradePresent.onConfirm(writePad.getCachebBitmapWithCode());
+                if(!isConfirm){
+                    isConfirm = true;
+                    mTradePresent.onConfirm(writePad.getCachebBitmapWithCode());
+                }
             else{
                 //getHostActivity().clearPageTimeout();
                 //mTradePresent.gotoNextStep();

@@ -2,6 +2,7 @@ package com.centerm.epos.activity.msn;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -49,6 +50,7 @@ import java.util.Map;
 import config.BusinessConfig;
 
 import static com.centerm.epos.common.TransCode.PRINT_IC_INFO;
+import static com.centerm.epos.common.TransCode.fingerRegister;
 
 /**
  * 《基础版本》
@@ -64,6 +66,7 @@ public class AbnormalTradeDetailActivity extends BaseActivity implements PrintMa
     protected CommonDao<ReverseInfo> reverseDao;
     protected ITransactionMessage factory2;
     private Map<String, Object> mapData;
+    private boolean isTradeSuccess = false;
 
     @Override
     public void onInitLocalData(Bundle savedInstanceState) {
@@ -118,6 +121,16 @@ public class AbnormalTradeDetailActivity extends BaseActivity implements PrintMa
             }catch (Exception e){}
             dataMap.put(TradeInformationTag.TRACE_NUMBER, tradeInfo.getIso_f11());
             send8583Data(true,TransCode.SALE_RESULT_QUERY,dataMap);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("===","onResume");
+        if(isTradeSuccess){
+            EventBus.getDefault().post(new PrinteEvent(TradeMessage.EXIT));
+            finish();
         }
     }
 
@@ -186,6 +199,7 @@ public class AbnormalTradeDetailActivity extends BaseActivity implements PrintMa
             ViewUtils.showToast(this, "交易失败");
             return;
         }
+        isTradeSuccess = true;
         ViewUtils.showToast(this, "交易成功，请签名");
         Bundle bundle = new Bundle();
         for(Map.Entry<String, Object> entry : mapData.entrySet()){

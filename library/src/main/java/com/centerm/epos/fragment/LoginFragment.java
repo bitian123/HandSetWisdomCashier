@@ -73,6 +73,7 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener 
     private LinearLayout mLl1,mLl2;
     private Button btn_login;
     private boolean isOpenCommonPay = false;
+    private boolean isLogin = false;
 
     @Override
     protected void onInitLocalData(Bundle savedInstanceState) {
@@ -269,7 +270,6 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener 
 
     public void onLoginClick() {
         Context context = getContext();
-
         String tagAccount = accountEdit.getText().toString().trim().replace(" ", "");
         String tagPwd = pwdEdit.getText().toString().trim().replace(" ", "");
 
@@ -380,11 +380,21 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener 
         };
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        isLogin = false;
+    }
+
     /**
      * 登录成功后，根据操作员编号跳转到指定界面
      * @param tagAccount    操作员编号
      */
     private void switchAfterLoginOK(String tagAccount) {
+        if(isLogin){
+            return;
+        }
+        isLogin = true;
         if (Config.DEFAULT_ADMIN_ACCOUNT.equals(tagAccount)) {
             //ViewUtils.showToast(getContext(), R.string.tip_login_admin_suc);
             //Menu menu = activity.getConfigureManager().getThirdlyMenu(getContext());

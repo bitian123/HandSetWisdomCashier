@@ -14,6 +14,8 @@ import com.centerm.epos.bean.TradeInfoRecord;
 import com.centerm.epos.common.Settings;
 import com.centerm.epos.configure.ConfigureManager;
 import com.centerm.epos.db.CommonManager;
+import com.centerm.epos.event.PrinteEvent;
+import com.centerm.epos.event.TradeMessage;
 import com.centerm.epos.fragment.trade.ITradingView;
 import com.centerm.epos.printer.BasePrintTransData;
 import com.centerm.epos.printer.IPrintRransData;
@@ -31,6 +33,7 @@ import com.centerm.epos.view.AlertDialog;
 import com.centerm.epos.xml.keys.Keys;
 
 import org.apache.log4j.Logger;
+import org.greenrobot.eventbus.EventBus;
 
 import java.io.File;
 import java.sql.SQLException;
@@ -340,6 +343,7 @@ public class BatchSendComplete implements ManageTransaction, IPrinterCallBack {
         if (FileUtils.getFileSize(path) > 0) {
             FileUtils.deleteAllFiles(path);
         }
+        EventBus.getDefault().post(new PrinteEvent(TradeMessage.GO_LOGIN));
         mTradePresent.gotoNextStep("1234");
 
 //        boolean isAutoSignOut = BusinessConfig.getInstance().getFlag(mTradingView.getHostActivity(), BusinessConfig.Key

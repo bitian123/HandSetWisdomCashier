@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -21,6 +22,8 @@ import com.centerm.epos.common.Settings;
 import com.centerm.epos.common.TransCode;
 import com.centerm.epos.common.TransDataKey;
 import com.centerm.epos.configure.ConfigureManager;
+import com.centerm.epos.event.PrinteEvent;
+import com.centerm.epos.event.TradeMessage;
 import com.centerm.epos.fragment.LoginFragment;
 import com.centerm.epos.function.AppUpgradeForLiandiShopUtil;
 import com.centerm.epos.model.BaseTradeParameter;
@@ -42,6 +45,10 @@ import com.centerm.epos.xml.keys.Keys;
 import com.daimajia.slider.library.Indicators.PagerIndicator;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.io.File;
 import java.util.HashMap;
@@ -82,6 +89,26 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
         return presenter.getLayoutId();
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void handleMessage(PrinteEvent event) {
+        Log.d("===", "handleMessage:"+event.getWhat());
+        //结算完退到登录界面
+        if(event.getWhat()== TradeMessage.GO_LOGIN){
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if(getActivity()!=null){
+                        BusinessConfig config = BusinessConfig.getInstance();
+                        String current = config.getValue(getActivity(), BusinessConfig.Key.KEY_OPER_ID);
+                        config.setValue(getActivity(), BusinessConfig.Key.KEY_LAST_OPER_ID, current);
+                        config.setValue(getActivity(), BusinessConfig.Key.KEY_OPER_ID, null);
+                        getHostActivity().replace(new LoginFragment()).commit();
+                    }
+                }
+            },500);
+        }
+    }
+
     @Override
     protected void afterInitView() {
         super.afterInitView();
@@ -113,6 +140,7 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
 
     @Override
     protected void onInitView(View view) {
+        EventBus.getDefault().register(this);
         presenter.initTopView();
 
         mHotLine = (TextView) view.findViewById(R.id.mHotLine);
@@ -197,10 +225,6 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
             super.onClick(v);
         }
     }
-
-
-
-
 
     private void setDefaultBanner(){
         if(getActivity()==null){
@@ -506,7 +530,6 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
                     public void onClick(AlertDialog.ButtonType button, View v) {
                         switch (button) {
                             case POSITIVE:
-//                                Settings.setValue(getContext(), Settings.KEY.BATCH_SEND_STATUS, "1");
                                 presenter.beginOnlineProcess(TransCode.SETTLEMENT);
                                 break;
                         }
@@ -519,7 +542,6 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
         if ("2".equals(batchState) && !TransCode.SIGN_OUT.equals(transCode)) {
             String errTips = getString(R.string.tip_batch_over_please_sign_out);
             logger.debug("^_^ " + errTips + " ^_^");
-//            ViewUtils.showToast(getContext(), errTips);
             getHostActivity().jumpToLogin();
             return true;
         }
@@ -639,5 +661,6 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
     public void onDestroy() {
         sliderLayout.stopAutoCycle();
         super.onDestroy();
+        EventBus.getDefault().unregister(this);
     }
 }
