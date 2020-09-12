@@ -432,8 +432,8 @@ public class GtBusinessListBean {
              * unpaidAmount : 210000
              */
 
-            private int amountReceivable;
-            private int amountReceived;
+            private double amountReceivable;
+            private double amountReceived;
             private String businessId;
             private String businessType;
             private String businessTypeCode;
@@ -449,19 +449,19 @@ public class GtBusinessListBean {
                 return new Gson().fromJson(str, UnionListBean.class);
             }
 
-            public int getAmountReceivable() {
+            public double getAmountReceivable() {
                 return amountReceivable;
             }
 
-            public void setAmountReceivable(int amountReceivable) {
+            public void setAmountReceivable(double amountReceivable) {
                 this.amountReceivable = amountReceivable;
             }
 
-            public int getAmountReceived() {
+            public double getAmountReceived() {
                 return amountReceived;
             }
 
-            public void setAmountReceived(int amountReceived) {
+            public void setAmountReceived(double amountReceived) {
                 this.amountReceived = amountReceived;
             }
 

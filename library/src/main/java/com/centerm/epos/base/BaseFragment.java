@@ -421,6 +421,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
                         if (receivedData == null) {
                             logger.error("^_^ 接收数据失败！receivedData = null ^_^");
                         } else {
+
                             final Map<String, Object> mapData = factory.unPackMessage(transCode, receivedData);
                             if(getActivity()!=null){
                                 getActivity().runOnUiThread(new Runnable() {

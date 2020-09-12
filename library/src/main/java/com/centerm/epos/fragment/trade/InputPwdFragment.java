@@ -209,6 +209,16 @@ public class InputPwdFragment extends BaseTradeFragment {
         dataMap.put(JsonKeyGT.idNo , mTradePresent.getTransData(JsonKeyGT.idNo));
         dataMap.put(JsonKeyGT.cardNo, mTradePresent.getTransData(TradeInformationTag.BANK_CARD_NUM));
         dataMap.put(JsonKeyGT.termSn, CommonUtils.getSn());
+        for(GtBusinessListBean.MoneyDetailListBean moneyDetailBean:data.getMoneyDetailList()){
+            if(moneyDetailBean.isChecked()){
+                //新增监管及面积补差参数
+                dataMap.put(JsonKeyGT.superviseFlag, moneyDetailBean.getSuperviseFlag());
+                dataMap.put(JsonKeyGT.area, moneyDetailBean.getArea());
+                dataMap.put(JsonKeyGT.areaCode, moneyDetailBean.getAreaCode());
+                dataMap.put(JsonKeyGT.contractNo, moneyDetailBean.getContractNo());
+                break;
+            }
+        }
         try {
             JSONArray moneyDetailArray = new JSONArray();
             for(GtBusinessListBean.MoneyDetailListBean moneyDetailBean:data.getMoneyDetailList()){

@@ -71,38 +71,33 @@ public class EbiContractQueryTrade implements ManageTransaction {
                     XLogUtil.d("queryIdNo", idNo);
                     String[] names = name.split(",");
                     String[] idNos = idNo.split(",");
-                    final List<ContrantInfoBean> listQuery = new ArrayList<>();
+                    final List<String> listQuery = new ArrayList<>();
                     for (int i = 0; i < names.length; i++) {
-                        listQuery.add(new ContrantInfoBean(names[i], idNos[i]));
+                        listQuery.add(idNos[i].trim()+names[i].trim());
                     }
-
                     String tradeName = (String) tradePresent.getTransData().get(JsonKeyGT.checkCardShowName);
                     XLogUtil.d("tradeName", tradeName);
-                    String tradeIdNo = (String) tradePresent.getTransData().get(JsonKeyGT.checkCardShowIdNo);
+                    String tradeIdNo =(String) tradePresent.getTransData().get(JsonKeyGT.checkCardShowIdNo);
                     XLogUtil.d("tradeIdNo", tradeIdNo);
+
                     String[] nameTrades = tradeName.trim().split(" ");
                     String[] idNosTrades = tradeIdNo.trim().split(" ");
                     List<String> listTrades = new ArrayList<>();
-                    for (int i = 0; i < names.length; i++) {
+                    for (int i = 0; i < nameTrades.length; i++) {
                         listTrades.add(idNosTrades[i]+nameTrades[i]);
                     }
                     boolean isSame=true;
-                    List<GtBusinessListBean.MoneyDetailListBean.CustomListBean> customListBeans = (List<GtBusinessListBean.MoneyDetailListBean.CustomListBean>) tradePresent.getTransData().get(JsonKeyGT.customList);
-                    if (customListBeans == null){
+
+                    if (listQuery == null){
                         isSame=false;
                     }
-                    if(listTrades.size() !=customListBeans.size() ){
+                    if(listTrades.size() !=listQuery.size() ){
                         isSame=false;
                     }else{
-                        for (GtBusinessListBean.MoneyDetailListBean.CustomListBean customListBean :
-                                customListBeans) {
-                            String   custominfo=customListBean.getIdNo()+customListBean.getName();
-                            for (String trades:listTrades) {
-                                if (!custominfo.equals(trades)){
-                                    isSame=false;
-                                }
+                        for (String custominfo:listQuery) {
+                            if (!listTrades.contains(custominfo)){
+                                isSame= false;
                             }
-
                         }
                     }
 
