@@ -312,6 +312,7 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
                         for (int i = 0; i < list.size(); i++) {
                             if (!present.isEmpty(list.get(i).getSubjectName())) {
                                 checkedItem = list.get(i);
+                                checkedItem.setPosition(i);
                                 break;
                             }
                         }
@@ -384,6 +385,7 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
                     }
                     if (checkedItem == null) {
                         checkedItem = list.get(i);
+                        checkedItem.setPosition(i);
                     } else {
                         if("1".equals(checkedItem.getSuperviseFlag())){
                             popToast("监管项不支持合并支付");
@@ -721,17 +723,29 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
                     }else{
                         showDetailDialog(position,1);
                     }
-
                 }
             });
             holder.mTvTip2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if("1".equals(list.get(position).getSign())){
-                        showDetailDialog(position,2);
-                    }else{
-                        showDetailDialog(position,1);
+                    if(checkedItem==null){
+                        if("1".equals(list.get(position).getSign())){
+                            showDetailDialog(position,2);
+                        }else{
+                            showDetailDialog(position,1);
+                        }
+                    }else {
+                        if("1".equals(checkedItem.getSuperviseFlag())&&checkedItem.getPosition()!=position){
+                            popToast("监管项不支持合并支付");
+                        }else {
+                            if("1".equals(list.get(position).getSign())){
+                                showDetailDialog(position,2);
+                            }else{
+                                showDetailDialog(position,1);
+                            }
+                        }
                     }
+
 //                    holder.mEtAmt.setFocusableInTouchMode(true);
 //                    holder.mEtAmt.setFocusable(true);
 //                    holder.mEtAmt.requestFocus();
@@ -855,6 +869,7 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
         }
         if (checkedItem == null && actionFlag) {
             checkedItem = list.get(position);
+            checkedItem.setPosition(position);
         }
         if (actionFlag) {
             list.get(position).setChecked(true);
