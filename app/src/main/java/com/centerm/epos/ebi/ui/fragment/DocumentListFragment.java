@@ -399,7 +399,7 @@ public class DocumentListFragment extends BaseTradeFragment implements View.OnCl
                 holder = (ViewHolder) convertView.getTag();
             }
             holder.mTvPayTime.setText("付款日期: "+bean.getPayDate());
-            holder.mBillId.setText("款项名称: "+bean.getBusinessType());
+            holder.mBillId.setText("款项名称: "+bean.getPaymentItemName());
             holder.mName.setText("票据号码: "+bean.getBillCode());
             holder.mTvSettlement.setText("打印次数: "+bean.getPrintTime());
             holder.mTvPaidAmt.setText("付款金额: "+DataHelper.saved2Decimal(bean.getAmountReceived())+"元");

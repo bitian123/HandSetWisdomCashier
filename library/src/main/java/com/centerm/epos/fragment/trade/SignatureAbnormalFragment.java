@@ -157,6 +157,7 @@ public class SignatureAbnormalFragment extends BaseTradeFragment {
 
     private void next(){
         if(isPay==0){//代付
+            isConfirm = false;
             mTvTip.setText("请在下方区域进行购房人签名\n（签名用于收据）");
             writePad.clear();
             writePad.setContionCode(mSignaturePresent.getContionCode());

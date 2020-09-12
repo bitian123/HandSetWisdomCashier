@@ -74,6 +74,7 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
     private Button mBtnIdCard,mBtnOther;
     private TextView mHotLine;
     private boolean hasBanner = false;
+    private boolean isGoto = false;//判断是否离开本界面
 
     @Override
     protected void onInitLocalData(Bundle savedInstanceState) {
@@ -177,7 +178,6 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
             AppUpgradeForLiandiShopUtil.getInstance().checkNewVersion(getContext(),new AppUpgradeForLiandiShopUtil.CheckVersion() {
                 @Override
                 public void hasNoNewVersion() {
-
                     if (Looper.myLooper() != Looper.getMainLooper()) {
                         // If we finish marking off of the main thread, we need to
                         // actually do it on the main thread to ensure correct ordering.
@@ -185,7 +185,10 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
                         mainThread.post(new Runnable() {
                             @Override
                             public void run() {
-                                presenter.beginOnlineProcess(TransCode.SALE, "gt_sale.xml");
+                                if(!isGoto){
+                                    isGoto = true;
+                                    presenter.beginOnlineProcess(TransCode.SALE, "gt_sale.xml");
+                                }
                             }
                         });
                         return;
@@ -353,7 +356,10 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
                     if("0".equals(bean.getCode())){//需授权
                         showAuthDialog();
                     }else if("12".equals(bean.getCode())){//不需要授权
-                        presenter.beginOnlineProcess(TransCode.SALE, "gt_sale_other_no_auth.xml");
+                        if(!isGoto){
+                            isGoto = true;
+                            presenter.beginOnlineProcess(TransCode.SALE, "gt_sale_other_no_auth.xml");
+                        }
                     }else {
                         popToast(bean.getMsg());
                     }
@@ -597,6 +603,7 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
     @Override
     public void onResume() {
         presenter.initOnResume();
+        isGoto = false;
         super.onResume();
         ApplicationEnvironment.startCheckVersion(getContext());
         if (isAutoSign && needDownload[0]) {
