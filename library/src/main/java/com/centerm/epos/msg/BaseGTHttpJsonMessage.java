@@ -151,6 +151,11 @@ public class BaseGTHttpJsonMessage {
         data.put(JsonKeyGT.idNo, transData.get(JsonKeyGT.idNo));
         data.put(JsonKeyGT.cardNo, transData.get(JsonKeyGT.cardNo));
         data.put(JsonKeyGT.termSn, transData.get(JsonKeyGT.termSn));
+        data.put(JsonKeyGT.superviseFlag, transData.get(JsonKeyGT.superviseFlag));
+        data.put(JsonKeyGT.area, transData.get(JsonKeyGT.area));
+        data.put(JsonKeyGT.areaCode, transData.get(JsonKeyGT.areaCode));
+        data.put(JsonKeyGT.contractNo, transData.get(JsonKeyGT.contractNo));
+        data.put(JsonKeyGT.sign, transData.get(JsonKeyGT.sign));
         data.put(JsonKeyGT.moneyDetailList, transData.get(JsonKeyGT.moneyDetailList));
         return data.toString();
     }
