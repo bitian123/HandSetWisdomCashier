@@ -93,7 +93,7 @@ public class ReadIdCardFragment extends BaseTradeFragment implements View.OnClic
                 getActivity().unbindService(conn);
                 cpayaiService.stopDetectIDCard();
             }
-        } catch (RemoteException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         super.onDestroy();
