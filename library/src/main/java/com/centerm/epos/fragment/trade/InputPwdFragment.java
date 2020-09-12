@@ -374,6 +374,7 @@ public class InputPwdFragment extends BaseTradeFragment {
 
     @Override
     public void onDestroy() {
+        cancelTimeout();
         mInputPasswordPresent.unbind();
         super.onDestroy();
     }

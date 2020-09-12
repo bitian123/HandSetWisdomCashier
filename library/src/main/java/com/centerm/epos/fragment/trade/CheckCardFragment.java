@@ -309,6 +309,12 @@ public class CheckCardFragment extends BaseTradeFragment {
     }
 
     @Override
+    public void onDestroy() {
+        cancelTimeout();
+        super.onDestroy();
+    }
+
+    @Override
     public boolean onBackPressed() {
         mTradePresent.onCancel();
         return false;

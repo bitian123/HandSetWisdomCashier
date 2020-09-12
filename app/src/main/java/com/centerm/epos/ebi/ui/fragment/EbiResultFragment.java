@@ -130,7 +130,7 @@ public class EbiResultFragment extends BaseTradeFragment implements View.OnClick
                 addItemView("应收总金额", mTradePresent.getTransData().get(TradeInformationTag.totalReceivable)+"元",false);
             }
 
-            addItemView("已收总金额", received+"元",false);
+            addItemView("已收总金额", received,false);
             if(mTradePresent.getTransData()==null||mTradePresent.getTransData().get(TradeInformationTag.totalUnpaidAmount)==null){
                 addItemView("本次应收总金额", "0.00"+"元",false);
             }else{
@@ -197,6 +197,12 @@ public class EbiResultFragment extends BaseTradeFragment implements View.OnClick
         super.onResume();
         setTitle(R.string.title_result);
         hideBackBtn();
+    }
+
+    @Override
+    public void onDestroy() {
+        cancelTimeout();
+        super.onDestroy();
     }
 
     @Override
@@ -306,6 +312,7 @@ public class EbiResultFragment extends BaseTradeFragment implements View.OnClick
             return;
         }
         if(v.getId()==R.id.mBtnNext){
+            cancelTimeout();
             Map<String, Object> map = new ArrayMap<>();
             map.put(JsonKeyGT.idType, mTradePresent.getTransData().get(JsonKeyGT.idType));
             map.put(JsonKeyGT.name, mTradePresent.getTransData().get(JsonKeyGT.name));
