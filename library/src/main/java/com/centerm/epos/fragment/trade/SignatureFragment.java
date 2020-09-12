@@ -103,6 +103,10 @@ public class SignatureFragment extends BaseTradeFragment {
             mTvTip.setText("请在下方区域进行签名\n（签名用于签购单和收据）");
         }
 
+        if(TransCode.VOID.equals(mTradePresent.getTradeCode())){
+            mTvTip.setText("请签名");
+            view.findViewById(R.id.mIvTip).setVisibility(View.GONE);
+        }
 
     }
 

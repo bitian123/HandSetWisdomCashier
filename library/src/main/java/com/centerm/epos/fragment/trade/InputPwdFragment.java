@@ -70,7 +70,6 @@ public class InputPwdFragment extends BaseTradeFragment {
             mTradePresent.beginTransaction();
         }
 
-
     }
 
     @Override
@@ -120,6 +119,9 @@ public class InputPwdFragment extends BaseTradeFragment {
          */
         setTitlePicture(rootView,R.drawable.pic_password);
 
+        if(TransCode.VOID.equals(mTradePresent.getTradeCode())){
+            rootView.findViewById(R.id.mIvTip).setVisibility(View.INVISIBLE);
+        }
     }
 
     public void authCheck(){

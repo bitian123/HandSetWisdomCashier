@@ -102,9 +102,18 @@ public class EbiResultFragment extends BaseTradeFragment implements View.OnClick
                 mIvTip.setVisibility(View.GONE);
             }
         }
+        if (mTradePresent.isICInsertTrade()) {
+            rootView.findViewById(R.id.tip_take_out).setVisibility(View.VISIBLE);
+        }
 
         isSuccess = mResultPresent.isSuccess();
         if (mResultPresent.isSuccess()) {
+            if(TransCode.VOID.equals(mTradePresent.getTradeCode())){
+                rootView.findViewById(R.id.mIvTip).setVisibility(View.INVISIBLE);
+                rootView.findViewById(R.id.mBtnNext).setVisibility(View.INVISIBLE);
+                addItemView("本次撤销金额", mTradePresent.getTransData().get(TradeInformationTag.TRANS_MONEY)+"元",false);
+                return;
+            }
             if(mTradePresent.getTransData().get(JsonKey.PROPERTY_FLAG)!=null){
                 //发送交易结果通知回调
                 ((EbiBaseResultPresent)mResultPresent).sendNotice();
@@ -159,10 +168,6 @@ public class EbiResultFragment extends BaseTradeFragment implements View.OnClick
 
             //添加倒计时
             showingTimeout(mTvShowTimeOut);
-        }
-
-        if (mTradePresent.isICInsertTrade()) {
-            rootView.findViewById(R.id.tip_take_out).setVisibility(View.VISIBLE);
         }
 
     }

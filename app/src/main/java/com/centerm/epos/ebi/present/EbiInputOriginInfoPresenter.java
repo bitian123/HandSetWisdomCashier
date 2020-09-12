@@ -101,7 +101,7 @@ public class EbiInputOriginInfoPresenter extends BaseTradePresent implements IIn
                     if (oriInfo.getStateFlag() == 1) {
                         view.popToast("该交易已撤销");
                         return false;
-                    }else if(!oriInfo.getSuperviseFlag().equals("1")|| !oriInfo.getAreaCode().equals(CommonConstant.AreaCode.HANGZHOU_CODE)){
+                    }else if(!"1".equals(oriInfo.getSuperviseFlag())|| !CommonConstant.AreaCode.HANGZHOU_CODE.equals(oriInfo.getAreaCode())){
                         view.popToast("该订单不属于杭州监管订单、不允许撤销");
                         return false;
                     }

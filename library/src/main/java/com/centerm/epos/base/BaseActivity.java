@@ -320,6 +320,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
         onInitView();
         afterInitView();
+        CommonUtils.resetLastClickTime();
     }
 
     private final void _initView() {

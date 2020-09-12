@@ -199,6 +199,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
 
         onInitView(view);
         afterInitView();
+        CommonUtils.resetLastClickTime();
         return view;
     }
 

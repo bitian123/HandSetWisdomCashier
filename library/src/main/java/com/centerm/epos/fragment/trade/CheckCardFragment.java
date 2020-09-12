@@ -1,6 +1,9 @@
 package com.centerm.epos.fragment.trade;
 
+import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.centerm.epos.EposApplication;
@@ -48,6 +51,8 @@ public class CheckCardFragment extends BaseTradeFragment {
     protected CheckCardPresent mCheckCardPresent;
     private TextView mTvPayAmt,mTvReceivable,mTvReceived,mTvUnpaidAmount;
     private TextView mTvShowAmtTip1,mTvShowAmtTip2,mTvShowName;
+    private ImageView mIvTip;
+    private LinearLayout mViewShowAmmt;
     private final static int AuthCheck = 1;
     private final static int OrderSync = 2;
     private String orderNo = "";
@@ -75,45 +80,25 @@ public class CheckCardFragment extends BaseTradeFragment {
     @Override
     public void onInitView(View rootView) {
         initFinishBtnlistener(rootView);
-        if(CommonUtils.isK9()){
-            mTvPayAmt = (TextView) rootView.findViewById(R.id.mTvPayAmt);
-            mTvReceivable = (TextView) rootView.findViewById(R.id.mTvReceivable);
-            mTvReceived = (TextView) rootView.findViewById(R.id.mTvReceived);
-            mTvUnpaidAmount = (TextView) rootView.findViewById(R.id.mTvUnpaidAmount);
-            mTvShowName = (TextView) rootView.findViewById(R.id.mTvShowName);
-            if(mTradePresent.getTransData().get(TradeInformationTag.TRANS_MONEY)==null){
-                mTvPayAmt.setText("0.00"+"元");
-                mTvReceivable.setText("0.00"+"元");
-                mTvReceived.setText("0.00"+"元");
-                mTvUnpaidAmount.setText("0.00"+"元");
-                mTvShowName.setText("姓名:"+"未知");
-            }else{
-                mTvPayAmt.setText(mTradePresent.getTransData().get(TradeInformationTag.TRANS_MONEY)+"元");
-                mTvReceivable.setText(mTradePresent.getTransData().get(TradeInformationTag.totalReceivable)+"元");
-                mTvReceived.setText(mTradePresent.getTransData().get(TradeInformationTag.totalReceived)+"元");
-                mTvUnpaidAmount.setText(mTradePresent.getTransData().get(TradeInformationTag.totalUnpaidAmount)+"元");
-                mTvShowName.setText("姓名:"+mTradePresent.getTransData().get(JsonKeyGT.checkCardShowName));
-            }
-        }else {
-            mTvShowAmtTip1 = (TextView) rootView.findViewById(R.id.mTvShowAmtTip1);
-            mTvShowAmtTip2 = (TextView) rootView.findViewById(R.id.mTvShowAmtTip2);
-
-            StringBuilder builder = new StringBuilder();
-            builder.append("应收总金额"+mTradePresent.getTransData().get(TradeInformationTag.totalReceivable)+"元，")
-                    .append("已收总金额"+mTradePresent.getTransData().get(TradeInformationTag.totalReceived)+"元，")
-                    .append("本次应收总金额"+mTradePresent.getTransData().get(TradeInformationTag.totalUnpaidAmount)+"元。");
-            mTvShowAmtTip1.setText(builder.toString());
-            mTvShowAmtTip2.setText("本次付款总金额"+mTradePresent.getTransData().get(TradeInformationTag.TRANS_MONEY)+"元");
-
-            rootView.findViewById(R.id.mIvTipPic).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mTradePresent.getTransData().put(TradeInformationTag.SERVICE_ENTRY_MODE, "021");
-                    mTradePresent.getTransData().put(TradeInformationTag.BANK_CARD_NUM, "6227001823770958319");
-                    mTradePresent.getTransData().put(TradeInformationTag.TRACK_2_DATA, "6227001823770958319D42C67C70F1908C2A0");
-                    mTradePresent.gotoNextStep("1");
-                }
-            });
+        mIvTip = rootView.findViewById(R.id.mIvTip);
+        mViewShowAmmt = rootView.findViewById(R.id.mViewShowAmmt);
+        mTvPayAmt = (TextView) rootView.findViewById(R.id.mTvPayAmt);
+        mTvReceivable = (TextView) rootView.findViewById(R.id.mTvReceivable);
+        mTvReceived = (TextView) rootView.findViewById(R.id.mTvReceived);
+        mTvUnpaidAmount = (TextView) rootView.findViewById(R.id.mTvUnpaidAmount);
+        mTvShowName = (TextView) rootView.findViewById(R.id.mTvShowName);
+        if(mTradePresent.getTransData().get(TradeInformationTag.TRANS_MONEY)==null){
+            mTvPayAmt.setText("0.00"+"元");
+            mTvReceivable.setText("0.00"+"元");
+            mTvReceived.setText("0.00"+"元");
+            mTvUnpaidAmount.setText("0.00"+"元");
+            mTvShowName.setText("姓名:"+"未知");
+        }else{
+            mTvPayAmt.setText(mTradePresent.getTransData().get(TradeInformationTag.TRANS_MONEY)+"元");
+            mTvReceivable.setText(mTradePresent.getTransData().get(TradeInformationTag.totalReceivable)+"元");
+            mTvReceived.setText(mTradePresent.getTransData().get(TradeInformationTag.totalReceived)+"元");
+            mTvUnpaidAmount.setText(mTradePresent.getTransData().get(TradeInformationTag.totalUnpaidAmount)+"元");
+            mTvShowName.setText("姓名:"+mTradePresent.getTransData().get(JsonKeyGT.checkCardShowName));
         }
 
         showingTimeout((TextView) rootView.findViewById(R.id.mTvShowTimeOut), new OnTimeOutListener() {
@@ -126,6 +111,13 @@ public class CheckCardFragment extends BaseTradeFragment {
                 }
             }
         });
+
+        if(TransCode.VOID.equals(mTradePresent.getTradeCode())){
+            mIvTip.setVisibility(View.GONE);
+            mViewShowAmmt.setVisibility(View.GONE);
+            mTvShowName.setVisibility(View.GONE);
+            rootView.findViewById(R.id.mViewLine).setVisibility(View.GONE);
+        }
 
     }
 
