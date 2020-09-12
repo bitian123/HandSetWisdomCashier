@@ -14,8 +14,8 @@ android {
         applicationId "com.centerm.epos.ebi.gt"
         minSdkVersion 19
         targetSdkVersion 26
-        versionCode 21
-        versionName "1.1.1"
+        versionCode 22
+        versionName "1.2.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }

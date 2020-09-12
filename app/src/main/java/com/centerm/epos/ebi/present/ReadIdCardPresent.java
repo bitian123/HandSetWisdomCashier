@@ -72,6 +72,7 @@ public class ReadIdCardPresent extends BaseTradePresent {
                         DialogFactory.hideAll();
                         tipError(i);
                         gotoNextStep("99");
+
                     }
                 }
 
