@@ -1,0 +1,65 @@
+<!--节点ID为0，代表主界面-->
+<!--消费流程-->
+<process transCode="">
+    <component name="com.centerm.epos.fragment.trade.CheckCardFragment" id="1">
+        <condition id="1">12</condition>
+        <condition id="99">7</condition>
+    </component>
+
+
+    <component name="com.centerm.epos.fragment.trade.CheckCardFragment"
+        present="com.centerm.epos.present.transaction.CheckCardPresentSecond" id="12">
+        <condition id="1">2</condition>
+        <condition id="99">7</condition>
+    </component>
+
+    <component name="com.centerm.epos.fragment.trade.InputCommonInfoFragment" id="2">
+        <condition id="1">3</condition>
+    </component>
+
+    <!--输入金额-->
+    <component name="com.centerm.epos.fragment.trade.InputMoneyFragment" id="3">
+        <condition id="1">4</condition>
+    </component>
+
+    <!--联机加载-->
+    <component name="com.centerm.epos.fragment.trade.TradingFragment" id="4">
+        <condition id="1">9</condition>
+        <condition id="2">10</condition>
+        <condition id="99">7</condition>
+    </component>
+
+    <!--输入金额-->
+    <component name="com.centerm.epos.fragment.trade.InputMoneyFragment" id="9">
+        <condition id="1">10</condition>
+        <condition id="99">7</condition>
+    </component>
+
+    <!--输入密码-->
+    <component name="com.centerm.epos.fragment.trade.InputPwdFragment" id="10">
+        <condition id="1">13</condition>
+        <condition id="99">7</condition>
+    </component>
+
+    <!--联机加载-->
+    <component name="com.centerm.epos.fragment.trade.TradingFragment" id="13">
+        <condition id="1">6</condition>
+        <condition id="99">7</condition>
+    </component>
+
+    <!--电子签名-->
+    <component name="com.centerm.epos.fragment.trade.SignatureFragment" id="6" controller="com.centerm.epos.transcation.pos.controller.ShowSignPadUIController">
+        <condition id="1">8</condition>
+        <condition id="99">7</condition>
+    </component>
+    <!--电话号码-->
+    <component name="com.centerm.epos.fragment.trade.InputPhoneNumberFragment" id="8"
+        controller="com.centerm.epos.transcation.pos.controller.ShowInputPhoneUIController">
+        <condition id="1">7</condition>
+        <condition id="99">7</condition>
+    </component>
+    <!--交易结果-->
+    <component name="com.centerm.epos.fragment.trade.ResultFragment" id="7">
+        <condition id="1">0</condition>
+    </component>
+</process>

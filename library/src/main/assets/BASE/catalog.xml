@@ -1,0 +1,25 @@
+<Configuration project="BASE">
+    <Item enable="true" filePath="menu/primary.xml" tag="primaryMenu" version="1"/>
+    <Item enable="true" filePath="menu/secondary.xml" tag="secondaryMenu" version="1"/>
+    <Item enable="true" filePath="menu/thirdly.xml" tag="thirdlyMenu" version="1"/>
+    <Item enable="true" filePath="menu/shortcut.xml" tag="shortcut" version="1"/>
+
+    <Item enable="true" filePath="transaction/process" tag="tradeFlow" version="1"/>
+    <Item enable="true" filePath="transaction/functionToggle.xml" tag="functionToggle" version="1"/>
+    <Item enable="true" filePath="transaction/redevelop.xml" tag="redevelop" version="1"/>
+
+    <Item enable="true" filePath="message/union_pay.xml" tag="isoMsgConfig" version="1"/>
+    <Item enable="true" filePath="message/Iso8583FieldProcess.xml" tag="isoFieldProcess" version="1"/>
+
+    <Item enable="true" filePath="parameter/default.xml" tag="defaultParams" version="1"/>
+    <Item enable="true" filePath="security.xml" tag="security" version="1"/>
+
+    <Item enable="true" filePath="slip/sales_slip.xml" tag="saleSlip" version="1"/>
+    <Item enable="true" filePath="slip/sales_scan_slip.xml" tag="saleScanSlip" version="1"/>
+
+    <Item enable="true" filePath="properties.xml" tag="properties" version="1"/>
+    <Item enable="true" filePath="transaction/manager_trade.xml" tag="manager_trade" version="1"/>
+
+    <Item enable="true" filePath="transaction/trade_factor.xml" tag="tradeFactor" version="1"/>
+
+</Configuration>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_layout" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/ConfigureItemTextStyle"
+        android:layout_marginTop="@dimen/margin_50"
+        android:text="@string/label_esign_package_max" />
+
+    <EditText
+        android:id="@+id/et_esign_package_max"
+        style="@style/ConfigureItemTextMiniStyle.Edit"
+        android:maxLength="15" />
+
+    <TextView
+        style="@style/ConfigureItemTextStyle"
+        android:layout_marginTop="@dimen/margin_30"
+        android:text="@string/label_sign_timeout" />
+
+    <EditText
+        android:id="@+id/et_sign_timeout"
+        android:maxLength="5"
+        style="@style/ConfigureItemTextMiniStyle.Edit" />
+
+    <TextView
+            style="@style/ConfigureItemTextStyle"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/label_request_time_max" />
+
+    <EditText
+            android:id="@+id/et_retry_max"
+            android:maxLength="10"
+            style="@style/ConfigureItemTextMiniStyle.Edit" />
+
+    <TextView
+            style="@style/ConfigureItemTextStyle"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/label_esign_store_max" />
+
+    <EditText
+            android:id="@+id/et_store_max"
+            android:maxLength="10"
+            style="@style/ConfigureItemTextMiniStyle.Edit" />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_50"
+            android:gravity="center_vertical">
+
+        <TextView
+                android:id="@+id/textView3"
+                style="@style/ConfigureItemTextStyle"
+                android:text="@string/label_esign_open"/>
+
+        <CheckBox
+                android:layout_marginEnd="@dimen/margin_60"
+                android:id="@+id/cb_esign_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_alignParentEnd="true"
+                android:button="@drawable/sel_toggle"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:gravity="center_vertical">
+
+        <TextView
+                style="@style/ConfigureItemTextStyle"
+                android:text="@string/label_esign_multi_package"/>
+
+        <CheckBox
+                android:layout_marginEnd="@dimen/margin_60"
+                android:id="@+id/cb_esign_multi_package"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_alignParentEnd="true"
+                android:button="@drawable/sel_toggle"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:gravity="center_vertical">
+
+        <TextView
+                style="@style/ConfigureItemTextStyle"
+                android:text="@string/label_signpad_inner"/>
+
+        <CheckBox
+                android:layout_marginEnd="@dimen/margin_60"
+                android:id="@+id/cb_signpad_inner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_alignParentEnd="true"
+                android:button="@drawable/sel_toggle"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:gravity="center_vertical">
+
+        <TextView
+                style="@style/ConfigureItemTextStyle"
+                android:text="@string/label_esign_phone_num"/>
+
+        <CheckBox
+                android:layout_marginEnd="@dimen/margin_60"
+                android:id="@+id/cb_phone_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_alignParentEnd="true"
+                android:button="@drawable/sel_toggle"/>
+    </RelativeLayout>
+
+    <Button
+        android:onClick="onSureClick"
+        style="@style/ConfigureItemLayoutStyle.Button"
+            android:layout_marginTop="@dimen/margin_20"/>
+
+</LinearLayout>

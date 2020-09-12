@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/trading_window_bg"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:paddingRight="20dp"
+        android:background="@drawable/bg_frame1">
+
+        <TextView
+            android:id="@+id/mTvRoomId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="项目名称"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:id="@+id/mTvBillId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地址"
+            android:textSize="13sp"
+            android:layout_marginTop="@dimen/v_business_item_margin_top"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/mTvMoneyType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="款项名称"
+            android:textSize="13sp"
+            android:layout_marginTop="@dimen/v_business_item_margin_top"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/mTvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名"
+            android:textSize="13sp"
+            android:layout_marginTop="@dimen/v_business_item_margin_top"
+            android:textColor="@color/tip4D" />
+
+        <TextView
+            android:id="@+id/mTvUnpaidAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="应收金额"
+            android:layout_marginTop="14dp"
+            android:textColor="@color/tip4D"/>
+
+        <TextView
+            android:id="@+id/mTvPaidAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="已收金额"
+            android:layout_marginTop="@dimen/v_business_item_margin_top"
+            android:textColor="@color/tip4D"/>
+
+        <TextView
+            android:id="@+id/mTvAmtReceivable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="本次应收"
+            android:layout_marginTop="@dimen/v_business_item_margin_top"
+            android:textColor="@color/tip4D"/>
+
+        <TextView
+            android:id="@+id/mTvSettleNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="结算帐户结"
+            android:layout_marginTop="@dimen/v_business_item_margin_top"
+            android:textColor="@color/tip4D"/>
+
+        <LinearLayout style="@style/mw_style"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp">
+            <TextView
+                android:id="@+id/mTvPayAmountTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="本次付款金额: "
+                android:layout_marginTop="@dimen/v_business_item_margin_top"
+                android:textColor="@color/tip4D"/>
+
+            <com.centerm.epos.view.ClearEditText
+                android:id="@+id/mEtPayAmount"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:minWidth="30dp"
+                android:textSize="13sp"
+                android:text="0.00"
+                android:paddingRight="5dp"
+                android:maxLength="12"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="@dimen/v_business_item_margin_top"
+                android:textColor="@color/tip4D"
+                android:textCursorDrawable="@drawable/edittext_cursor" />
+
+            <TextView
+                android:id="@+id/mTvPayAmountIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="元"
+                android:layout_marginLeft="5dp"
+                android:drawablePadding="10dp"
+                android:layout_marginTop="@dimen/v_business_item_margin_top"
+                android:textColor="@color/tip4D"/>
+        </LinearLayout>
+
+        <RelativeLayout style="@style/mw_style"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/mBtnConfirm"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="确定"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textColor="@color/font_white"
+                android:background="@drawable/btn_login_bg"/>
+
+            <TextView
+                android:id="@+id/mBtnCancel"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="取消"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textColor="@color/font_white"
+                android:background="@drawable/btn_login_bg_gray"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

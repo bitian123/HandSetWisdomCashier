@@ -1,0 +1,24 @@
+<!--项目改动点配置信息
+    TAG说明：
+    key: 交易标识，作为缓存的索引值
+    trade_name: 交易名称
+    msg_req_type：请求报文交易类型
+    msg_resp_type：应答报文交易类型
+    process_code：交易处理码
+    service_point：服务点条件码
+    trade_code：交易类型码
+    reverse：是否冲正
+
+    注：与TranscationFactor类成员对应
+
+    属性说明：
+    version：版本号
+    tag：标签
+    id：id
+-->
+<factor version="1.0.0">
+
+    <!--交易名称 消息类型请求 消息类型响应 交易处理码（3域）服务点条件码(25域) 交易类型码（60.1域）是否冲正-->
+    <Item key="UNION_PAY_SALE" trade_name="银联消费" msg_req_type="0200" msg_resp_type="0210" process_code="000000" service_point="00" trade_code="22" reverse="true"/>
+    <!--<Item key="UNION_PAY_SALE" trade_name="现金充值" msg_req_type="0200" msg_resp_type="0210" process_code="630000" service_point="91" trade_code="46" reverse="false"/>-->
+</factor>

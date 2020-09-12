@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/common_margin"
+        android:paddingRight="@dimen/common_margin"
+        android:paddingTop="25dp">
+
+        <TextView
+            android:id="@+id/opt_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="01"
+            android:paddingLeft="8dp"
+            android:textColor="@color/tip4D"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/modify_psw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_centerHorizontal="true"
+            android:text="修改密码"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/del_opt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="#FF4331"
+            android:text="删除"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

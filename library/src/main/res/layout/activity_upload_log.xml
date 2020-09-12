@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_title_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_type"
+        android:layout_width="match_parent"
+        android:background="@color/font_white"
+        android:layout_height="200dp">
+
+        <CalendarView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#fff"
+            android:shownWeekCount="4"
+            android:focusedMonthDateColor="#f00"
+            android:weekSeparatorLineColor="#ff0"
+            android:unfocusedMonthDateColor="#f9f"
+            android:id="@+id/calendarView_log"
+            >
+        </CalendarView>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_log_date"
+        android:text="请选择上传日志日期"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/font_red"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"/>
+
+
+
+    <Button
+        android:id="@+id/btn_upload"
+        android:text="开始上传"
+        style="@style/ConfigureItemLayoutStyle.Button"
+        android:background="@color/font_blue_success"
+        />
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout style="@style/mm_style"
+        android:orientation="horizontal"
+        android:paddingTop="25pt"
+        android:paddingLeft="35pt">
+
+        <ImageView style="@style/ww_style"
+            android:background="@drawable/icon_print_last"
+            android:id="@+id/mBtnPrintLast"/>
+
+        <ImageView style="@style/ww_style"
+            android:background="@drawable/icon_print_any"
+            android:id="@+id/mBtnPrintAny"
+            android:layout_marginLeft="30pt"/>
+
+    </LinearLayout>
+
+</LinearLayout>

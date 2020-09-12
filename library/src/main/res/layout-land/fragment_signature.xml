@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+        style="@style/TradeFragment"
+    android:background="@color/e10_f3_color">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/common_title_layout"/>
+
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mIvTip"
+        android:layout_marginTop="10pt"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/card_step4"/>
+
+    <RelativeLayout style="@style/mm_style">
+        <LinearLayout style="@style/e10_content_style"
+            android:orientation="vertical">
+            <TextView style="@style/ww_style"
+                android:text="请在下方实线框区域进行签名"
+                android:textColor="#333333"
+                android:textSize="12pt"
+                android:layout_marginTop="15pt"
+                android:layout_marginLeft="20pt"/>
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="12pt"
+                android:layout_marginBottom="12pt"
+                android:layout_marginLeft="15pt"
+                android:layout_marginRight="15pt"
+                android:layerType="software"
+                android:background="@drawable/dotted_line"/>
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="165pt"
+                android:layout_marginLeft="30pt"
+                android:layout_marginRight="30pt"
+                android:background="@drawable/bg_frame2">
+                <com.centerm.epos.view.HandwrittenPad
+                    android:layout_width="match_parent"
+                    android:layout_height="165pt"
+                    android:layout_margin="1pt"
+                    android:id="@+id/hand_write_pad" />
+            </RelativeLayout>
+
+            <LinearLayout style="@style/mm_style"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/resign_btn"
+                    android:layout_width="100pt"
+                    android:layout_height="30pt"
+                    android:gravity="center"
+                    android:textSize="14pt"
+                    android:background="@drawable/btn_login_bg_gray"
+                    android:textColor="@color/font_white"
+                    android:text="清除"/>
+
+                <TextView
+                    android:id="@+id/positive_btn"
+                    android:layout_width="100pt"
+                    android:layout_height="30pt"
+                    android:gravity="center"
+                    android:textSize="14pt"
+                    android:layout_marginLeft="25pt"
+                    android:textColor="@color/font_white"
+                    android:text="确认"
+                    android:background="@drawable/btn_login_bg"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton style="@style/ww_style"
+            android:id="@+id/mBtnFinish"
+            android:background="@drawable/btn_exit"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15pt"/>
+
+        <ImageButton style="@style/ww_style"
+            android:id="@+id/imgbtn_back"
+            android:background="@drawable/btn_exit"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15pt"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<!--下载参数-->
+<process>
+    <!--联机-->
+    <component name="com.centerm.epos.fragment.trade.TradingFragment" id="1">
+        <condition id="1">2</condition>
+    </component>
+    <!--交易结果-->
+    <component name="com.centerm.epos.fragment.trade.ResultFragment" id="2">
+        <condition id="1">0</condition>
+    </component>
+</process>

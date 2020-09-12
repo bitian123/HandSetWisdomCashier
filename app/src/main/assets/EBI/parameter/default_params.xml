@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<!-- 属性说明：
+    index 参数对应的索引号，参数存取的唯一标识。
+    FileName 参数存储的文件名，子标签中参数设置此属性表示单独存储到指定文件中独立保存。
+    type HEX，BCD，TEXT，BOOLEAN
+-->
+<Parameter version="1.0.0">
+    <!-- 应用参数 -->
+    <Group name="Application" fileName="ApplicationParameter">
+        <!-- 交易流水号 -->
+        <Item fileName="TradeIndexRecord" index="1" key="TradeIndex" type="HEX" value="000001"/>
+        <!-- 应用功能版本号 -->
+        <Item index="2" key="MenuVersion" type="BCD" value="00000000"/>
+        <!-- ADD CUSTOM PARAMETER MORE HERE BEEGIN -->
+        <Item index="3" key="def_oper_id" type="TEXT" value="01"/>
+
+        <!-- 渠道交易流水号 -->
+        <Item fileName="TradeIndexRecord_GX" index="22" key="TradeIndexForServer" type="BCD" value="001"/>
+
+
+        <!-- ADD CUSTOM PARAMETER MORE HERE END -->
+
+        <!-- 项目名称 for 版本切换控制 -->
+        <Item fileName="ePay+APP_Config" index="100" key="ProjectName" type="TEXT" value="ZJ"/>
+    </Group>
+
+    <!-- 交易参数 -->
+    <Group name="Transaction" fileName="TransactionParameter">
+        <!-- 小额免密免签 -->
+        <Item index="1" key="CommType" type="BOOLEAN" value="false"/>
+        <!-- 优先挥卡交易开关 -->
+        <Item index="2" key="WirelessPrior" type="BOOLEAN" value="false"/>
+        <!-- 银联国际卡提醒功能 -->
+        <Item index="3" key="UnionPayInternationalCard" type="BOOLEAN" value="false"/>
+        <!--检卡最大重试次数-->
+        <Item index="4" key="max_read_times" type="BOOLEAN" value="false"/>
+
+        <!-- ADD CUSTOM PARAMETER MORE HERE BEEGIN -->
+
+
+        <!-- ADD CUSTOM PARAMETER MORE HERE END -->
+
+    </Group>
+
+    <!-- 安全参数 -->
+    <Group name="Security" fileName="SecurityParameter">
+        <!-- 密钥索引号 -->
+        <Item index="1" key="KeyIndex" type="HEX" value="0000"/>
+        <!-- 中心号码 -->
+        <Item index="2" key="NumberOfTradeServer" type="TEXT" value="123"/>
+
+        <!-- ADD CUSTOM PARAMETER MORE HERE BEEGIN -->
+
+
+        <!-- ADD CUSTOM PARAMETER MORE HERE END -->
+
+    </Group>
+</Parameter>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/e10_f3_color">
+
+    <include layout="@layout/common_title_layout" />
+
+    <RelativeLayout style="@style/mw_style"
+        android:layout_marginTop="10pt">
+        <TextView style="@style/ww_style"
+            android:id="@+id/mTvShowTimeOut"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="60秒"
+            android:gravity="center"
+            android:paddingLeft="30pt"
+            android:textSize="15pt"
+            android:background="@drawable/icon_time"
+            android:textColor="@color/font_white"/>
+        <LinearLayout style="@style/mw_style"
+            android:orientation="horizontal"
+            android:layout_toLeftOf="@id/mTvShowTimeOut"
+            android:gravity="center">
+            <ImageView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mIvTip"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/auth_step_4"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/mm_style">
+        <LinearLayout style="@style/e10_content_style"
+            android:orientation="vertical"
+            android:id="@+id/mViewAccount"
+            android:gravity="center_horizontal">
+
+            <com.centerm.epos.view.ClearEditText
+                android:layout_width="200pt"
+                android:layout_height="30pt"
+                android:paddingLeft="15pt"
+                android:paddingRight="15pt"
+                android:id="@+id/account_edit"
+                android:hint="请输入证件号"
+                android:layout_marginTop="45pt"
+                android:inputType="text"
+                android:textColorHint="#999999"
+                android:textSize="12pt"
+                android:maxLength="30"
+                android:background="@drawable/bg_login_et" />
+
+            <com.centerm.epos.view.ClearEditText
+                android:layout_width="200pt"
+                android:layout_height="30pt"
+                android:paddingLeft="15pt"
+                android:paddingRight="15pt"
+                android:id="@+id/pwd_edit"
+                android:hint="请输入姓名"
+                android:textColorHint="#999999"
+                android:maxLength="20"
+                android:textSize="12pt"
+                android:layout_marginTop="15pt"
+                android:background="@drawable/bg_login_et"
+                android:inputType="text"/>
+
+            <Button
+                android:id="@+id/btn_login"
+                android:text="确认"
+                android:layout_width="200pt"
+                android:layout_height="30pt"
+                android:textSize="14pt"
+                android:layout_marginTop="25pt"
+                style="@style/LoginLayoutStyle.Button2"/>
+        </LinearLayout>
+
+        <ImageButton style="@style/ww_style"
+            android:id="@+id/mBtnFinish"
+            android:background="@drawable/btn_exit"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15pt"/>
+
+        <ImageButton style="@style/ww_style"
+            android:id="@+id/imgbtn_back"
+            android:background="@drawable/btn_back"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15pt"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

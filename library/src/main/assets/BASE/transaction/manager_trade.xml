@@ -1,0 +1,30 @@
+<!--管理业务配置
+    属性说明：
+    version：版本号
+    tag：标签，业务标识，${}引用properties.xml定义的属性
+    check：环境和前置条件检查的处理类名
+    class: 业务处理类名
+-->
+<trade version="1.0.0">
+    <Item tag="${SignInTradeTag}" check="com.centerm.epos.transcation.pos.manager.SignInTradeChecker"
+            class="com.centerm.epos.transcation.pos.manager.SignInTrade"/>
+    <Item tag="${SignOutTradeTag}" class="com.centerm.epos.transcation.pos.manager.SignOutTrade"/>
+    <Item tag="${DownloadCAPKTag}" class="com.centerm.epos.transcation.pos.manager.DownloadCAPKTrade"/>
+    <Item tag="${DownloadAIDTag}" class="com.centerm.epos.transcation.pos.manager.DownloadAIDTrade"/>
+    <Item tag="${DownloadParameterTag}" class="com.centerm.epos.transcation.pos.manager.DownloadParameterTrade"/>
+    <Item tag="${UploadScriptTag}" check="com.centerm.epos.transcation.pos.manager.UploadScriptTradeChecker"
+            class="com.centerm.epos.transcation.pos.manager.UploadScriptTrade"/>
+    <!--<Item tag="${ReverseTag}" check="com.centerm.epos.transcation.pos.manager.ReverseTradeCheck"-->
+            <!--class="com.centerm.epos.transcation.pos.manager.ReverseTrade"/>-->
+    <Item tag="${SettlementTag}" check="com.centerm.epos.transcation.pos.manager.SettlementTradeChecker"
+            class="com.centerm.epos.transcation.pos.manager.SettlementTrade"/>
+    <Item tag="${DownloadQpsTag}" class="com.centerm.epos.transcation.pos.manager.DownloadQpsTrade"/>
+    <Item tag="${DownloadQpsBinTag}" class="com.centerm.epos.transcation.pos.manager.DownloadQpsBinTrade"/>
+    <Item tag="${DownloadQpsBlackBinTag}" class="com.centerm.epos.transcation.pos.manager.DownloadQpsBlackBinTrade"/>
+    <Item tag="${UploadESignTag}" check="com.centerm.epos.transcation.pos.manager.UploadESignatureTradeChecker"
+            class="com.centerm.epos.transcation.pos.manager.UploadESignatureTrade"/>
+    <Item tag="${UploadBeforeSettlementTag}" check="com.centerm.epos.transcation.pos.manager.UploadTradeBeforeSettlementChecker"
+            class="com.centerm.epos.transcation.pos.manager.UploadTradeBeforeSettlementTrade"/>
+    <Item tag="${UploadOfflineTag}" check="com.centerm.epos.transcation.pos.manager.UploadOfflineTradeChecker"
+        class="com.centerm.epos.transcation.pos.manager.UploadOfflineTrade"/>
+</trade>

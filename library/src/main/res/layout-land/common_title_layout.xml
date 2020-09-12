@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="35pt"
+    android:background="@drawable/bg_bar">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="35pt">
+
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo_gt"
+            android:layout_marginLeft="15pt"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10pt"/>
+
+        <TextView style="@style/ww_style"
+            android:id="@+id/txtvw_title"
+            android:visibility="gone"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mHotLine"
+            android:textColor="@color/e10_hotline_color"
+            android:drawableLeft="@drawable/hotline_icon"
+            android:drawablePadding="7pt"
+            android:text="4007008010"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="18pt"
+            android:layout_gravity="center_horizontal"
+            android:textSize="12pt"/>
+    </RelativeLayout>
+
+</RelativeLayout>

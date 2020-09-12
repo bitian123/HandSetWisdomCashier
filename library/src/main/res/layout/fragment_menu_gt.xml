@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:slide_layout="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="@drawable/pic2">
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/index_exit"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="45dp"
+            android:id="@+id/mBtnExit"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_banner"
+        android:layout_height="247dp"
+        android:paddingTop="24dp"
+        android:paddingLeft="28dp"
+        android:paddingRight="28dp">
+
+        <com.daimajia.slider.library.SliderLayout
+            android:id="@+id/slider_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            slide_layout:auto_cycle="true"
+            slide_layout:indicator_visibility="visible"
+            slide_layout:pager_animation="DepthPage"
+            slide_layout:pager_animation_span="1200" />
+
+        <com.daimajia.slider.library.Indicators.PagerIndicator
+            android:id="@+id/page_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="6.5dp"
+            android:gravity="center"
+            slide_layout:selected_drawable="@drawable/dot_on"
+            slide_layout:unselected_drawable="@drawable/dot" />
+    </RelativeLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/mBtnIdCard"
+            android:background="@drawable/btn_idcard"
+            />
+
+        <Button  android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/mBtnOther"
+            android:background="@drawable/btn_other"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mHotLine"
+            android:textColor="@color/tip"
+            android:drawableLeft="@drawable/hotline_icon"
+            android:drawablePadding="5dp"
+            android:text="4007008010"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="25dp"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+</LinearLayout>

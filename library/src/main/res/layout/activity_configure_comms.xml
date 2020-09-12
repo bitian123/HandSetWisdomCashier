@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_layout" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/ConfigureItemTextStyle"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_20"
+        android:text="@string/label_configure_comms_service" />
+
+    <EditText
+        android:id="@+id/extxt_confiure_comms_service"
+        style="@style/ConfigureItemTextStyle.Edit"
+        android:digits="0123456789."
+        android:layout_height="30dp"
+        android:hint="0.0.0.0"
+        android:maxLength="15" />
+
+
+    <TextView
+        style="@style/ConfigureItemTextStyle"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_30"
+        android:text="@string/label_configure_comms_port" />
+
+    <EditText
+        android:id="@+id/extxt_confiure_comms_port"
+        android:maxLength="5"
+        android:layout_height="30dp"
+        style="@style/ConfigureItemTextStyle.Edit" />
+
+    <TextView
+            style="@style/ConfigureItemTextStyle"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/label_configure_comms_tpdu" />
+
+    <EditText
+            android:id="@+id/extxt_confiure_comms_tpdu"
+            android:maxLength="10"
+            android:layout_height="30dp"
+            style="@style/ConfigureItemTextStyle.Edit" />
+
+    <TextView
+        android:id="@+id/textView11"
+        style="@style/ConfigureItemTextStyle"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_50"
+        android:text="备用服务器地址" />
+
+    <EditText
+        android:id="@+id/service_reserve"
+        style="@style/ConfigureItemTextStyle.Edit"
+        android:digits="0123456789."
+        android:layout_height="30dp"
+        android:hint="0.0.0.0"
+        android:maxLength="15" />
+
+    <TextView
+        style="@style/ConfigureItemTextStyle"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_30"
+        android:text="备用端口" />
+
+    <EditText
+        android:id="@+id/port_reserve"
+        android:maxLength="5"
+        android:layout_height="30dp"
+        style="@style/ConfigureItemTextStyle.Edit" />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_50"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+        <TextView
+                android:id="@+id/textView3"
+                style="@style/ConfigureItemTextStyle"
+                android:text="@string/label_communication_encrypt"/>
+
+        <CheckBox
+                android:layout_marginRight="@dimen/margin_60"
+                android:id="@+id/auto_sign_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/sel_toggle"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/mTvAddressReserve"
+            style="@style/ConfigureItemTextStyle"
+            android:text="使用备用服务器地址"/>
+
+        <CheckBox
+            android:layout_marginRight="@dimen/margin_60"
+            android:id="@+id/mBoxAddressReserve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_alignParentRight="true"
+            android:button="@drawable/sel_toggle"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_20"
+            android:gravity="center_vertical">
+
+        <TextView
+                style="@style/ConfigureItemTextStyle"
+                android:text="@string/label_communication_alive"/>
+
+        <CheckBox
+                android:layout_marginRight="@dimen/margin_60"
+                android:id="@+id/cb_connect_alive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_alignParentRight="true"
+                android:button="@drawable/sel_toggle"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/mTvEncodeType"
+            style="@style/ConfigureItemTextStyle"
+            android:text="全报文加密"/>
+
+        <CheckBox
+            android:layout_marginRight="@dimen/margin_60"
+            android:id="@+id/mBoxmEncodeType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_alignParentRight="true"
+            android:button="@drawable/sel_toggle"/>
+    </RelativeLayout>
+
+    <Button
+        android:onClick="onSureClick"
+        android:layout_marginTop="@dimen/margin_20"
+        style="@style/ConfigureItemLayoutStyle.Button" />
+
+</LinearLayout>

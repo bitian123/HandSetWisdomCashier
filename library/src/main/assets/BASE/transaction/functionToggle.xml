@@ -1,0 +1,19 @@
+<Map>
+    <Boolean key="script_notify" value="true"/><!--是否进行脚本结果通知-->
+    <Boolean key="poundage_tip" value="false"/><!--是否进行国际银联卡高手续费提示-->
+    <Boolean key="prefer_clss" value="true"/><!--是否支持优先挥卡-->
+
+    <Boolean key="encrypt_track" value="true"/><!--联机上送是否加密磁道信息-->
+    <Boolean key="void_need_pin" value="true"/><!--消费撤销时是否需要输入密码-->
+    <Boolean key="void_need_read_card" value="true"/><!--消费撤销时是否需要检卡-->
+    <Boolean key="electronic_sign" value="false"/><!--是否开启电子签名-->
+    <Boolean key="auto_sign_out" value="true"/><!--批结算后是否自动签退-->
+    <Boolean key="operator_login" value="true"/><!--是否开启操作员登录功能-->
+    <Boolean key="keep_result_page" value="false"/><!--交易完成后是否停留结果页 add by ysd-->
+    <Boolean key="back_direct_to_launcher" value="false"/><!--主页面回退键，直接到桌面-->
+    <Boolean key="script_update" value="true"/><!--是否支持脚本上送-->
+    <Boolean key="check_merchant_info" value="true"/><!--是否开启操作员登录功能-->
+    <Boolean key="prior_response_result" value="false"/><!--联机应答结果优先,联机响应处理时忽略PBOC执行结果-->
+    <Boolean key="check_merchant_terminal_is_null" value="true"/><!--是否检查商户号终端号为空-->
+    <Boolean key="needLogin_when_opernull" value="false"/><!--当操作员为空时， 进入应用时，是否进入登录界面-->
+</Map>

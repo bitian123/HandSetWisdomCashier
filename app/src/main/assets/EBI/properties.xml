@@ -1,0 +1,18 @@
+<Map>
+    <Item key="SignInTradeTag" value="POS_SIGN_IN"/><!--签到业务标识-->
+    <Item key="SignOutTradeTag" value="POS_SIGN_OUT"/><!--签退业务标识-->
+    <Item key="DownloadCAPKTag" value="DOWNLOAD_CAPK"/><!--下载公钥业务标识-->
+    <Item key="DownloadAIDTag" value="DOWNLOAD_AID"/><!--下载IC卡参数业务标识-->
+    <Item key="DownloadParameterTag" value="DOWNLOAD_TERMINAL_PARAMETER"/><!--下载终端参数业务标识-->
+    <Item key="UploadScriptTag" value="UPLOAD_SCRIPT_RESULT"/><!--上传脚本结果-->
+    <Item key="UploadESignTag" value="ESIGN_UPLOAD"/><!--电子签名上送-->
+    <Item key="SettlementTag" value="SETTLEMENT"/><!--结算-->
+    <Item key="ReverseTag" value="REVERSE"/><!--冲正-->
+    <Item key="DownloadQpsTag" value="DOWNLOAD_QPS_PARAMS"/><!--下载双免参数-->
+    <Item key="DownloadQpsBinTag" value="DOWNLOAD_CARD_BIN_QPS"/><!--下载双免卡BIN-->
+    <Item key="DownloadQpsBlackBinTag" value="DOWNLOAD_BLACK_CARD_BIN_QPS"/><!--下载双免卡BIN黑名单-->
+    <Item key="UploadBeforeSettlementTag" value="UPLOAD_TRADE_BEFORE_SETTLEMENT"/> <!-- 批结算前上传交易 -->
+
+    <Item key="DownLoadMainKeyTag" value="DOWNLOAD_MAIN_KEY"/> <!-- 下载签名密钥交易 -->
+    <Item key="ContractInfoQueryTag" value="CONTRACT_INFO_QUERY"/> <!-- 合同信息查询 -->
+</Map>

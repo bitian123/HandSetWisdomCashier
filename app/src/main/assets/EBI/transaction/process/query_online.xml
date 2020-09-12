@@ -1,0 +1,19 @@
+<!--节点ID为0，代表主界面-->
+<!--余额流程-->
+<process transCode="">
+    <!--联机加载-->
+    <component name="com.centerm.epos.fragment.trade.TradingFragment"
+               present="com.centerm.epos.ebi.present.EbiTradingPresent"
+               id="4">
+        <condition id="1">5</condition>
+        <condition id="2">5</condition>
+        <condition id="3">5</condition>
+        <condition id="99">5</condition>
+    </component>
+    <!--交易结果-->
+    <component name="com.centerm.epos.ebi.ui.fragment.EbiResultFragment"
+               present="com.centerm.epos.ebi.present.EbiBaseResultPresent"
+               id="5">
+        <condition id="1">0</condition>
+    </component>
+</process>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+        style="@style/TradeFragment">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/common_title_layout_sp" />
+
+    <LinearLayout
+        android:id="@+id/show_card_LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_title"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_80"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20">
+
+        <TextView
+            style="@style/BaseText.Tip"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="卡号确认"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/show_card_num"
+            style="@style/BaseEditBox.Number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_60"
+            android:paddingBottom="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_20"
+            android:text="1234567890123456"
+            android:maxLength="19"
+            android:gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/positive_btn"
+            style="@style/BaseButton.Positive"
+            android:layout_marginLeft="@dimen/margin_60"
+            android:layout_marginRight="@dimen/margin_60"
+            android:layout_marginTop="@dimen/margin_60"/>
+    </LinearLayout>
+</RelativeLayout>

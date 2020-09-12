@@ -1,0 +1,15 @@
+<!--节点ID为0，代表主界面-->
+<!--余额流程-->
+<process transCode="">
+    <!--检卡-->
+    <component name="com.centerm.epos.fragment.trade.CheckCardFragment"
+               present="com.centerm.epos.present.transaction.CheckCardPresent"
+               id="2">
+        <condition id="1">5</condition>
+        <condition id="99">5</condition>
+    </component>
+    <!--交易结果-->
+    <component name="com.centerm.epos.fragment.trade.ResultFragment" id="5">
+        <condition id="1">0</condition>
+    </component>
+</process>

@@ -1,0 +1,22 @@
+<!--配置注解的类需要扫描的包
+
+    basePackage 包名，可以有多个包，以','分开
+
+    注意：如果同时配置了以xml方式获取处理类时，则以注解的配置为准，xml的配置会失效
+-->
+<annotation-epos version="1.0.0">
+    <!--ISO8583包域处理-->
+    <Item tag="iso-field-process" basePackage="com.centerm.epos.transcation.pos.data"/>
+    <!--二次开发-->
+    <Item tag="redevelop-process" basePackage="com.centerm.epos.redevelop"/>
+    <!-- 业务的UI界面 -->
+    <Item tag="trade-view" basePackage="com.centerm.epos.fragment.trade"/>
+    <!-- 交易的业务逻辑处理 -->
+    <Item tag="trade-present" basePackage="com.centerm.epos.present.transaction"/>
+    <!-- 交易界面的控制器/过滤器/拦截器 -->
+    <Item tag="trade-controller" basePackage="com.centerm.epos.transcation.pos.controller"/>
+    <!-- 交易界面使用的数据模型 -->
+    <Item tag="trade-model" basePackage="com.centerm.epos.transcation.pos.model"/>
+    <!-- 管理类业务 -->
+    <Item tag="manager-trade-item" basePackage="com.centerm.epos.transcation.pos.manager"/>
+</annotation-epos>

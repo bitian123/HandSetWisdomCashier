@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+                style="@style/TradeFragment">
+
+    <include layout="@layout/common_title_layout"/>
+
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mIvTip"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/card_step3"/>
+
+    <TextView
+        style="@style/BaseText.Tip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        android:text="请输入您的密码"
+        android:textSize="18sp"
+        android:textColor="@color/font_black"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_20"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/indicator1"
+            style="@style/PasswordIndicator"
+            android:layout_marginLeft="0dp"
+            android:clickable="false"
+            android:focusable="false"/>
+
+        <CheckBox
+            android:id="@+id/indicator2"
+            style="@style/PasswordIndicator"
+            android:clickable="false"
+            android:focusable="false"/>
+
+        <CheckBox
+            android:id="@+id/indicator3"
+            style="@style/PasswordIndicator"
+            android:clickable="false"
+            android:focusable="false"/>
+
+        <CheckBox
+            android:id="@+id/indicator4"
+            style="@style/PasswordIndicator"
+            android:clickable="false"
+            android:focusable="false"/>
+
+        <CheckBox
+            android:id="@+id/indicator5"
+            style="@style/PasswordIndicator"
+            android:clickable="false"
+            android:focusable="false"/>
+
+        <CheckBox
+            android:id="@+id/indicator6"
+            style="@style/PasswordIndicator"
+            android:clickable="false"
+            android:focusable="false"/>
+    </LinearLayout>
+
+    <TextView style="@style/mw_style"
+        android:padding="15dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/mTvShowTimeOut"
+        android:text=""
+        android:textColor="#00B77C"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_40"
+        android:paddingRight="@dimen/margin_40">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/info_divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/BaseText.Tip"
+                android:text="@string/label_trans_type"/>
+
+            <TextView
+                android:id="@+id/trans_type_show"
+                style="@style/BaseText.Tip.Dark"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/trans_money_block"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/BaseText.Tip"
+                android:text="@string/label_trans_amt"/>
+
+            <TextView
+                android:id="@+id/trans_money_show"
+                style="@style/BaseText.Tip.Dark"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/BaseText.Tip"
+                android:text="@string/label_trans_card"/>
+
+            <TextView
+                android:id="@+id/trans_card_show"
+                style="@style/BaseText.Tip.Dark"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/info_divider"/>
+    </LinearLayout>
+
+
+    <Button
+        style="@style/BaseButton.Positive"
+        android:layout_marginLeft="@dimen/margin_40"
+        android:layout_marginRight="@dimen/margin_40"
+        android:layout_marginTop="@dimen/margin_100"
+        android:onClick="onConfirmClick"
+        android:visibility="gone"/>
+
+</LinearLayout>

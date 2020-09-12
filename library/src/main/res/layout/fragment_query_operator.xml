@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView style="@style/ww_style"
+        android:id="@+id/mBtnAdd"
+        android:text="新增"
+        android:textColor="@color/font_white"
+        android:background="@drawable/btn_add_bg"
+        android:layout_marginLeft="25pt"
+        android:layout_marginTop="8pt"
+        android:layout_marginBottom="8pt"
+        android:textSize="12pt"
+        android:paddingLeft="13pt"
+        android:paddingRight="13pt"
+        android:paddingTop="5pt"
+        android:paddingBottom="5pt"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30pt"
+        android:background="#3EA958"
+        android:orientation="horizontal">
+        <TextView android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/font_white"
+            android:text="操作员号"
+            android:gravity="center"
+            android:textSize="10pt"/>
+        <TextView android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/font_white"
+            android:text="操作"
+            android:gravity="center"
+            android:textSize="10pt"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lstvw_opt"
+        android:layout_marginTop="-4dp"
+        android:layout_width="match_parent"
+        android:layout_above="@id/mHotLine"
+        android:divider="@null"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_frame5"
+        android:layout_marginBottom="50dp"
+        android:paddingBottom="25dp"/>
+
+</LinearLayout>

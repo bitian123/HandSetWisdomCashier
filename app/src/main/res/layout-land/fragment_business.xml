@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/TradeFragment"
+    android:background="@color/e10_f3_color"
+    android:gravity="center_horizontal">
+
+    <include layout="@layout/common_title_layout" />
+
+    <RelativeLayout style="@style/mw_style"
+        android:layout_marginTop="10pt">
+        <TextView style="@style/ww_style"
+            android:id="@+id/mTvShowTimeOut"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="60秒"
+            android:gravity="center"
+            android:paddingLeft="30pt"
+            android:textSize="15pt"
+            android:background="@drawable/icon_time"
+            android:textColor="@color/font_white"/>
+
+        <LinearLayout style="@style/mw_style"
+            android:orientation="horizontal"
+            android:layout_toLeftOf="@id/mTvShowTimeOut"
+            android:gravity="center">
+            <ImageView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mIvTip"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/step_3"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/mm_style">
+        <LinearLayout style="@style/e10_content_style"
+            android:orientation="horizontal"
+            android:id="@+id/mViewAccount"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50pt"
+                android:id="@+id/mBtnSale"
+                android:background="@drawable/business_sale"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50pt"
+                android:layout_marginLeft="50pt"
+                android:id="@+id/mBtnPrint"
+                android:background="@drawable/business_print"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:id="@+id/mBtnRefund"
+                android:visibility="gone"
+                android:background="@drawable/business_refund"
+                />
+        </LinearLayout>
+
+        <ImageButton style="@style/ww_style"
+            android:id="@+id/mBtnFinish"
+            android:background="@drawable/btn_exit"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15pt"/>
+
+        <ImageButton style="@style/ww_style"
+            android:id="@+id/imgbtn_back"
+            android:background="@drawable/btn_back"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15pt"/>
+    </RelativeLayout>
+
+</LinearLayout>

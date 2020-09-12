@@ -1,0 +1,25 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.centerm.epos.ebi">
+
+    <application
+            android:name="com.centerm.epos.ebi.App"
+            android:allowBackup="true"
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher_round"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:largeHeap="true"
+            android:hardwareAccelerated="false"
+            android:theme="@style/EPosAppTheme">
+
+        <activity android:name=".ui.activity.ScanQueryTradeActivity"/>
+        <activity android:name=".ui.activity.ScanTradeDetailActivity"/>
+        <activity android:name=".ui.activity.TradeDetailActivity"/>
+        <activity android:name=".ui.activity.QueryTradeActivity"/>
+        <activity android:name=".ui.activity.EbiTMKByICActivity"/>
+        <activity android:name=".ui.activity.TMKByICActivity"/>
+        <activity android:name=".ui.activity.ScanCommunicationSettingsActivity"/>
+        <activity android:name=".ui.activity.GtCommunicationSettingsActivity"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,19 @@
+<!--节点ID为0，代表主界面-->
+<!--快速支付流程-->
+<process transCode="">
+    <!--检卡-->
+    <component name="com.centerm.epos.fragment.trade.CheckCardFragment" id="1">
+        <condition id="1">2</condition>
+        <condition id="2">3</condition>
+        <condition id="99">3</condition>
+    </component>
+    <!--交易结果-->
+    <component name="com.centerm.epos.fragment.trade.ShowIccLoadRecordsFragment"  id="2">
+        <condition id="1">0</condition>
+    </component>
+
+    <!--交易结果-->
+    <component name="com.centerm.epos.fragment.trade.ResultFragment"  id="3">
+        <condition id="1">0</condition>
+    </component>
+</process>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/login_bg">
+
+    <LinearLayout android:layout_width="555pt"
+        android:layout_height="250pt"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_frame_login">
+
+        <LinearLayout android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <RelativeLayout style="@style/mm_style">
+                <ImageView style="@style/ww_style"
+                    android:src="@drawable/login_left"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <ImageView style="@style/ww_style"
+                android:id="@+id/mIvLogo"
+                android:background="@drawable/logo_gt"
+                android:layout_marginTop="30pt"/>
+
+            <com.centerm.epos.view.ClearEditText
+                android:id="@+id/account_edit"
+                style="@style/LoginItemStyle.Account"
+                android:background="@drawable/bg_login_et"
+                android:layout_width="200pt"
+                android:textSize="12pt"
+                android:paddingLeft="15pt"
+                android:paddingRight="15pt"
+                android:layout_height="35pt"
+                android:layout_marginTop="25pt"/>
+
+            <com.centerm.epos.view.ClearEditText
+                android:id="@+id/pwd_edit"
+                style="@style/LoginItemStyle.Pwd"
+                android:layout_marginTop="15pt"
+                android:layout_width="200pt"
+                android:layout_height="35pt"
+                android:paddingRight="15pt"
+                android:textSize="12pt"
+                android:paddingLeft="15pt"
+                android:background="@drawable/bg_login_et"/>
+
+            <Button
+                android:id="@+id/btn_login"
+                style="@style/LoginLayoutStyle.Button2"
+                android:layout_marginTop="20pt"
+                android:textSize="14pt"
+                android:layout_width="200pt"
+                android:layout_height="30pt"/>
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mHotLine"
+                    android:text="4007008010"
+                    android:drawableLeft="@drawable/hotline_icon"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/tip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/version_show"
+                    style="@style/BaseText.Tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="版本号"
+                    android:textSize="15sp"
+                    android:textColor="@color/tip"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:padding="@dimen/margin_10"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

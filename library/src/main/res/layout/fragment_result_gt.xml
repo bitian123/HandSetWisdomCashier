@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/secondary_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_title_layout" />
+
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mIvTip"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/card_step6"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/flagIconShow"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/sale_success"/>
+
+    <LinearLayout
+        android:id="@+id/result_info_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:layout_marginTop="-3dp"
+        android:background="@drawable/bg_frame5">
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tip_take_out"
+        style="@style/BaseText.Tip.Dark"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_40"
+        android:text="@string/tip_take_out_card"
+        android:textColor="@color/font_red"
+        android:textSize="@dimen/font_42"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/mBtnNext"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:background="@drawable/btn_login_bg"
+            android:text="继续刷卡"
+            android:layout_centerHorizontal="true"
+            android:textSize="17sp"
+            android:textColor="@color/font_white"/>
+
+        <TextView
+            android:id="@+id/mBtnPrint"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_login_bg"
+            android:text="单据打印"
+            android:visibility="gone"
+            android:layout_gravity="right"
+            android:textSize="17sp"
+            android:textColor="@color/font_white"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/mBtnQuery"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:background="@drawable/btn_login_bg"
+        android:text="交易结果查询"
+        android:layout_gravity="center_horizontal"
+        android:textSize="17sp"
+        android:visibility="gone"
+        android:textColor="@color/font_white"/>
+
+    <include layout="@layout/view_bottom_time_out"/>
+
+</LinearLayout>

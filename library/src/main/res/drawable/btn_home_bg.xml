@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<item android:drawable="@drawable/btn" android:state_pressed="true"/>-->
+    <!--<item android:drawable="@drawable/btn" android:state_selected="true"/>-->
+    <!--<item android:drawable="@drawable/btn" android:state_focused="true"/>-->
+
+    <item android:drawable="@drawable/btn_home_pre" android:state_pressed="true"/>
+    <item android:drawable="@drawable/btn_home_pre" android:state_selected="true"/>
+    <item android:drawable="@drawable/btn_home_pre" android:state_focused="true"/>
+    <item android:drawable="@drawable/btn_home"/>
+
+</selector>
+<!--<ripple-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:color="#e63f97f2">-->
+
+    <!--<item android:drawable="@drawable/btn_home"/>-->
+<!--</ripple>-->

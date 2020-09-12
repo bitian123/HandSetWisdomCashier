@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@android:color/white">
+
+    <ImageView style="@style/LoginTopIconStyle"
+        android:id="@+id/mIvBg"
+        android:src="@drawable/bg_login"/>
+
+    <LinearLayout style="@style/LoginLayoutStyle.Account"
+        android:layout_marginTop="50dp"
+        android:id="@+id/mLl1">
+
+        <ImageView style="@style/LoginIconStyle.Account" />
+
+        <com.centerm.epos.view.ClearEditText
+            android:id="@+id/account_edit"
+            style="@style/LoginItemStyle.Account" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/LoginLayoutStyle.Pwd"
+        android:id="@+id/mLl2">
+
+        <ImageView style="@style/LoginIconStyle.Pwd" />
+
+        <com.centerm.epos.view.ClearEditText
+            android:id="@+id/pwd_edit"
+            style="@style/LoginItemStyle.Pwd"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/LoginLayoutStyle.Button2"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mHotLine"
+            android:text="4007008010"
+            android:drawableLeft="@drawable/hotline_icon"
+            android:drawablePadding="5dp"
+            android:textColor="@color/tip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/version_show"
+            style="@style/BaseText.Tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="版本号"
+            android:textSize="12sp"
+            android:textColor="@color/tip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/margin_10"/>
+    </RelativeLayout>
+
+</LinearLayout>

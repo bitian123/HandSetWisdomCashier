@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="scan_code_max_len">20</integer>
+    <integer name="date_max_len">4</integer>
+    <integer name="integral_goods_code_max_len">30</integer>
+    <integer name="cardholder_info_max_len">20</integer>
+    <integer name="phone_number_max_len">11</integer>
+    <integer name="reservation_phone_number_min_len">4</integer>
+    <integer name="reservation_number_max_len">6</integer>
+    <integer name="card_number_max_len">19</integer>
+    <integer name="card_number_min_len">13</integer>
+
+    <integer name="offline_auth_code_max_len">6</integer>
+    <integer name="offline_original_code_max_len">11</integer>
+</resources>

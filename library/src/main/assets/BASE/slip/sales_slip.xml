@@ -1,0 +1,83 @@
+<!--
+    属性说明：
+    tag：打印元素的标识，具有唯一性
+    label：标签，例如“商户名”
+    enLabel：英文标签，例如“MERCHANT NAME”
+    align：对齐方式，可选值：LEFT,CENTER,RIGHT，默认为LEFT
+    //default：默认值，如果value为空，则取该值进行打印
+    enable：是否打印该值，可选值：TRUE,FALSE，默认为true
+    font：字号大小，可选值：SMALL,MEDIUM,LARGE，默认为MEDIUM
+    isBold：是否加粗，可选值：TRUE,FALSE，默认为FALSE
+    type：元素类型，可选值：TEXT,BARCODE,PIC，默认为TEXT
+    belongs：签购单所属，可选值：MERCHANT,CARD_HOLDER,BOTH，默认为BOTH
+    source：值来源，可选值：CONSTANT,VARIABLE,CLASS，默认为VAR
+    value：值
+    isPrintNull:默认为TRUE 打印，FASE 不打印，当value为空时是否打印该行, TEXT有有效
+    condition: 打印条件，IC
+    isWrapValue：是否将标签和值进行换行显示，可选值：TRUE,FALSE，默认为FALSE
+        valueFont：值的字号大小，可选值：SMALL,MEDIUM,LARGE，默认为MEDIUM
+        valueAlign：值的对齐方式，可选值：LEFT,MIDDLE,RIGHT，默认为LEFT
+        valueIsBold：值是否加粗，可选值：TRUE,FALSE，默认为FALSE
+    -->
+
+<Slip version="2">
+    <Item _tag="1F01" align="CENTER" enLabel="" enable="TRUE" font="LARGE" isBold="FALSE" label="" type="TEXT"/><!--签购单头部-->
+    <Item _tag="1F02" align="CENTER" belongs="MERCHANT" value="------------商户存根------------"/>
+    <Item _tag="1F03" align="CENTER" belongs="CARD_HOLDER" value="-----------持卡人存根-----------"/>
+
+    <Item _tag="3F01" condition="RE_PRINT" value="--- 重打印 ---"/>
+
+    <Item _tag="1F04" enLabel="MERCHANT NAME" label="商户名" isWrapValue="TRUE" valueIsBold="TRUE"/>
+    <Item _tag="1F05" enLabel="MERCHANT NO." label="商户号" isWrapValue="TRUE"/>
+    <Item _tag="1F06" enLabel="TERMINAL NO." label="终端号"/>
+    <Item _tag="1F07" enLabel="OPERATOR NO." label="操作员号"/>
+    <Item _tag="1F08" enLabel="ISSUER" label="发卡行"/>
+    <Item _tag="1F09" enLabel="ACQUIRER" label="收单行"/>
+    <Item _tag="1F10" enLabel="CARD NO." isWrapValue="TRUE" label="卡号" valueFont="LARGE" valueIsBold="TRUE"/>
+    <Item _tag="1F11" enLabel="EXP DATE" label="有效期"/>
+    <Item _tag="1F12" enLabel="TRANS TYPE" isWrapValue="TRUE" label="交易类型" valueAlign="LEFT" valueFont="LARGE" valueIsBold="TRUE"/>
+    <Item _tag="1F13" enLabel="BATCH NO." label="批次号"/>
+    <Item _tag="1F14" enLabel="VOUCHER NO." label="凭证号"/>
+    <Item _tag="1F15" enLabel="AUTH NO." label="授权码"/>
+    <Item _tag="1F16" enLabel="REFER NO." label="参考号"/>
+    <Item _tag="1F17" enLabel="DATE/TIME" isWrapValue="TRUE" label="日期/时间"/>
+    <Item _tag="1F18" enLabel="AMOUNT" isWrapValue="TRUE" label="金额" valueAlign="CENTER" valueFont="LARGE" valueIsBold="TRUE"/>
+
+    <Item _tag="0F01" value="-------------------------------"/>
+    <Item _tag="1F19" enLabel="REFERENCE" font="SMALL" label="备注" valueFont="SMALL"/>
+    <Item _tag="1F25" enLabel="VOUCHER" font="SMALL" label="原凭证号" valueFont="SMALL" isPrintNull="FALSE"/>
+    <Item _tag="1F26" enLabel="REFER NO" font="SMALL" label="原参考号" valueFont="SMALL" isPrintNull="FALSE"/>
+    <Item _tag="1F27" enLabel="ORG DATE" font="SMALL" label="原交易日期" valueFont="SMALL" isPrintNull="FALSE"/>
+    <Item _tag="1F28" enLabel="AUTH NO" font="SMALL" label="原授权码" valueFont="SMALL" isPrintNull="FALSE"/>
+
+    <Item _tag="1F2A" enLabel="EC BALANCE" font="LARGE" label="电子现金余额" valueFont="LARGE" isPrintNull="FALSE"/>
+    <Item _tag="1F2B" enLabel="BALANCE" font="SMALL" label="余额" valueFont="LARGE" isPrintNull="FALSE"/>
+    <Item _tag="1F2C" enLabel="ECA" font="LARGE" label="充值后卡片余额" valueFont="LARGE" isPrintNull="FALSE"/>
+
+    <Item _tag="1F2D" enLabel="TERM ID" font="SMALL" label="原终端号" valueFont="SMALL" isPrintNull="FALSE"/>
+    <Item _tag="1F2E" enLabel="BATCH NO" font="SMALL" label="原批次号" valueFont="SMALL" isPrintNull="FALSE"/>
+    <Item _tag="1F2F" enLabel="Into Account" font="SMALL" label="转入卡" valueFont="SMALL" isPrintNull="FALSE"/>
+    <Item _tag="1F50" enLabel="Points Balance" font="SMALL" label="积分余额" valueFont="SMALL" isPrintNull="FALSE"/>
+
+    <Item _tag="1F29" enLabel="Host" font="SMALL" label="附加信息" valueFont="SMALL" isWrapValue="TRUE" isPrintNull="FALSE"/>
+
+    <Item _tag="0F00" condition="IC_TRADE" value=" "/>
+    <Item _tag="2F00" label="TC" font="SMALL" condition="IC_TRADE" isPrintNull="FALSE"/>
+    <Item _tag="2F01" label="ARQC" font="SMALL" condition="IC_TRADE" isPrintNull="FALSE"/>
+    <Item _tag="2F02" label="TVR" font="SMALL" condition="IC_TRADE" isPrintNull="FALSE"/>
+    <Item _tag="2F03" label="AID" font="SMALL" condition="IC_TRADE" isPrintNull="FALSE"/>
+    <Item _tag="2F04" label="ATC" font="SMALL" condition="IC_TRADE" isPrintNull="FALSE"/>
+    <Item _tag="2F05" label="UMPR MUM" font="SMALL" condition="IC_TRADE" isPrintNull="FALSE"/>
+    <Item _tag="2F06" label="AIP" font="SMALL" condition="IC_TRADE" isPrintNull="FALSE"/>
+    <Item _tag="2F07" label="IAD" font="SMALL" condition="IC_TRADE" isPrintNull="FALSE"/>
+    <!--增加IC卡卡片序列号的打印-->
+    <Item _tag="2F08" label="CSN" font="SMALL" condition="IC_TRADE" isPrintNull="FALSE"/>
+
+    <Item _tag="1F99" condition="IC_TRADE" value=""/>
+
+    <Item _tag="1F22" belongs="MERCHANT" condition="IC_TRADE"/>
+
+    <Item _tag="1F20" belongs="MERCHANT" enLabel="CARD HOLDER SIGNATURE" font="SMALL" isWrapValue="true" label="持卡人签名"/>
+    <Item _tag="1F30" belongs="MERCHANT" isWrapValue="true" type="PIC"/>
+    <Item _tag="1F21" align="CENTER" belongs="MERCHANT" font="SMALL" value="本人确认以上交易，同意将其计入本人账户\nI ACKNOWLEDGE SATISFACTORY RECEIPT OF RELATIVE \nGOODS/SERVICE"/>
+</Slip>

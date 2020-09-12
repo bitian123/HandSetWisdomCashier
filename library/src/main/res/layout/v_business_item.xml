@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:background="@android:color/white"
+    android:orientation="horizontal">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <CheckBox
+            android:id="@+id/mCbItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:clickable="false"
+            android:focusable="false"
+            style="@style/MyCheckBox"/>
+
+        <TextView
+            android:id="@+id/mMoneyType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text=""
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:textColor="#40AFFF"/>
+
+        <TextView
+            android:id="@+id/mBillId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_marginTop="3dp"
+            android:text="xxxx"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/mMoneyType"
+            android:layout_toRightOf="@id/mCbItem"
+            android:textColor="@color/font_black"/>
+
+        <TextView
+            android:id="@+id/mTvDeail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_below="@id/mBillId"
+            android:text="款项详情"
+            android:drawablePadding="5dp"
+            android:padding="8dp"
+            android:drawableLeft="@drawable/detail_icon"
+            android:layout_alignParentRight="true"
+            android:textColor="#00B77C"/>
+
+        <TextView
+            android:id="@+id/mName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_below="@id/mBillId"
+            android:text="yyyy"
+            android:layout_toLeftOf="@id/mTvDeail"
+            android:layout_marginTop="@dimen/v_business_item_margin_top"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/mCbItem"
+            android:textColor="@color/tip4D"/>
+
+        <TextView
+            android:id="@+id/mUnpaidAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_below="@id/mName"
+            android:text="yyyy"
+            android:layout_marginTop="@dimen/v_business_item_margin_top"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/mCbItem"
+            android:textColor="@color/tip4D"/>
+
+        <TextView
+            android:id="@+id/mTvTip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_below="@id/mUnpaidAmount"
+            android:text="本次付款金额: "
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/v_business_item_margin_top"
+            android:layout_toRightOf="@id/mCbItem"
+            android:textColor="@color/tip4D"/>
+
+        <com.centerm.epos.view.MyEditText
+            android:id="@+id/mEtAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="30dp"
+            android:textSize="13sp"
+            android:layout_below="@id/mUnpaidAmount"
+            android:text="0.00"
+            android:focusable="false"
+            android:textCursorDrawable="@drawable/edittext_cursor"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="@dimen/v_business_item_margin_top"
+            android:layout_toRightOf="@id/mTvTip1"
+            android:textColor="@color/tip4D"
+            android:background="@null"/>
+
+        <ImageView style="@style/ww_style"
+            android:id="@+id/mBtnClear"
+            android:visibility="gone"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/wl_ic_clear"
+            android:layout_below="@id/mUnpaidAmount"
+            android:layout_toRightOf="@id/mEtAmt"
+            android:layout_marginTop="6dp"
+            android:paddingBottom="@dimen/v_business_item_margin_top"/>
+
+        <TextView
+            android:id="@+id/mTvTip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_below="@id/mUnpaidAmount"
+            android:text="元"
+            android:drawableRight="@drawable/edit_icon"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="@dimen/v_business_item_margin_top"
+            android:paddingBottom="@dimen/v_business_item_margin_top"
+            android:paddingLeft="5dp"
+            android:layout_toRightOf="@id/mEtAmt"
+            android:textColor="@color/tip4D"/>
+
+        <TextView
+            android:id="@+id/mTvSettlement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_below="@id/mTvTip1"
+            android:text="结算账户: "
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/v_business_item_margin_top"
+            android:layout_toRightOf="@id/mCbItem"
+            android:textColor="#999999"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--该文件用来控制imageview-->
+<!--<selector xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+    <!--&lt;!&ndash;&lt;!&ndash;<item android:drawable="@drawable/icon_home_consume_pre" android:state_pressed="true"/>&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;<item android:drawable="@drawable/icon_home_consume_pre" android:state_selected="true"/>&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;<item android:drawable="@drawable/icon_home_consume_pre" android:state_focused="true"/>&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;<item android:drawable="@drawable/icon_home_consume"/>&ndash;&gt;&ndash;&gt;-->
+
+    <!--&lt;!&ndash;&lt;!&ndash;<item android:drawable="@drawable/icon_home_consume" android:state_pressed="true"/>&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;<item android:drawable="@drawable/icon_home_consume" android:state_selected="true"/>&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;<item android:drawable="@drawable/icon_home_consume" android:state_focused="true"/>&ndash;&gt;&ndash;&gt;-->
+    <!--<item android:drawable="@drawable/icon_home_consume"/>-->
+
+<!--</selector>-->
+
+<!--<ripple-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:color="#e63f97f2">-->
+
+    <!--<item android:drawable="@drawable/icon_home_consume"/>-->
+<!--</ripple>-->
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+     android:src="@drawable/icon_home_consume"
+    />

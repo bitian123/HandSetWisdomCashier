@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/trading_window_bg">
+
+
+    <TextView
+        android:id="@+id/hint_text_show"
+        style="@style/BaseText"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/tip_trading_default"/>
+
+
+    <ImageView
+        android:id="@+id/trading_logo_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/hint_text_show"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/anim_trading"/>
+
+</RelativeLayout>

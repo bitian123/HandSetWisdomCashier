@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@drawable/bg_menu_sys">
+    <RelativeLayout style="@style/mw_style"
+        android:layout_marginTop="25dp">
+        <ImageView style="@style/ww_style"
+            android:background="@drawable/gt_logo"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginTop="16dp"/>
+        <TextView style="@style/ww_style"
+            android:text="终端管理系统"
+            android:textColor="#004E2B"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="@dimen/common_margin"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/mw_style"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginBottom="20dp">
+        <TextView style="@style/ww_style"
+            android:text="重打POS小票"
+            android:textColor="@color/font_black"
+            android:layout_centerVertical="true"
+            android:textSize="21sp"/>
+
+        <RelativeLayout android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:id="@+id/mBtnReturn"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_frame6"
+            android:layout_alignParentRight="true">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="返回"
+                android:layout_centerInParent="true"
+                android:textSize="16sp"
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                android:padding="5dp"
+                android:drawablePadding="3dp"
+                android:drawableLeft="@drawable/icon_return2"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/mw_style"
+        android:id="@+id/mBtnPrintLast"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:background="@drawable/bg_frame5"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+        <TextView style="@style/ww_style"
+            android:text="重打最后一笔"
+            android:textColor="@color/font_black"
+            android:textSize="20sp"
+            android:layout_marginLeft="50dp"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/icon_print_last"/>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/mw_style"
+        android:id="@+id/mBtnPrintAny"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:background="@drawable/bg_frame5"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+        <TextView style="@style/ww_style"
+            android:text="重打任意一笔"
+            android:textColor="@color/font_black"
+            android:textSize="20sp"
+            android:layout_marginLeft="50dp"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/icon_print_any"/>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/mw_style"
+        android:id="@+id/mBtnQuery"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:background="@drawable/bg_frame5"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:visibility="invisible">
+        <TextView style="@style/ww_style"
+            android:text="异常交易查询"
+            android:textColor="@color/font_black"
+            android:textSize="20sp"
+            android:layout_marginLeft="50dp"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/icon_ab"/>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/mm_style">
+        <TextView style="@style/ww_style"
+            android:id="@+id/mHotLine"
+            android:text="4007008010"
+            android:textColor="#004E2B"
+            android:drawableLeft="@drawable/sys_hotline_icon"
+            android:drawablePadding="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

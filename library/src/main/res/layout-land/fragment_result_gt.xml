@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/secondary_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_title_layout" />
+
+    <RelativeLayout style="@style/mw_style"
+        android:layout_marginTop="10pt">
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mIvTip"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/card_step5"/>
+        <TextView style="@style/ww_style"
+            android:id="@+id/mTvShowTimeOut"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="60秒"
+            android:gravity="center"
+            android:paddingLeft="30pt"
+            android:textSize="15pt"
+            android:background="@drawable/icon_time"
+            android:textColor="@color/font_white"/>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/mm_style">
+        <RelativeLayout style="@style/e10_content_style"
+            android:id="@+id/mViewFinger">
+            <ImageView style="@style/ww_style"
+                android:id="@+id/mIvTipPic"
+                android:layout_marginLeft="45pt"
+                android:background="@drawable/sale_success"
+                android:layout_centerVertical="true"/>
+            <LinearLayout style="@style/mm_style"
+                android:orientation="vertical"
+                android:layout_toRightOf="@id/mIvTipPic">
+
+                <LinearLayout style="@style/ww_style"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="35pt"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView android:layout_width="25pt"
+                        android:layout_height="25pt"
+                        android:background="@drawable/result_ok"
+                        android:id="@+id/flagIconShow"/>
+                    <TextView
+                        style="@style/ww_style"
+                        android:id="@+id/mTvResultTip"
+                        android:text="交易成功"
+                        android:textSize="15pt"
+                        android:layout_marginLeft="15pt"
+                        android:textColor="#333333"/>
+                </LinearLayout>
+
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="15pt"
+                    android:layout_marginLeft="30pt"
+                    android:layout_marginRight="30pt"
+                    android:layerType="software"
+                    android:background="@drawable/dotted_line"/>
+
+                <LinearLayout
+                    android:id="@+id/result_info_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40pt"
+                    android:layout_marginRight="40pt"
+                    android:orientation="vertical"
+                    android:paddingTop="16dp">
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tip_take_out"
+                    style="@style/BaseText.Tip.Dark"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_40"
+                    android:text="@string/tip_take_out_card"
+                    android:textColor="@color/font_red"
+                    android:textSize="12pt"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/mw_style"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10pt"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/mBtnNext"
+                    android:layout_width="100pt"
+                    android:layout_height="30pt"
+                    android:gravity="center"
+                    android:textSize="14pt"
+                    android:background="@drawable/btn_login_bg_gray"
+                    android:textColor="@color/font_white"
+                    android:text="继续刷卡"/>
+
+                <TextView
+                    android:id="@+id/mBtnPrint"
+                    android:layout_width="100pt"
+                    android:layout_height="30pt"
+                    android:gravity="center"
+                    android:textSize="14pt"
+                    android:layout_marginLeft="25pt"
+                    android:textColor="@color/font_white"
+                    android:text="单据打印"
+                    android:visibility="gone"
+                    android:background="@drawable/btn_login_bg"/>
+
+                <TextView
+                    android:id="@+id/mBtnQuery"
+                    android:layout_width="100pt"
+                    android:layout_height="30pt"
+                    android:gravity="center"
+                    android:textSize="14pt"
+                    android:layout_marginLeft="25pt"
+                    android:textColor="@color/font_white"
+                    android:text="交易结果查询"
+                    android:visibility="gone"
+                    android:background="@drawable/btn_login_bg"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageButton style="@style/ww_style"
+            android:id="@+id/mBtnFinish"
+            android:background="@drawable/btn_exit"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15pt"/>
+
+        <ImageButton style="@style/ww_style"
+            android:id="@+id/imgbtn_back"
+            android:background="@drawable/btn_back"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15pt"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

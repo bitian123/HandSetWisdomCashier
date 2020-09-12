@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/font_white">
+
+    <TextView style="@style/ww_style"
+        android:id="@+id/mTvOperNum"
+        android:text="操作员号"
+        android:textSize="12pt"
+        android:paddingTop="40pt"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#666666"/>
+
+    <LinearLayout style="@style/mw_style"
+        android:orientation="vertical"
+        android:layout_marginTop="10pt"
+        android:paddingLeft="120pt">
+
+        <LinearLayout style="@style/mw_style"
+            android:orientation="horizontal"
+            android:layout_marginTop="10pt"
+            android:gravity="center_vertical">
+            <TextView style="@style/ww_style"
+                android:id="@+id/mTv1"
+                android:text="   原密码:"
+                android:textSize="12pt"
+                android:textColor="#666666"/>
+
+            <com.centerm.epos.view.ClearEditText
+                android:id="@+id/edtxt_old_pwd"
+                style="@style/LoginItemStyle.Pwd"
+                android:layout_width="200pt"
+                android:layout_height="35pt"
+                android:hint=""
+                android:layout_marginLeft="8pt"
+                android:paddingRight="10pt"
+                android:textSize="12pt"
+                android:maxLength="20"
+                android:paddingLeft="15pt"
+                android:background="@drawable/bg_login_et"/>
+        </LinearLayout>
+
+        <LinearLayout style="@style/mw_style"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20pt">
+            <TextView style="@style/ww_style"
+                android:text="   新密码:"
+                android:textSize="12pt"
+                android:textColor="#666666"/>
+
+            <com.centerm.epos.view.ClearEditText
+                android:id="@+id/edtxt_new_pwd"
+                style="@style/LoginItemStyle.Pwd"
+                android:layout_width="200pt"
+                android:hint=""
+                android:layout_marginLeft="8pt"
+                android:paddingRight="10pt"
+                android:layout_height="35pt"
+                android:textSize="12pt"
+                android:maxLength="20"
+                android:paddingLeft="15pt"
+                android:background="@drawable/bg_login_et"/>
+        </LinearLayout>
+
+        <LinearLayout style="@style/mw_style"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20pt">
+            <TextView style="@style/ww_style"
+                android:text="确认密码:"
+                android:textSize="12pt"
+                android:textColor="#666666"/>
+
+            <com.centerm.epos.view.ClearEditText
+                android:id="@+id/edtxt_renew_pwd"
+                style="@style/LoginItemStyle.Pwd"
+                android:layout_width="200pt"
+                android:hint=""
+                android:layout_marginLeft="8pt"
+                android:paddingRight="10pt"
+                android:layout_height="35pt"
+                android:textSize="12pt"
+                android:maxLength="20"
+                android:paddingLeft="15pt"
+                android:background="@drawable/bg_login_et"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/mw_style"
+        android:orientation="horizontal"
+        android:layout_marginTop="50pt"
+        android:gravity="center_horizontal">
+        <Button
+            style="@style/LoginLayoutStyle.Button2"
+            android:textSize="14pt"
+            android:text="返回"
+            android:visibility="gone"
+            android:id="@+id/mBtnBack"
+            android:background="@drawable/btn_login_bg_gray"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="100pt"
+            android:layout_height="30pt"/>
+
+        <Button
+            style="@style/LoginLayoutStyle.Button2"
+            android:textSize="14pt"
+            android:text="修改"
+            android:id="@+id/mBtnModify"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="100pt"
+            android:layout_height="30pt"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

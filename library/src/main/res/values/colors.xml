@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d33530</color>//#D0262A<!--程序主色调-->
+    <color name="colorPrimaryDark">#000000</color>//#D0262A
+    <color name="colorAccent">#00B77C</color>
+    <color name="colorMenuRipple">#f2f0f0</color>
+    <color name="trading_window_bg">#A3000000</color>
+
+    <color name="common_main_bg">#ffffff</color><!--窗口背景色-->
+    <color name="common_divider">#cccccc</color>
+    <color name="common_list_item_pre_bg">#f2f0f0</color>
+    <color name="secondary_bg">#f4f1f3</color>
+    <color name="result_item_name_bg">#f2f2f2</color>
+
+    <!--涉及字体颜色的统一以font_为前缀-->
+    <color name="font_white">#FFFFFF</color>
+    <color name="font_black">#2b2525</color>
+    <color name="font_tip_check_card">#666666</color>
+    <color name="font_tip">#999999</color>
+    <color name="font_hint">#363636</color>
+    <color name="font_hint2">#BFBFBF</color>
+    <color name="font_tip_info">#666666</color>
+    <color name="font_blue_success">#3f97f2</color>
+    <color name="font_blue_fail">#fe593d</color>
+
+    <color name="font_red">#e05c58</color>
+    <color name="font_blue">#4495f1</color>
+
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+
+    <color name="num_padding_white">#FFFFFF</color>
+    <color name="white_divider">#FFFFFF</color>
+    <color name="colorPrimaryBlue">#3595f3</color>
+    <color name="colorPrimaryBlueTransparent">#803595f3</color>
+    <color name="pad_divider">#e6e6e6</color>
+    <color name="info_divider">#e6e6e6</color>
+
+
+    <color name="system_setting_bg">#edeef0</color>
+    <color name="common_bg">#edeef0</color>
+    <color name="common_bg_transparent_100">#00f5f6f7</color>  <!--完全透明-->
+
+
+    <color name="reading_icc_bg">#4D000000</color>  <!--70%透明度的 000000 -->
+    <color name="tran70">#B3000000</color>  <!--70%透明度的 000000 -->
+
+    <color name="result_divider">#cccccc</color>
+    <color name="tip">#B4B4B4</color>
+    <color name="tip4D">#4D4D4D</color>
+
+    <color name="e10_main_color">#F89847</color>
+    <color name="e10_exit_color">#69A646</color>
+    <color name="e10_hotline_color">#004E2B</color>
+    <color name="e10_f3_color">#F3F3F3</color>
+
+    <color name="color_yellow">#FF9800</color>
+    <color name="color_gray">#FFCBCBCB</color>
+
+
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/common_bg">
+
+    <include layout="@layout/common_title_layout"/>
+
+    <LinearLayout
+        android:id="@+id/trade_info_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_40"
+        android:layout_marginRight="@dimen/margin_40"
+        android:layout_marginTop="@dimen/margin_60"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <Button
+        style="@style/BaseButton.Positive"
+        android:id="@+id/mBtnPrint"
+        android:layout_marginLeft="@dimen/margin_40"
+        android:layout_marginRight="@dimen/margin_40"
+        android:layout_marginTop="@dimen/margin_60"
+        android:onClick="onReprintSlip"
+        android:background="@drawable/btn_login_bg"
+        android:text="@string/label_print_slip"/>
+
+    <Button
+        style="@style/BaseButton.Positive"
+        android:id="@+id/mBtnSendNotice"
+        android:layout_marginLeft="@dimen/margin_40"
+        android:layout_marginRight="@dimen/margin_40"
+        android:layout_marginTop="@dimen/margin_40"
+        android:onClick="onSendNotice"
+        android:visibility="gone"
+        android:text="发送交易结果通知"/>
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_title_height"
+    android:background="@drawable/bg_bar">
+
+    <ImageButton
+        android:id="@+id/imgbtn_back"
+        android:layout_width="@dimen/ic_back_width"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/sel_back_btn"
+        android:layout_marginTop="@dimen/margin_70"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/txtvw_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/font_white"
+        android:textSize="@dimen/font_title"
+        android:text=""
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_80"/>
+
+    <!--android:background="@drawable/btn_exit_bg"-->
+    <Button
+        android:id="@+id/btn_title_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_65"
+
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:onClick="onRightButtonClick"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_36"
+        android:visibility="gone"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginEnd="11dp"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_scan"
+        android:layout_marginTop="@dimen/margin_76"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:paddingEnd="20dp"
+        android:paddingStart="80dp"
+        android:src="@drawable/menu_sao"
+        android:background="@null"
+        android:visibility="gone"
+        />
+</RelativeLayout>

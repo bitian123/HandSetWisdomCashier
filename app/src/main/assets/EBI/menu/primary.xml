@@ -1,0 +1,84 @@
+<!--TAG说明：
+    Menu：父节点
+    MenuItem：叶子节点
+-->
+<!--属性说明：
+    chnTag：中文标签，必填。
+    enTag：英文标签，必填。
+    iconRes：图标资源名称，可填，如不指定，则使用默认图标。
+    textRes：菜单名资源名称，可填，如不指定，则使用中文标签。
+    isShow：是否显示，可填，如不指定，默认值为TRUE.可选值：TRUE（是），FALSE（否）。
+    structure：视图结构，可填，如不指定，默认值为GRID.可选值：GRID（九宫格），LIST（列表）。
+    process：流程文件名称的绝对路径，可填，如不指定，默认值为null
+    code：交易码，可填，如不指定，默认值为英文标签。
+    topView：顶部视图样式，可填，如不指定，默认值为TITLE.可选值：TITLE（显示标题栏）,BANNER（显示横幅）,MIX（都显示）,NONE（都不显示）。
+    itemStyle：菜单项的视图风格，可填，如不指定，DEF，可选值：DEF（默认样式）,TOGGLE（带开关样式）
+-->
+<Menu chnTag="银联支付" enTag="MAIN" iconRes="ic_menu_main" isShow="TRUE" structure="GRID" textRes="">
+    <MenuItem chnTag="扫码下单" enTag="SALE_PROPERTY" iconRes="icon_home_ywxd" isShow="FALSE" process="sale_property.xml"/>
+    <MenuItem chnTag="消费" enTag="SALE" iconRes="ic_menu_sale" isShow="TRUE" process="sale.xml" textRes="menu_sale"/>
+    <MenuItem chnTag="扫码消费" enTag="SALE_SCAN" iconRes="ic_menu_sale" isShow="FALSE" process="sale_scan.xml"/>
+
+    <MenuItem chnTag="银行卡消费撤销" enTag="VOID" process="void.xml"/>
+    <Menu chnTag="消费撤销" enTag="VOID" isShow="FALSE">
+        <MenuItem chnTag="银行卡消费撤销" enTag="VOID" process="void.xml"/>
+        <MenuItem chnTag="扫码撤销" enTag="SALE_SCAN_VOID" iconRes="ic_menu_void_scan" process="void_scan.xml" />
+    </Menu>
+    <Menu chnTag="退货" enTag="REFUND" isShow="FALSE">
+        <MenuItem chnTag="银行卡消费退货" enTag="REFUND" process="refund.xml"/>
+        <MenuItem chnTag="扫码退货" enTag="SALE_SCAN_REFUND" iconRes="ic_menu_refund_scan" process="refund_scan.xml" isShow="TRUE" />
+
+    </Menu>
+    <Menu chnTag="预授权" enTag="AUTHMENU" iconRes="ic_menu_auth" isShow="FALSE">
+        <MenuItem chnTag="预授权" enTag="AUTH" process="auth.xml"/>
+        <MenuItem chnTag="预授权完成（请求）" enTag="AUTH_COMPLETE" process="auth_complete.xml"/>
+        <MenuItem chnTag="预授权撤销" enTag="CANCEL" process="cancel.xml"/>
+        <MenuItem chnTag="预授权完成撤销" enTag="COMPLETE_VOID" process="complete_void.xml"/>
+    </Menu>
+
+    <!--<Menu chnTag="离线" enTag="OFFLINE" iconRes="ic_menu_offline" isShow="TRUE" structure="LIST">-->
+        <!--<MenuItem chnTag="离线结算" enTag="OFFLINE_SETTLEMENT" process="offline_settlement.xml"/>-->
+        <!--<MenuItem chnTag="离线调整" enTag="OFFLINE_ADJUST" process="offline_adjust.xml"/>-->
+    <!--</Menu>-->
+    <MenuItem chnTag="余额查询" enTag="BALANCE" process="balance.xml" isShow="TRUE"/>
+    <Menu chnTag="电子现金" enTag="ECASH_MENU" iconRes="ic_menu_ecash" structure="LIST" isShow="FALSE">
+        <MenuItem chnTag="快速支付" enTag="E_QUICK" process="ecash.xml" iconRes="icon_menu_cscd"/>
+        <MenuItem chnTag="普通支付" enTag="E_COMMON" process="ecash.xml" iconRes="icon_menu_cscd"/>
+        <MenuItem chnTag="脱机退货" enTag="E_REFUND" process="ec_refund.xml" iconRes="icon_menu_cscd"/>
+        <MenuItem chnTag="余额查询" enTag="E_BALANCE" process="ec_balance.xml" iconRes="ic_menu_trade_query"/>
+    </Menu>
+    <MenuItem chnTag="扫码订单查询" enTag="ORDER_QUERY" iconRes="ic_menu_balance" isShow="FALSE" />
+
+    <Menu chnTag="打印" enTag="print" structure="LIST" isShow="TRUE">
+        <MenuItem chnTag="重打最后一笔" enTag="PRINT_LAST"/>
+        <MenuItem chnTag="重打任意一笔" enTag="PRINT_ANY"/>
+        <MenuItem chnTag="打印交易明细" enTag="PRINT_DETAIL" isShow="FALSE"/>
+        <MenuItem chnTag="打印交易汇总" enTag="PRINT_SUMMARY" isShow="FALSE"/>
+        <MenuItem chnTag="打印上批总计" enTag="PRINT_BATCH_SUMMARY" iconRes="icon_menu_csdy" isShow="FALSE"/>
+    </Menu>
+    <Menu chnTag="管理" enTag="MANAGEMENT" structure="LIST">
+        <Menu chnTag="签到" enTag="POS_SIGN_IN" iconRes="ic_menu_sign_in">
+            <MenuItem chnTag="操作员签到" enTag="OPERATOR_SIGN_IN" iconRes="ic_menu_sign_in"/>
+            <MenuItem chnTag="终端签到" enTag="POS_SIGN_IN" iconRes="ic_menu_sign_in" process="online.xml"/>
+        </Menu>
+        <MenuItem chnTag="签退" enTag="POS_SIGN_OUT" iconRes="ic_menu_sign_out" isShow="FALSE"/>
+        <MenuItem chnTag="结算" enTag="SETTLEMENT"/>
+        <MenuItem chnTag="交易查询" enTag="TRADE_QUERY"/>
+        <MenuItem chnTag="下载签名密钥" enTag="DOWNLOAD_MAIN_KEY" iconRes="ic_menu_download" process="online.xml" isShow="FALSE"/>
+        <MenuItem chnTag="锁定终端" enTag="POS_LOCK" isShow="FALSE"/>
+        <MenuItem chnTag="终端版本" enTag="POS_VERSION" isShow="FALSE"/>
+    </Menu>
+    <Menu chnTag="其它" enTag="OTHER" structure="LIST" isShow="FALSE">
+        <MenuItem chnTag="插卡消费" enTag="SALE_INSERT" iconRes="ic_menu_download" isShow="FALSE" process="sale.xml"/>
+        <Menu chnTag="闪付凭密" enTag="QUICK_PIN" iconRes="ic_menu_download" structure="LIST">
+            <MenuItem chnTag="消费凭密" enTag="SALE_NEED_PIN" iconRes="ic_menu_download" isShow="TRUE" process="sale.xml"/>
+            <MenuItem chnTag="预授权凭密" enTag="AUTH_NEED_PIN" iconRes="ic_menu_download" isShow="TRUE" process="auth.xml"/>
+        </Menu>
+        <Menu chnTag="分期" enTag="INSTALLMENT" iconRes="ic_menu_download" isShow="FALSE">
+            <MenuItem chnTag="分期消费" enTag="SALE_INSTALLMENT" iconRes="ic_menu_sale" process="installment_sale.xml"/>
+            <MenuItem chnTag="分期消费撤销" enTag="VOID_INSTALLMENT" iconRes="ic_menu_void" process="void.xml"/>
+        </Menu>
+    </Menu>
+
+
+</Menu>

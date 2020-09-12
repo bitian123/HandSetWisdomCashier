@@ -1,0 +1,27 @@
+ext {
+    plugin = [
+            library    : 'com.android.library',
+            application: 'com.android.application'
+    ]
+
+    android = [
+            applicationId    : "com.centerm.epos.ebi",
+            compileSdkVersion: 25,
+            buildToolsVersion: "25.0.2",
+
+            minSdkVersion    : 17,
+            targetSdkVersion : 24,
+
+            versionCode      : 21,
+            versionName      : "1.0.2",
+
+            jackOptions      : true
+    ]
+
+    dependencies = [
+//            andserver: 'com.yanzhenjie:andserver:1.0.2',
+//            appCompat: 'com.android.support:appcompat-v7:25.2.0',
+//            design   : 'com.android.support:design:25.2.0',
+//            nohttp   : 'com.yanzhenjie.nohttp:nohttp:1.1.1'
+    ]
+}

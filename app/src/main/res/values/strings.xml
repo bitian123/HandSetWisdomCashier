@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">智慧收银</string>
+
+    <string name="pay_type_tip">请选择收款方式</string>
+    <string name="pay_type_card">银行卡</string>
+    <string name="pay_type_ali">支付宝</string>
+    <string name="pay_type_wei">微信</string>
+    <string name="pay_type_union">银联</string>
+
+    <string name="sale_scan_query">扫码消费</string>
+    <string name="sale_scan_void">扫码撤销</string>
+    <string name="sale_scan_refund">扫码退货</string>
+    <string name="order_query">订单查询</string>
+    <string name="pay_no_label">电银流水号</string>
+    <string name="ori_order_no_label">商户退款单号</string>
+    <string name="refund_result_label">退款结果</string>
+
+    <string name="label_serial_num_detail_ori_orderid">原订单号</string>
+    <string name="label_orderid">订单号</string>
+    <string name="tip_input_ori_order">请输入原订单号</string>
+    <string name="label_search">查询</string>
+    <string name="label_order_search">扫码订单查询</string>
+    <string name="tip_download_mainkey">下载签名密钥</string>
+    <string name="tip_download_pos_mainkey">下载主密钥</string>
+    <string name="tip_download_mainkey_success">下载签名密钥成功</string>
+    <string name="tip_download_mainkey_failed">下载签名密钥失败</string>
+    <string name="label_tmk_download_pos">POS主密钥远程下载</string>
+    <string name="label_tms_download_pos">终端参数下载</string>
+    <string name="label_e_common">普通支付</string>
+    <string name="label_e_refund">脱机退货</string>
+    <string name="label_sale_property">物业扫码下单</string>
+</resources>

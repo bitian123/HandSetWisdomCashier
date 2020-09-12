@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/trading_window_bg"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:paddingRight="20dp"
+        android:background="@drawable/bg_frame1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/black"
+                android:text="详情"
+                android:gravity="center_vertical"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/tv_page_number"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_alignParentRight="true"
+                android:text="第1/2页"
+                android:gravity="center_vertical"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+        <TextView android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layerType="software"
+            android:background="@drawable/dotted_line"/>
+        <ListView
+            android:id="@+id/list_union"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentStart="true">
+
+        </ListView>
+
+        <RelativeLayout style="@style/mw_style"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/mBtnConfirm"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="确定"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textColor="@color/font_white"
+                android:background="@drawable/btn_login_bg"/>
+
+            <TextView
+                android:id="@+id/mBtnCancel"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="取消"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textColor="@color/font_white"
+                android:background="@drawable/btn_login_bg_gray"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

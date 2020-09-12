@@ -1,0 +1,91 @@
+<!--节点ID为0，代表主界面-->
+<!--绿城认筹消费流程-->
+<process transCode="">
+
+    <component name="com.centerm.epos.ebi.ui.fragment.AuthTypeFragment"
+        id="18">
+        <condition id="1">19</condition>
+    </component>
+
+    <component name="com.centerm.epos.ebi.ui.fragment.AuthVerifyFragment"
+        id="19">
+        <condition id="1">20</condition>
+    </component>
+
+    <component name="com.centerm.epos.ebi.ui.fragment.BusinessTypeFragment"
+        id="20">
+        <condition id="1">21</condition>
+        <condition id="2">22</condition>
+        <condition id="3">23</condition>
+        <condition id="4">24</condition>
+    </component>
+    <component name="com.centerm.epos.ebi.ui.fragment.BusinessListFragment"
+        id="21">
+        <condition id="1">2</condition>
+        <condition id="2">20</condition>
+    </component>
+    <component name="com.centerm.epos.ebi.ui.fragment.DocumentListFragment"
+        id="22">
+        <condition id="1">2</condition>
+        <condition id="2">20</condition>
+    </component>
+
+    <!--检卡-->
+    <component name="com.centerm.epos.fragment.trade.CheckCardFragment"
+        present="com.centerm.epos.ebi.present.EbiCheckCardPresent"
+               id="2">
+        <condition id="1">4</condition>
+        <condition id="2">5</condition><!--小额免密直接开始联机-->
+        <condition id="3">3</condition><!--国际银联卡会要求输入主管密码-->
+        <condition id="99">7</condition>
+    </component>
+    <!--扫码-反扫-->
+    <component name="com.centerm.epos.ebi.ui.fragment.EbiScanQRCodeFragment" id="12">
+        <condition id="1">5</condition>
+        <condition id="99">7</condition>
+    </component>
+    <!--扫码-正扫-->
+    <component name="com.centerm.epos.jsnx.fragment.trade.ShowCodeFragment" id="13">
+        <condition id="1">7</condition>
+        <condition id="99">7</condition>
+    </component>
+    <!--输入主管密码-->
+    <component name="com.centerm.epos.fragment.trade.VerifyPwdFragment" id="3">
+        <condition id="1">4</condition>
+        <condition id="99">7</condition>
+    </component>
+    <!--输入密码-->
+    <component name="com.centerm.epos.fragment.trade.InputPwdFragment" id="4">
+        <condition id="1">5</condition>
+        <condition id="66">6</condition>
+        <condition id="99">7</condition>
+    </component>
+    <!--联机加载-->
+    <component name="com.centerm.epos.fragment.trade.TradingFragment"
+               id="5">
+        <condition id="1">6</condition>
+        <condition id="2">7</condition>
+        <condition id="3">5</condition>
+        <condition id="99">7</condition>
+    </component>
+    <!--电子签名-->
+    <component name="com.centerm.epos.fragment.trade.SignatureFragment" id="6"
+        controller="com.centerm.epos.transcation.pos.controller.ShowSignPadUIController">
+        <condition id="1">8</condition>
+        <condition id="99">7</condition>
+    </component>
+    <!--电话号码-->
+    <component name="com.centerm.epos.fragment.trade.InputPhoneNumberFragment" id="8"
+            controller="com.centerm.epos.transcation.pos.controller.ShowInputPhoneUIController">
+        <condition id="1">7</condition>
+        <condition id="99">7</condition>
+    </component>
+    <!--交易结果-->
+    <component name="com.centerm.epos.ebi.ui.fragment.EbiResultFragment" id="7">
+        <condition id="1">0</condition>
+        <condition id="2">21</condition>
+        <condition id="3">22</condition>
+        <condition id="4">23</condition>
+        <condition id="555">6</condition>
+    </component>
+</process>

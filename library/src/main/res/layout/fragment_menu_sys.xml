@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/root_view"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/bg_menu_sys"
+              android:orientation="vertical">
+
+    <RelativeLayout style="@style/mw_style"
+        android:layout_marginTop="25dp">
+        <ImageView style="@style/ww_style"
+            android:background="@drawable/gt_logo"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="16dp"/>
+        <TextView style="@style/ww_style"
+            android:text="终端管理系统"
+            android:textColor="#004E2B"
+            android:textSize="18sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/common_margin"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/mw_style"
+        android:layout_marginTop="@dimen/common_margin"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin">
+        <ImageView style="@style/sys_menu_icon_style"
+            android:background="@drawable/sys_menu_btn11"
+            android:id="@+id/mBtn1"
+            />
+        <ImageView style="@style/sys_menu_icon_style"
+            android:background="@drawable/sys_menu_btn22"
+            android:id="@+id/mBtn2"
+            android:layout_alignParentRight="true"/>
+
+        <ImageView style="@style/sys_menu_icon_style"
+            android:background="@drawable/sys_menu_btn33"
+            android:id="@+id/mBtn3"
+            android:layout_below="@id/mBtn1"
+            android:layout_marginTop="@dimen/sys_menu_common_margin"
+            />
+        <ImageView style="@style/sys_menu_icon_style"
+            android:background="@drawable/sys_menu_btn44"
+            android:id="@+id/mBtn4"
+            android:layout_below="@id/mBtn1"
+            android:layout_marginTop="@dimen/sys_menu_common_margin"
+            android:layout_alignParentRight="true"/>
+
+        <ImageView style="@style/sys_menu_icon_style"
+            android:background="@drawable/sys_menu_btn55"
+            android:id="@+id/mBtn5"
+            android:layout_below="@id/mBtn3"
+            android:layout_marginTop="@dimen/sys_menu_common_margin"
+            />
+        <ImageView style="@style/sys_menu_icon_style"
+            android:background="@drawable/sys_menu_btn66"
+            android:id="@+id/mBtn6"
+            android:layout_below="@id/mBtn3"
+            android:layout_marginTop="@dimen/sys_menu_common_margin"
+            android:layout_alignParentRight="true"/>
+
+        <ImageView style="@style/sys_menu_icon_style"
+            android:background="@drawable/sys_menu_btn77"
+            android:id="@+id/mBtn7"
+            android:layout_below="@id/mBtn5"
+            android:layout_marginTop="@dimen/sys_menu_common_margin"
+            />
+        <ImageView style="@style/sys_menu_icon_style"
+            android:background="@drawable/sys_menu_btn88"
+            android:id="@+id/mBtn8"
+            android:layout_below="@id/mBtn6"
+            android:layout_marginTop="@dimen/sys_menu_common_margin"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/mm_style">
+        <TextView style="@style/ww_style"
+            android:id="@+id/mHotLine"
+            android:layout_gravity="bottom"
+            android:text="4007008010"
+            android:textColor="#004E2B"
+            android:drawableLeft="@drawable/sys_hotline_icon"
+            android:drawablePadding="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="@dimen/common_margin"/>
+        <LinearLayout android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:id="@+id/mBtnExit"
+            android:background="@drawable/btn_login_bg"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/common_margin"
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
+            <TextView style="@style/ww_style"
+                android:text="退出系统"
+                android:drawableLeft="@drawable/icon_sys_exit"
+                android:textColor="@color/font_white"
+                android:drawablePadding="6dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

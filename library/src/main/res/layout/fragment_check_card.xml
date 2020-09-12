@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/check_card_layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              style="@style/TradeFragment">
+
+    <include layout="@layout/common_title_layout" />
+
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mIvTip"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/card_step2"/>
+
+    <TextView style="@style/ww_style"
+        android:textColor="@android:color/black"
+        android:id="@+id/mTvShowName"
+        android:textSize="16sp"
+        android:text=""
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_marginLeft="23dp"/>
+
+    <View android:layout_width="match_parent" android:layout_height="4dp"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"/>
+    <LinearLayout style="@style/mw_style"
+        android:orientation="vertical"
+        android:background="@drawable/bg_frame5"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="-2dp"
+        android:padding="10dp">
+
+        <RelativeLayout style="@style/mw_style">
+            <TextView style="@style/ww_style"
+                android:text="应收总金额"
+                android:textSize="16sp"
+                android:textColor="@color/tip4D"/>
+
+            <TextView style="@style/ww_style"
+                android:id="@+id/mTvReceivable"
+                android:text="0.00元"
+                android:textSize="16sp"
+                android:textColor="@color/tip4D"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/mw_style"
+            android:layout_marginTop="8dp">
+            <TextView style="@style/ww_style"
+                android:text="已收总金额"
+                android:textSize="16sp"
+                android:textColor="@color/tip4D"/>
+
+            <TextView style="@style/ww_style"
+                android:text="0.00元"
+                android:id="@+id/mTvReceived"
+                android:textSize="16sp"
+                android:textColor="@color/tip4D"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/mw_style"
+            android:layout_marginTop="8dp">
+            <TextView style="@style/ww_style"
+                android:text="本次应收总金额"
+                android:textSize="16sp"
+                android:textColor="@color/tip4D"/>
+
+            <TextView style="@style/ww_style"
+                android:text="0.00元"
+                android:id="@+id/mTvUnpaidAmount"
+                android:textSize="16sp"
+                android:textColor="@color/tip4D"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="12dp"
+            android:layerType="software"
+            android:background="@drawable/dotted_line"/>
+
+        <RelativeLayout style="@style/mw_style"
+            android:layout_marginTop="8dp">
+            <TextView style="@style/ww_style"
+                android:text="本次付款总金额"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/tip4D"/>
+
+            <TextView style="@style/ww_style"
+                android:id="@+id/mTvPayAmt"
+                android:text="0.00元"
+                android:textSize="16sp"
+                android:textColor="#FF5545"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView style="@style/ww_style"
+        android:text="请根据提示放置您的银行卡"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/font_black"
+        android:layout_marginLeft="28dp"/>
+
+    <ImageView style="@style/ww_style"
+        android:background="@drawable/tip_readcard"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView style="@style/ww_style"
+        android:text="温馨提示： \n请根据如图提示放置您的银行卡，请勿离开！"
+        android:textSize="15sp"
+        android:textColor="@color/tip4D"
+        android:layout_marginLeft="28dp"/>
+
+    <include layout="@layout/view_bottom_time_out"/>
+
+</LinearLayout>

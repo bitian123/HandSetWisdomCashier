@@ -1,0 +1,13 @@
+<!--TAG说明：
+    Menu：父节点
+    MenuItem：叶子节点
+-->
+<!--属性说明：
+    chnTag：中文标签，必填。
+    enTag：英文标签，必填。
+    prjID：项目id
+-->
+<!--出厂菜单-->
+<Menu chnTag="项目列表" enTag="projectList" default="EBI" structure="LIST">
+    <MenuItem chnTag="电银" enTag="EBI" prjID="C007"/>
+</Menu>

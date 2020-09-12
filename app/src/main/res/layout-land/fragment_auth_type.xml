@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F3F3"
+    style="@style/TradeFragment"
+    android:gravity="center_horizontal">
+
+    <include layout="@layout/common_title_layout" />
+
+    <RelativeLayout style="@style/mw_style"
+        android:layout_marginTop="10pt">
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/step_3"/>
+        <TextView style="@style/ww_style"
+            android:id="@+id/mTvShowTimeOut"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="60秒"
+            android:gravity="center"
+            android:paddingLeft="30pt"
+            android:textSize="15pt"
+            android:background="@drawable/icon_time"
+            android:textColor="@color/font_white"/>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/mm_style">
+
+        <LinearLayout style="@style/e10_content_style"
+            android:orientation="vertical">
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40pt"
+                android:paddingLeft="75pt"
+                android:paddingRight="75pt">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mBtnType1"
+                    android:background="@drawable/auth_type1"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mBtnType2"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/auth_type2"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mBtnType3"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/auth_type3"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25pt"
+                android:paddingLeft="75pt"
+                android:paddingRight="75pt">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mBtnType4"
+                    android:background="@drawable/auth_type4"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mBtnType5"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/auth_type5"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mBtnType6"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/auth_type6"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageButton style="@style/ww_style"
+            android:id="@+id/mBtnFinish"
+            android:background="@drawable/btn_exit"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15pt"/>
+
+        <ImageButton style="@style/ww_style"
+            android:id="@+id/imgbtn_back"
+            android:background="@drawable/btn_back"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15pt"/>
+    </RelativeLayout>
+
+</LinearLayout>

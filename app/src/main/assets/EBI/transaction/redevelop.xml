@@ -1,0 +1,19 @@
+<!--项目改动点配置信息
+    TAG说明：
+    operation：根节点，标识该文件是作为项目改动配置信息
+    action：改动点
+
+    属性说明：
+    version：版本号
+    tag：标签
+    id：id
+-->
+<Redevelop version="1.0.0">
+
+    <Item tag="redevelop_menu_helper" index="4" class="com.centerm.epos.ebi.helper.EBIMenuHelper"/>
+    <!--<Item tag="redevelop_receive_over_algorithm" index="6" class="com.centerm.epos.jsnx.redevelop.JsnxPayReceivedOver"/>-->
+    <!--<Item tag="redevelop_mac_algorithm" index="6" class="com.centerm.epos.jsnx.redevelop.JSNXPayMacAlgorithm"/>-->
+    <!--<Item tag="redevelop_mac_algorithm" index="6" class="com.centerm.epos.jsnx.redevelop.JSNXPayMacAlgorithm"/>-->
+    <!--<Item tag="redevelop_print_data" index="6" class="com.centerm.epos.jsnx.printer.JSNXBasePrintTransData"/>-->
+
+</Redevelop>

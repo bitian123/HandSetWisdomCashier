@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/bg_popup"
+             android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:padding="15dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标题"
+                android:textColor="#4D4D4D"
+                android:textSize="@dimen/font_36"
+                />
+
+            <TextView
+                android:id="@+id/dialog_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#4D4D4D"
+                android:textSize="@dimen/font_36" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/dialog_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="内容内容时发生地方发生的放水电费水电费是否"
+                android:textColor="#4D4D4D"
+                android:textSize="@dimen/font_32" />
+
+            <TextView
+                android:id="@+id/dialog_msg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:visibility="gone"
+                android:text="温馨提示： \n代付可能会影响银行按揭办理，\n请注意！"
+                android:textColor="#4D4D4D"
+                android:textSize="@dimen/font_32" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/mw_style"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp"
+            android:gravity="center_horizontal">
+            <Button
+                android:id="@+id/positive_btn"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_login_bg"
+                android:textColor="@color/font_white"
+                android:text="@string/label_confirm"/>
+
+            <Button
+                android:id="@+id/negative_btn"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:textColor="@color/font_white"
+                android:background="@drawable/btn_login_bg_gray"
+                android:layout_marginLeft="10dp"
+                android:text="取消"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

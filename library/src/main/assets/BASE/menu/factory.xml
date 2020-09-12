@@ -1,0 +1,32 @@
+<!--TAG说明：
+    Menu：父节点
+    MenuItem：叶子节点
+-->
+<!--属性说明：
+    chnTag：中文标签，必填。
+    enTag：英文标签，必填。
+    default：默认初始化的项目标识（取enTag的值），配置了此属性则不显示项目列表，直接初始化为默认项目。
+    iconRes：图标资源名称，可填，如不指定，则使用默认图标。
+    textRes：菜单名资源名称，可填，如不指定，则使用中文标签。
+    isShow：是否显示，可填，如不指定，默认值为TRUE.可选值：TRUE（是），FALSE（否）
+    structure：视图结构，可填，如不指定，默认值为GRID.可选值：GRID（九宫格），LIST（列表）
+    process：流程文件名称，可填，如不指定，默认值为【英文标签】.xml
+    code：交易码，可填，如不指定，默认值为英文标签
+    prjID：项目id
+    channelID：通道ID，用于项目切换
+-->
+<!--出厂菜单-->
+<Menu chnTag="项目列表" enTag="projectList" structure="LIST">
+    <MenuItem chnTag="银联" enTag="BASE" iconRes="launcher_unionpay" prjID="C000" channelID="0"/>
+    <!--<MenuItem chnTag="浦发" enTag="SPDB" iconRes="launcher_qianbao"/>-->
+    <!--<MenuItem chnTag="钱宝" enTag="QIANBAO" iconRes="launcher_qianbao"/>-->
+    <!--<MenuItem chnTag="示例" enTag="SAMPLE" iconRes="launcher_unionpay"/>-->
+    <!--<MenuItem chnTag="山东运达" enTag="SDYD" iconRes="launcher_unionpay"/>-->
+    <!--<MenuItem chnTag="广东通莞" enTag="GDTG" iconRes="launcher_unionpay"/>-->
+    <!--<MenuItem chnTag="中汇" enTag="ZHONGHUI"/>-->
+    <!--<MenuItem chnTag="盛付通" enTag="SHENGFUTONG"/>-->
+    <!--<MenuItem chnTag="德颐" enTag="DEYI"/>-->
+    <!--<MenuItem chnTag="现代金控" enTag="XIANDAIJINKONG"/>-->
+    <!--<MenuItem chnTag="金迪" enTag="JINDI"/>-->
+    <!--<MenuItem chnTag="沃银" enTag="WOYIN"/>-->
+</Menu>

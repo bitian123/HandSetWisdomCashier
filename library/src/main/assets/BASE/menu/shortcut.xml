@@ -1,0 +1,19 @@
+<!--TAG说明：
+    Menu：父节点
+    MenuItem：叶子节点
+-->
+<!--属性说明：
+    chnTag：中文标签，必填。
+    enTag：英文标签，必填。
+    iconRes：图标资源名称，可填，如不指定，则使用默认图标。
+    textRes：菜单名资源名称，可填，如不指定，则使用中文标签。
+    isShow：是否显示，可填，如不指定，默认值为TRUE.可选值：TRUE（是），FALSE（否）
+    structure：视图结构，可填，如不指定，默认值为GRID.可选值：GRID（九宫格），LIST（列表）
+    process：流程文件名称，可填，如不指定，默认值为【英文标签】.xml
+    code：交易码，可填，如不指定，默认值为英文标签
+-->
+<Menu chnTag="快捷方式" enTag="shortcut">
+    <MenuItem chnTag="银行卡" enTag="pay_by_card"/>
+    <MenuItem chnTag="微信支付" enTag="pay_by_wx"/>
+    <MenuItem chnTag="支付宝" enTag="pay_by_ali"/>
+</Menu>

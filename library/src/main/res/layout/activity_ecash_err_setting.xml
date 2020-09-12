@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_title_layout"/>
+
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/ConfigureItemTextStyle"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_30"
+        android:text="@string/label_ecash_retry_timeout"/>
+
+    <EditText
+        android:id="@+id/et_retry_timeout"
+        style="@style/ConfigureItemTextStyle.Edit"
+        android:maxLength="5"/>
+
+
+    <TextView
+        style="@style/ConfigureItemTextStyle"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_30"
+        android:text="@string/label_ecash_error_record_timeout"/>
+
+    <EditText
+        android:id="@+id/et_record_timeout"
+        style="@style/ConfigureItemTextStyle.Edit"
+        android:maxLength="8"/>
+
+
+    <TextView
+        style="@style/ConfigureItemTextStyle"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_30"
+        android:text="@string/label_ecash_error_record_max"/>
+
+    <EditText
+        android:id="@+id/et_record_max"
+        style="@style/ConfigureItemTextStyle.Edit"/>
+
+    <Button
+            android:onClick="onSureClick"
+            style="@style/ConfigureItemLayoutStyle.Button" />
+</LinearLayout>

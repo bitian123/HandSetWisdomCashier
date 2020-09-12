@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.centerm.epos">
+
+    <uses-permission android:name="android.permission.CLOUDPOS_PRINTER" />
+    <uses-permission android:name="android.permission.LAKALA.ENABLE_HOME" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 状态栏控制 -->
+    <uses-permission
+        android:name="android.permission.STATUS_BAR"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!-- 密码键盘权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_PINPAD_MODULE" />
+    <!-- 刷卡设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_SWIPE_MODULE" />
+    <!-- 简易PBOC权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_NEW_PBOC_MODULE" />
+    <!-- IC卡设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_IC_MODULE" />
+    <!-- 非接卡设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_RF_MODULE" />
+    <!-- 打印机权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_PRINTER_MODULE" />
+    <!-- 系统设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_SYSTEM_MODULE" />
+    <!-- M1卡设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_M1_MODULE" />
+    <!-- PSAM卡设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_PSAM_MODULE" />
+    <!-- 串口设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_SERIAL_PORT_MODULE" />
+    <!-- 安全模块权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_SAFE_MODULE" />
+    <!-- MEM4442卡设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_MEM4442_MODULE" />
+    <!-- MEM102卡设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_MEM102_MODULE" />
+    <!-- MEM1608卡设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_MEM1608_MODULE" />
+    <!-- MEMAT24C02卡设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_MEMAT24C02_MODULE" />
+    <!-- 语音播报 -->
+    <uses-permission android:name="android.permission.CPAYSDK_VOICE_MODULE" />
+    <!-- 静默安装应用接口权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_SILENT_INSTALL" />
+    <!-- 静默卸载应用接口权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_SILENT_UNINSTALL" />
+    <!-- 快速扫描应用接口权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_QUICK_SCAN" />
+    <!-- 版本获取权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_VERSION_MODULE" />
+
+    <application
+        android:debuggable="true"
+        tools:ignore="HardcodedDebugMode">
+        <!-- 支付组件入口界面 -->
+        <activity
+            android:name="com.centerm.component.pay.PayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/EPosAppTheme.Component" />
+
+        <!-- 主界面 -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:name=".base.MainActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@mipmap/launcher_ebi3"
+            android:label="@string/app_name"
+            android:targetActivity=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- 登录界面 -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:windowSoftInputMode="stateUnspecified" />
+        <!-- 菜单界面 -->
+        <activity android:name=".base.MenuActivity" />
+
+        <!-- 主管改密 -->
+        <activity android:name=".activity.msn.BaseModifyPwdActivity">
+            <intent-filter>
+                <action android:name="com.centerm.epos.changepwd" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 增加操作员 -->
+        <activity android:name=".activity.msn.BaseAddOperatorActivity">
+            <intent-filter>
+                <action android:name="com.centerm.epos.operatoradd" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 查询操作员 -->
+        <activity android:name=".activity.msn.BaseQueryOperatorActivity">
+            <intent-filter>
+                <action android:name="com.centerm.epos.operatorquery" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 删除操作员 -->
+        <activity android:name=".activity.msn.BaseDelOperatorActivity">
+            <intent-filter>
+                <action android:name="com.centerm.epos.operatordelete" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 通讯参数 -->
+        <activity android:name=".activity.msn.BaseCommunicationSettingsActivity">
+            <intent-filter>
+                <action android:name="com.centerm.epos.confiurecomms" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 通讯参数 -->
+        <!--
+                <activity android:name=".activity.msn.SerialNumQueryActivity">
+                <intent-filter>
+                    <action android:name="com.centerm.epos.serialnumquery"/>
+                    <category android:name="android.intent.category.DEFAULT"/>
+                </intent-filter>
+            </activity>
+        -->
+        <!-- 商户参数设置 -->
+        <activity android:name=".activity.msn.BaseMerchantSettingsActivity" />
+        <!-- 系统参数设置 -->
+        <activity android:name=".activity.msn.BaseSystemSettingsActivity" />
+        <!-- 交易参数设置 -->
+        <activity android:name=".activity.msn.BaseTradeSettingsActivity" />
+        <!-- 锁机界面 -->
+        <activity android:name=".activity.LockAcitivty" />
+        <!-- 交易明细 -->
+        <!-- 交易查询 -->
+        <activity android:name=".activity.msn.BaseQueryTradeActivity" />
+        <!-- 交易汇总 -->
+        <activity android:name=".activity.msn.BaseTradeSummaryActivity" />
+        <!-- 交易详情 -->
+        <activity android:name=".activity.msn.BaseTradeDetailActivity" />
+        <!-- 日志上传 -->
+        <activity android:name=".activity.msn.LogUploadActivity" />
+        <!-- 商户参数设置 -->
+        <activity android:name=".activity.SecurityModifyPwdActivity" />
+        <!--
+                 <activity
+                 android:name=".activity.msn.AppUpdateActivity"
+                 android:theme="@style/AppTheme.Trading">
+             </activity>
+        -->
+        <activity
+            android:name=".base.TradeFragmentContainer"
+            android:theme="@style/EPosAppTheme.Transcation" />
+        <activity android:name=".activity.msn.BaseTMKSettingsActivity" />
+        <activity android:name=".activity.msn.BaseTMKByICActivity" />
+        <activity android:name=".activity.msn.LastSlipPrintActivity" />
+        <activity android:name=".activity.msn.BaseQPSSettingActivity" />
+        <activity android:name=".activity.msn.ShowAppVersionActivity" />
+        <activity android:name=".activity.msn.ElectronicSignatureSettingsActivity" />
+        <!-- 打印联数设置 -->
+        <activity android:name=".activity.msn.BasePrintSettingsActivity" />
+        <activity android:name=".activity.msn.BaseTradeOtherControlActivity" />
+        <activity android:name=".activity.msn.BaseECashExceptionSettingsActivity" />
+        <activity android:name=".activity.msn.BaseNetSettingsActivity" />
+        <activity android:name=".activity.msn.BaseAppUpgradeSettingActivity" />
+
+        <activity
+            android:name=".activity.msn.BaseScanCodeActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <service android:name=".service.SendSignService" />
+        <service android:name=".service.EposService" />
+        <service android:name=".service.CpayLogService" />
+        <service android:name=".service.UpdateAppVersionService">
+            <intent-filter android:priority="1000">
+                <action android:name="com.shdy.UpdateAppVersionService" />
+            </intent-filter>
+        </service>
+        <!-- 百度定位服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="2sK9Vr1u0aerRbi3YHR64uZVoNpjq0pH" />
+        <!-- 网络环境 -->
+        <meta-data
+            android:name="ENVIRONMENT"
+            android:value="${ENVIRONMENT}" />
+        <!-- 收单渠道名 -->
+        <meta-data
+            android:name="PROJECT_NAME"
+            android:value="${PROJECT_NAME}" />
+        <!--zhouzhihua 方便从包的格式来区分UI风格-->
+        <meta-data
+            android:name="UI_CHANNEL_VALUE"
+            android:value="${UI_CHANNEL_VALUE}" />
+
+
+        <receiver android:name=".receiver.BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.UpdateDBCompleteReceiver">
+            <intent-filter>
+                <action android:name="com.centerm.epos.db.UPDATE_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.msn.SysManageActivity"></activity>
+        <activity android:name=".activity.msn.GtMerchantSettingsActivity"></activity>
+        <activity android:name=".activity.msn.DownloadTmkActivity"></activity>
+        <activity android:name=".activity.msn.EbiTMKByICActivity"></activity>
+        <activity android:name=".activity.msn.ReprintActivity"></activity>
+        <activity android:name=".activity.E10SysMenuActivity"></activity>
+        <activity android:name=".activity.msn.AbnormalQueryTradeActivity"></activity>
+        <activity android:name=".activity.msn.AbnormalTradeDetailActivity"></activity>
+        <activity android:name=".activity.ResultQueryActivity"></activity>
+        <activity android:name=".activity.msn.TradeQueryActivity"></activity>
+
+
+    </application>
+
+</manifest>

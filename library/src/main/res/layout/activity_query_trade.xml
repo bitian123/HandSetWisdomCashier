@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:MaterialRefreshLayout="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/common_bg"
+    >
+
+    <include layout="@layout/common_title_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mLlSearch"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_10"
+        android:minHeight="@dimen/trade_record_item_height"
+        android:background="@android:color/white">
+
+        <com.centerm.epos.view.ClearEditText
+            android:id="@+id/pos_serial_edit"
+            style="@style/SerialNumEditStyle"
+            android:imeOptions="actionDone"/>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="@dimen/width_80"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:onClick="onSearchClick"
+            android:src="@drawable/bt_search"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/margin_20"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_10"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/v_trade_record_item"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/trade_record_title_height"
+            android:minHeight="@dimen/trade_record_title_height"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_divider_size"
+            android:background="@color/colorPrimaryBlue"
+            />
+
+        <com.cjj.MaterialRefreshLayout
+            android:id="@+id/refresh_layout"
+            style="@style/CommonRefreshLayout"
+            MaterialRefreshLayout:isLoadMore="false"
+            MaterialRefreshLayout:overlay="false"
+            MaterialRefreshLayout:progress_size_type="big"
+            MaterialRefreshLayout:wave_height_type="normal"
+            MaterialRefreshLayout:wave_show="true"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/list_v"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/common_divider"
+                android:dividerHeight="@dimen/common_divider_size"
+                android:scrollbarStyle="outsideOverlay"
+                />
+        </com.cjj.MaterialRefreshLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+

@@ -1,0 +1,23 @@
+<!--节点ID为0，代表主界面-->
+<!--扫码付流程-->
+<process transCode="">
+    <!--金额输入-->
+    <component name="com.centerm.epos.fragment.trade.InputMoneyFragment" id="1">
+        <condition id="1">2</condition>
+    </component>
+    <!--扫码-->
+    <component name="com.centerm.epos.fragment.trade.ScanQRCodeFragment" id="2">
+        <condition id="1">4</condition>
+    </component>
+    <!--联机加载-->
+    <component name="com.centerm.epos.fragment.trade.TradingFragment"
+            present="com.centerm.epos.present.transaction.TradingPresent" id="4">
+        <condition id="1">5</condition>
+        <condition id="2">0</condition>
+        <condition id="99">5</condition>
+    </component>
+    <!--交易结果-->
+    <component name="com.centerm.epos.fragment.trade.ResultFragment" id="5">
+        <condition id="1">0</condition>
+    </component>
+</process>

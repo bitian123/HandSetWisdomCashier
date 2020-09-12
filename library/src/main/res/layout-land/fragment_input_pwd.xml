@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+                style="@style/TradeFragment">
+
+    <include layout="@layout/common_title_layout"/>
+
+    <RelativeLayout style="@style/mw_style"
+        android:layout_marginTop="10pt">
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/card_step3"/>
+        <TextView style="@style/ww_style"
+            android:id="@+id/mTvShowTimeOut"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="60秒"
+            android:gravity="center"
+            android:paddingLeft="30pt"
+            android:textSize="15pt"
+            android:background="@drawable/icon_time"
+            android:textColor="@color/font_white"/>
+    </RelativeLayout>
+
+    <TextView
+        style="@style/BaseText.Tip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:text="请输入您的密码"
+        android:textSize="15pt"
+        android:textColor="@color/font_black"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/indicator1"
+            style="@style/PasswordIndicator2"
+            android:layout_marginLeft="0dp"
+            android:clickable="false"
+            android:focusable="false"/>
+
+        <CheckBox
+            android:id="@+id/indicator2"
+            style="@style/PasswordIndicator2"
+            android:clickable="false"
+            android:focusable="false"/>
+
+        <CheckBox
+            android:id="@+id/indicator3"
+            style="@style/PasswordIndicator2"
+            android:clickable="false"
+            android:focusable="false"/>
+
+        <CheckBox
+            android:id="@+id/indicator4"
+            style="@style/PasswordIndicator2"
+            android:clickable="false"
+            android:focusable="false"/>
+
+        <CheckBox
+            android:id="@+id/indicator5"
+            style="@style/PasswordIndicator2"
+            android:clickable="false"
+            android:focusable="false"/>
+
+        <CheckBox
+            android:id="@+id/indicator6"
+            style="@style/PasswordIndicator2"
+            android:clickable="false"
+            android:focusable="false"/>
+    </LinearLayout>
+
+    <EditText android:layout_width="0.5dp"
+        android:layout_height="0.5dp"
+        android:id="@+id/mEtPw"
+        android:text=""
+        android:maxLength="7"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_60"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_40"
+        android:paddingRight="@dimen/margin_40">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/info_divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/BaseText.Tip"
+                android:text="@string/label_trans_type"
+                android:textSize="13pt"/>
+
+            <TextView
+                android:id="@+id/trans_type_show"
+                android:textSize="13pt"
+                style="@style/BaseText.Tip.Dark"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/trans_money_block"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/BaseText.Tip"
+                android:text="@string/label_trans_amt"
+                android:textSize="13pt"/>
+
+            <TextView
+                android:id="@+id/trans_money_show"
+                style="@style/BaseText.Tip.Dark"
+                android:textSize="13pt"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/BaseText.Tip"
+                android:text="@string/label_trans_card"
+                android:textSize="13pt"/>
+
+            <TextView
+                android:id="@+id/trans_card_show"
+                style="@style/BaseText.Tip.Dark"
+                android:textSize="13pt"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/info_divider"/>
+    </LinearLayout>
+
+    <RelativeLayout style="@style/mm_style">
+        <ImageButton style="@style/ww_style"
+            android:id="@+id/mBtnFinish"
+            android:background="@drawable/btn_exit"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15pt"/>
+
+        <ImageButton style="@style/ww_style"
+            android:id="@+id/imgbtn_back"
+            android:background="@drawable/btn_back"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:layout_marginBottom="15pt"/>
+    </RelativeLayout>
+
+</LinearLayout>

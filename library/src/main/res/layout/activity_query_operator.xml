@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_menu_sys"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/mw_style"
+        android:layout_marginTop="25dp">
+        <ImageView style="@style/ww_style"
+            android:background="@drawable/gt_logo"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginTop="16dp"/>
+        <TextView style="@style/ww_style"
+            android:text="终端管理系统"
+            android:textColor="#004E2B"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="@dimen/common_margin"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/mw_style"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginBottom="20dp">
+        <TextView style="@style/ww_style"
+            android:text="操作员管理"
+            android:textColor="@color/font_black"
+            android:layout_centerVertical="true"
+            android:textSize="21sp"/>
+
+        <RelativeLayout android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:id="@+id/mBtnReturn"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_frame6"
+            android:layout_alignParentRight="true">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="返回"
+                android:layout_centerInParent="true"
+                android:textSize="16sp"
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                android:padding="5dp"
+                android:drawablePadding="3dp"
+                android:drawableLeft="@drawable/icon_return2"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout style="@style/OperatorMarginStyle.Lnrlyt"
+                  android:focusable="true"
+        android:visibility="gone"
+                  android:focusableInTouchMode="true">
+
+        <EditText android:id="@+id/search_edit"
+                  style="@style/BaseEditBox.Number"
+                  android:layout_width="0px"
+                  android:layout_weight="1"
+                  android:background="@null"
+                  android:inputType="number"
+                  android:maxLength="2"
+                  android:hint="@string/label_operator_please_input_opt_no"
+                  android:textSize="@dimen/font_36"
+                  android:imeOptions="actionDone"
+            />
+
+        <View
+            android:layout_width="@dimen/common_divider_size"
+            android:layout_height="@dimen/height_40"
+            android:background="@color/common_divider" />
+
+       <!--<Button android:id="@+id/search_btn"-->
+            <!--style="@style/OperatorMarginStyle.Button"-->
+             <!--android:onClick="onSearchClick"/>-->
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="@dimen/width_80"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:onClick="onSearchClick"
+            android:src="@drawable/bt_search"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/margin_20"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout style="@style/mw_style"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:background="@drawable/bg_green">
+        <TextView style="@style/ww_style"
+            android:text="操作员号"
+            android:textSize="20sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/font_white"/>
+        <ImageView style="@style/ww_style"
+            android:id="@+id/mBtnAdd"
+            android:background="@drawable/icon_add2"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/mm_style"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin">
+        <TextView style="@style/ww_style"
+            android:id="@+id/mHotLine"
+            android:text="4007008010"
+            android:textColor="#004E2B"
+            android:drawableLeft="@drawable/sys_hotline_icon"
+            android:drawablePadding="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"/>
+
+        <ListView
+            android:id="@+id/lstvw_opt"
+            android:layout_marginTop="-4dp"
+            android:layout_width="match_parent"
+            android:layout_above="@id/mHotLine"
+            android:divider="@null"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_frame5"
+            android:layout_marginBottom="50dp"
+            android:paddingBottom="25dp"/>
+
+        <RelativeLayout style="@style/mm_style">
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>           

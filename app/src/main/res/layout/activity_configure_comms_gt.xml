@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_layout" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/ConfigureItemTextStyle"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_50"
+        android:text="服务器地址" />
+
+    <EditText
+        android:id="@+id/extxt_confiure_comms_service"
+        style="@style/ConfigureItemTextStyle.Edit"
+        android:layout_height="30dp"
+        android:inputType="textCapCharacters"
+        android:hint="0.0.0.0"/>
+
+
+    <TextView
+        style="@style/ConfigureItemTextStyle"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_30"
+        android:text="端口" />
+
+    <EditText
+        android:id="@+id/extxt_confiure_comms_port"
+        android:maxLength="5"
+        android:layout_height="30dp"
+        style="@style/ConfigureItemTextStyle.Edit" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/ConfigureItemTextStyle"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_50"
+        android:visibility="gone"
+        android:text="备用服务器地址" />
+
+    <EditText
+        android:id="@+id/extxt_confiure_comms_service_reserve"
+        style="@style/ConfigureItemTextStyle.Edit"
+        android:layout_height="30dp"
+        android:inputType="textCapCharacters"
+        android:visibility="gone"
+        android:hint="0.0.0.0"/>
+
+
+    <TextView
+        style="@style/ConfigureItemTextStyle"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_30"
+        android:visibility="gone"
+        android:text="备用端口" />
+
+    <EditText
+        android:id="@+id/extxt_confiure_comms_port_reserve"
+        android:maxLength="5"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        style="@style/ConfigureItemTextStyle.Edit" />
+
+    <Button
+        android:onClick="onSureClick"
+        style="@style/ConfigureItemLayoutStyle.Button" />
+
+</LinearLayout>

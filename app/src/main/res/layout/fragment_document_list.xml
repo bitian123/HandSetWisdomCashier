@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/TradeFragment">
+
+    <include layout="@layout/common_title_layout" />
+
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mIvTip"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/print_step1"/>
+
+    <RelativeLayout style="@style/mw_style"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="20dp">
+        <CheckBox android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mCheckBox"
+            style="@style/MyCheckBox"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            android:textColor="@color/font_black"
+            android:text="  全选"/>
+        <TextView style="@style/ww_style"
+            android:id="@+id/mTvRoomId"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:textColor="@color/font_black"
+            android:text=""/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#00B77C"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="10dp"/>
+
+    <RelativeLayout style="@style/mm_style">
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="暂无数据"
+            android:gravity="center"
+            android:textSize="25sp"/>
+
+        <ListView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mListView"
+            android:scrollbars="none"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp"/>
+
+        <RelativeLayout style="@style/mw_style"
+            android:id="@+id/mRlTotal"
+            android:layout_alignParentBottom="true"
+            android:background="@color/tran70"
+            android:visibility="gone"
+            android:clickable="true"
+            android:paddingBottom="15dp"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp">
+            <LinearLayout style="@style/ww_style"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true">
+                <TextView style="@style/ww_style"
+                    android:text="已选择"
+                    android:textColor="@color/font_white"
+                    android:textSize="13sp" />
+                <TextView style="@style/ww_style"
+                    android:id="@+id/mTvPrintNum"
+                    android:text="0笔"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:textColor="#FFC02C"
+                    android:textSize="20sp" />
+                <TextView style="@style/ww_style"
+                    android:text="需要打印的款项"
+                    android:layout_below="@id/mTvTotalAmt"
+                    android:textColor="@color/font_white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:id="@+id/mBtnPrint"
+                android:text="打印单份"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_login_bg"
+                android:textColor="@color/font_white"
+                android:textSize="17sp" />
+
+            <TextView android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/mBtnPrintMore"
+                android:text="打印多份"
+                android:gravity="center"
+                android:layout_below="@id/mBtnPrint"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/font_white"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

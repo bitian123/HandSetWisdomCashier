@@ -1,0 +1,54 @@
+<!--
+    属性说明：
+    tag：打印元素的标识，具有唯一性
+    label：标签，例如“商户名”
+    enLabel：英文标签，例如“MERCHANT NAME”
+    align：对齐方式，可选值：LEFT,CENTER,RIGHT，默认为LEFT
+    //default：默认值，如果value为空，则取该值进行打印
+    enable：是否打印该值，可选值：TRUE,FALSE，默认为true
+    font：字号大小，可选值：SMALL,MEDIUM,LARGE，默认为MEDIUM
+    isBold：是否加粗，可选值：TRUE,FALSE，默认为FALSE
+    type：元素类型，可选值：TEXT,BARCODE,PIC，默认为TEXT
+    belongs：签购单所属，可选值：MERCHANT,CARD_HOLDER,BOTH，默认为BOTH
+    source：值来源，可选值：CONSTANT,VARIABLE,CLASS，默认为VAR
+    value：值
+    condition: 打印条件，IC
+    isWrapValue：是否将标签和值进行换行显示，可选值：TRUE,FALSE，默认为FALSE
+        valueFont：值的字号大小，可选值：SMALL,MEDIUM,LARGE，默认为MEDIUM
+        valueAlign：值的对齐方式，可选值：LEFT,MIDDLE,RIGHT，默认为LEFT
+        valueIsBold：值是否加粗，可选值：TRUE,FALSE，默认为FALSE
+    -->
+
+<Slip version="1">
+    <Item _tag="1F01" align="CENTER" enLabel="" enable="TRUE" font="LARGE" isBold="FALSE" label="" source="CONSTANT" type="TEXT" value="POS签购单"/><!--签购单头部-->
+    <Item _tag="1F02" align="CENTER" belongs="MERCHANT" value="------------商户存根------------"/>
+    <Item _tag="1F03" align="CENTER" belongs="CARD_HOLDER" value="-----------持卡人存根-----------"/>
+
+    <Item _tag="3F01" condition="RE_PRINT" value="--- 重打印 ---"/>
+
+    <Item _tag="1F04" enLabel="MERCHANT NAME" label="商户名" isWrapValue="TRUE" valueIsBold="TRUE"/>
+    <Item _tag="1F05" enLabel="MERCHANT NO." label="商户号" isWrapValue="TRUE"/>
+    <Item _tag="1F06" enLabel="TERMINAL NO." label="终端号"/>
+    <Item _tag="1F07" enLabel="OPERATOR NO." label="操作员号"/>
+    <Item _tag="1F08" enLabel="ISSUER" label="发卡行"/>
+    <Item _tag="1F09" enLabel="ACQUIRER" label="收单行"/>
+    <Item _tag="1F21" enLabel="PAY CODE NUMBER" isWrapValue="TRUE" label="支付码号" valueFont="LARGE" valueAlign="CENTER"
+            valueIsBold="TRUE"/>
+    <Item _tag="1F12" enLabel="TRANS TYPE" isWrapValue="TRUE" label="交易类型" valueAlign="CENTER" valueFont="LARGE" valueIsBold="TRUE"/>
+    <Item _tag="1F24" isWrapValue="TRUE" label="付款凭证号" valueAlign="CENTER" valueIsBold="TRUE"/>
+    <Item _tag="1F23" isWrapValue="TRUE" label="付款凭证号" valueAlign="CENTER" type="BARCODE"/>
+    <Item _tag="1F14" enLabel="VOUCHER NO." label="凭证号"/>
+    <Item _tag="1F16" enLabel="REFER NO." label="参考号"/>
+    <Item _tag="1F17" enLabel="DATE/TIME" label="日期/时间"/>
+    <Item _tag="1F18" enLabel="AMOUNT" isWrapValue="TRUE" label="金额" valueAlign="CENTER" valueFont="LARGE" valueIsBold="TRUE"/>
+    <Item _tag="1F19" enLabel="REFERENCE" font="SMALL" label="备注" valueFont="SMALL"/>
+
+    <Item _tag="1F25" enLabel="VOUCHER" font="SMALL" label="原凭证号" valueFont="SMALL" isPrintNull="FALSE"/>
+    <Item _tag="1F26" enLabel="REFER NO" font="SMALL" label="原参考号" valueFont="SMALL" isPrintNull="FALSE"/>
+    <Item _tag="1F27" enLabel="ORG DATE" font="SMALL" label="原交易日期" valueFont="SMALL" isPrintNull="FALSE"/>
+    <Item _tag="1F28" enLabel="AUTH NO" font="SMALL" label="原授权码" valueFont="SMALL" isPrintNull="FALSE"/>
+
+    <Item _tag="1F29" enLabel="Host" font="SMALL" label="附加信息" valueFont="SMALL" isWrapValue="TRUE" isPrintNull="FALSE"/>
+
+    <Item _tag="1F20" value="\n扫码交易免签名\n\n"/>
+</Slip>

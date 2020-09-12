@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal">
+    <RelativeLayout style="@style/mw_style">
+        <TextView
+            android:id="@+id/item_name_show"
+            style="@style/ww_style"
+            android:text="xxxxxxxx"
+            android:paddingBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/tip4D"
+            android:textSize="@dimen/font_32" />
+
+        <TextView
+            android:id="@+id/item_value_show"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:text="222222"
+            android:layout_gravity="right"
+            android:paddingBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/font_32"/>
+    </RelativeLayout>
+
+</LinearLayout>

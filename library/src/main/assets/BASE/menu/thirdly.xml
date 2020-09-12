@@ -1,0 +1,145 @@
+<!--TAG说明：
+    Menu：父节点
+    MenuItem：叶子节点
+-->
+<!--属性说明：
+    chnTag：中文标签，必填。
+    enTag：英文标签，必填。
+    iconRes：图标资源名称，可填，如不指定，则使用默认图标。
+    textRes：菜单名资源名称，可填，如不指定，则使用中文标签。
+    isShow：是否显示，可填，如不指定，默认值为TRUE.可选值：TRUE（是），FALSE（否）
+    structure：视图结构，可填，如不指定，默认值为GRID.可选值：GRID（九宫格），LIST（列表）
+    process：流程文件名称，可填，如不指定，默认值为【英文标签】.xml
+    code：交易码，可填，如不指定，默认值为英文标签
+    topView：顶层视图样式，可填，如不指定，默认值为TITLE.可选值：TITLE（显示标题栏）,BANNER（显示横幅）,MIX（都显示）,NONE（都不显示）
+-->
+<Menu chnTag="系统管理" enTag="SYS_MANAGEMENT" structure="LIST" topView="BANNER">
+    <MenuItem chnTag="商户参数" enTag="MERCHANT_SETTINGS"/>
+    <MenuItem chnTag="系统参数设置" enTag="SYSTEM_SETTINGS"/>
+    <Menu chnTag="交易功能设置" enTag="TRADE_SETTINGS" structure="LIST">
+        <MenuItem chnTag="交易参数设置" enTag="TRADE_PARAMES" iconRes="ic_menu_trade_settings"/>
+
+        <Menu chnTag="交易开关控制" enTag="TRADE_CONTROL" iconRes="ic_menu_trade_settings" structure="LIST">
+            <Menu chnTag="传统类交易开关" enTag="TRADITIONAL_CONTROL" iconRes="ic_menu_trade_settings" structure="LIST">
+                <MenuItem chnTag="消费" enTag="TOGGLE_SALE" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="消费撤销" enTag="TOGGLE_VOID" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="退货" enTag="TOGGLE_REFUND" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="余额查询" enTag="TOGGLE_BALANCE" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="预授权" enTag="TOGGLE_AUTH" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="预授权撤销" enTag="TOGGLE_CANCEL" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="预授权完成请求" enTag="TOGGLE_AUTH_COMPLETE" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <!--<MenuItem chnTag="预授权完成通知" enTag="TOGGLE_AUTH_SETTLEMENT" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>-->
+                <MenuItem chnTag="预授权完成撤销" enTag="TOGGLE_COMPLETE_VOID" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="离线调整" enTag="TOGGLE_OFFLINE_SETTLEMENT" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="离线结算" enTag="TOGGLE_OFFLINE_ADJUST" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+            </Menu>
+
+            <Menu chnTag="电子现金类交易开关" enTag="EC_CONTROL" iconRes="ic_menu_trade_settings" structure="LIST">
+                <MenuItem chnTag="接触式电子现金消费" enTag="TOGGLE_E_COMMON" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="快速支付" enTag="TOGGLE_E_QUICK" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="电子现金指定账户圈存" enTag="TOGGLE_EC_LOAD_INNER" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="电子现金非指定账户圈存" enTag="TOGGLE_EC_LOAD_OUTER" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="电子现金现金充值" enTag="TOGGLE_EC_LOAD_CASH" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="电子现金现金充值撤销" enTag="TOGGLE_EC_VOID_CASH_LOAD" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="电子现金退货" enTag="TOGGLE_E_REFUND" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+            </Menu>
+
+            <Menu chnTag="分期付款类交易开关" enTag="INSTALLMENT_CONTROL" iconRes="ic_menu_trade_settings" structure="LIST">
+                <MenuItem chnTag="分期付款消费" enTag="TOGGLE_SALE_INSTALLMENT" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="分期付款消费撤销" enTag="TOGGLE_VOID_INSTALLMENT" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+            </Menu>
+
+            <Menu chnTag="积分类交易开关" enTag="BONUS_CONTROL" iconRes="ic_menu_trade_settings" structure="LIST">
+                <MenuItem chnTag="联盟积分消费" enTag="TOGGLE_UNION_INTEGRAL_SALE" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="发卡行积分消费" enTag="TOGGLE_ISS_INTEGRAL_SALE" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="联盟积分消费撤销" enTag="TOGGLE_UNION_INTEGRAL_VOID" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="发卡行积分消费撤销" enTag="TOGGLE_ISS_INTEGRAL_VOID" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="联盟积分查询" enTag="TOGGLE_UNION_INTEGRAL_BALANCE" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="联盟积分退货" enTag="TOGGLE_UNION_INTEGRAL_REFUND" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+            </Menu>
+
+            <!--<Menu chnTag="手机芯片类交易开关" enTag="UPCARD_CONTROL" iconRes="ic_menu_trade_settings" structure="LIST">-->
+
+            <!--</Menu>-->
+
+            <Menu chnTag="预约类交易开关" enTag="RESERVATION_CONTROL" iconRes="ic_menu_trade_settings" structure="LIST">
+                <MenuItem chnTag="预约消费" enTag="TOGGLE_RESERVATION_SALE" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="预约消费撤销" enTag="TOGGLE_RESERVATION_VOID" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+            </Menu>
+
+            <Menu chnTag="订购类交易开关" enTag="MOTO_CONTROL" iconRes="ic_menu_trade_settings" structure="LIST">
+                <MenuItem chnTag="订购消费" enTag="TOGGLE_MOTO_SALE" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="订购消费撤销" enTag="TOGGLE_MOTO_VOID" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="订购退货" enTag="TOGGLE_MOTO_REFUND" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="订购预授权" enTag="TOGGLE_MOTO_AUTH" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="订购预授权撤销" enTag="TOGGLE_MOTO_CANCEL" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="订购预授权完成请求" enTag="TOGGLE_MOTO_AUTH_COMPLETE" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <!--<MenuItem chnTag="订购预授权完成通知" enTag="TOGGLE_MOTO_AUTH_SETTLEMENT" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>-->
+            </Menu>
+
+            <Menu chnTag="其它类交易开关" enTag="OTHER_CONTROL" iconRes="ic_menu_trade_settings" structure="LIST">
+                <MenuItem chnTag="磁条卡现金充值" enTag="TOGGLE_MAG_ACCOUNT_VERIFY" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+                <MenuItem chnTag="磁条卡账户充值" enTag="TOGGLE_MAG_ACCOUNT_LOAD_VERIFY" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+            </Menu>
+        </Menu>
+
+        <Menu chnTag="交易刷卡控制" enTag="TRADE_CHECKCARDCONTROL" iconRes="ic_menu_trade_settings" structure="LIST">
+            <MenuItem chnTag="消费撤销" enTag="TOGGLE_VOID_CHECKCARD" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+            <MenuItem chnTag="预授权完成撤销" enTag="TOGGLE_COMPLETE_VOID_CHECKCARD" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+            <!--<MenuItem chnTag="预授权完成" enTag="TOGGLE_AUTH_COMPLETE_CHECKCARD" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>-->
+        </Menu>
+        <Menu chnTag="交易输密控制" enTag="TRADE_INPUTPWCONTROL" iconRes="ic_menu_trade_settings" structure="LIST">
+            <MenuItem chnTag="消费撤销" enTag="TOGGLE_VOID_INPUTWD" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+            <MenuItem chnTag="预授权撤销" enTag="TOGGLE_AUTH_VOID_INPUTWD" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+            <MenuItem chnTag="预授权完成" enTag="TOGGLE_AUTH_COMPLETE_INPUTWD" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+            <MenuItem chnTag="预授权完成撤销" enTag="TOGGLE_COMPLETE_VOID_INPUTWD" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+        </Menu>
+        <MenuItem chnTag="其它交易控制" enTag="TRADE_OTHER_CONTROL" iconRes="ic_menu_trade_settings"/>
+    </Menu>
+    <Menu chnTag="通讯设置" enTag="COMMUNICATION_SETTINGS" structure="LIST">
+        <MenuItem chnTag="通讯参数" enTag="COMMUNICATION_SETTINGS"/>
+        <MenuItem chnTag="网络设置" enTag="NET_SETTINGS" iconRes="ic_menu_communication_settings"/>
+    </Menu>
+
+    <Menu chnTag="密钥管理" enTag="KEY_MANAGER" iconRes="ic_menu_obtain_tmk" structure="LIST">
+        <MenuItem chnTag="手工设置主密钥" enTag="MANUAL_SET_TMK" iconRes="ic_menu_obtain_tmk"/>
+        <Menu chnTag="IC卡导入主密钥" enTag="IC_IMPORT_TMK_MENU" iconRes="ic_menu_obtain_tmk">
+            <MenuItem chnTag="IC卡注入主密钥" enTag="IC_IMPORT_TMK" iconRes="ic_menu_obtain_tmk"/>
+            <MenuItem chnTag="手工输入主密钥" enTag="MANUAL_IC_IMPORT_TMK" iconRes="ic_menu_obtain_tmk"/>
+        </Menu>
+        <MenuItem chnTag="设置加密算法" enTag="ENCRYPT_ALGORITHM" iconRes="ic_menu_obtain_tmk"/>
+        <MenuItem chnTag="设置主密钥索引" enTag="MAIN_KEY_INDEX" iconRes="ic_menu_obtain_tmk"/>
+    </Menu>
+    <MenuItem chnTag="管理员改密" enTag="ADMIN_MODIFY_PWD" iconRes="ic_menu_modify_pwd"/>
+    <Menu chnTag="其它功能" enTag="OTHER_SETUP" structure="LIST">
+        <MenuItem chnTag="导入终端参数" enTag="IMPORT_POS_PARAMETER" iconRes="ic_menu_download"/>
+        <MenuItem chnTag="清除交易流水" enTag="CLEAR_TRADE_RECORDS"/>
+        <Menu chnTag="下载功能" enTag="DOWNLOAD_FUNCTION" iconRes="ic_menu_download" structure="LIST">
+            <MenuItem chnTag="终端参数下载" enTag="DOWNLOAD_TERMINAL_PARAMETER" iconRes="ic_menu_download" process="online.xml"/>
+            <MenuItem chnTag="IC卡公钥下载" enTag="DOWNLOAD_CAPK" iconRes="ic_menu_download"  process="online.xml"/>
+            <MenuItem chnTag="IC卡参数下载" enTag="DOWNLOAD_AID" iconRes="ic_menu_download" process="online.xml"/>
+            <!--<MenuItem chnTag="卡BIN信息下载" enTag="DOWNLOAD_CARD_BIN" iconRes="ic_menu_download" process="online.xml"/>-->
+            <MenuItem chnTag="免密新增bin表B下载" enTag="DOWNLOAD_CARD_BIN_QPS" iconRes="ic_menu_download"
+                    process="online.xml"/>
+            <MenuItem chnTag="免密bin表C黑名单下载" enTag="DOWNLOAD_BLACK_CARD_BIN_QPS" iconRes="ic_menu_download"
+                    process="online.xml"/>
+            <MenuItem chnTag="非接业务参数下载" enTag="DOWNLOAD_QPS_PARAMS" iconRes="ic_menu_download" process="online.xml"/>
+        </Menu>
+        <!--<MenuItem chnTag="通讯长连接" enTag="KEEP_CONNECT_ALIVE" itemStyle="TOGGLE" iconRes="ic_menu_communication_settings"/>-->
+        <MenuItem chnTag="恢复默认设置" enTag="RESTORE_CONFIG" iconRes="ic_menu_system_settings"/>
+        <MenuItem chnTag="程序自动更新设置" enTag="APP_UPGRADE_SETTING" iconRes="ic_menu_system_settings"/>
+        <MenuItem chnTag="QPS参数设置" enTag="QPS_PARAM_SETTING" iconRes="ic_menu_system_settings"/>
+        <MenuItem chnTag="签名板设置" enTag="TRADE_SIGN_SETTINGS" iconRes="ic_menu_system_settings"/>
+        <MenuItem chnTag="闪卡参数设置" enTag="ECASH_PARAM_SETTINGS" iconRes="ic_menu_system_settings"/>
+        <MenuItem chnTag="安全密码修改" enTag="SECURITY_MODIFY_PWD" iconRes="ic_menu_modify_pwd"/>
+        <MenuItem chnTag="磁道数据加密" enTag="TOGGLE_TRACK_ENCRYPT" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+        <MenuItem chnTag="小费支持" enTag="TOGGLE_TIP_SUPPORT" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+        <MenuItem chnTag="自动冲正(即时)" enTag="TOGGLE_REVERSE_NOW" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+        <MenuItem chnTag="签购单打印英文" enTag="TOGGLE_SLIP_ENGLISH" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+        <MenuItem chnTag="支持批上送" enTag="TOGGLE_BATCH_UPLOAD" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+        <MenuItem chnTag="同步平台时间" enTag="TOGGLE_SYNC_TIME" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+        <MenuItem chnTag="EMV内核支持国密" enTag="TOGGLE_EMV_SM" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+        <MenuItem chnTag="小额代授权" enTag="TOGGLE_OFFLINE_AUTH" iconRes="ic_menu_toggle_prefer_clss" itemStyle="TOGGLE"/>
+        <MenuItem chnTag="非接交易通道" enTag="NFC_TRADE_CHANNEL" iconRes="ic_menu_obtain_tmk"/>
+    </Menu>
+</Menu>

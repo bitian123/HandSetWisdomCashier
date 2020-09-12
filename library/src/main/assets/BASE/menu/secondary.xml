@@ -1,0 +1,31 @@
+<!--TAG说明：
+    Menu：父节点
+    MenuItem：叶子节点
+-->
+<!--属性说明：
+    chnTag：中文标签，必填。
+    enTag：英文标签，必填。
+    iconRes：图标资源名称，可填，如不指定，则使用默认图标。
+    textRes：菜单名资源名称，可填，如不指定，则使用中文标签。
+    isShow：是否显示，可填，如不指定，默认值为TRUE.可选值：TRUE（是），FALSE（否）
+    structure：视图结构，可填，如不指定，默认值为GRID.可选值：GRID（九宫格），LIST（列表）
+    process：流程文件名称，可填，如不指定，默认值为【英文标签】.xml
+    code：交易码，可填，如不指定，默认值为英文标签
+    topView：顶层视图样式，可填，如不指定，默认值为TITLE.可选值：TITLE（显示标题栏）,BANNER（显示横幅）,MIX（都显示）,NONE（都不显示）
+
+-->
+<Menu chnTag="主管管理" enTag="SUPER_MANAGEMENT" structure="LIST" topView="BANNER">
+    <!--<MenuItem chnTag="通讯参数设置" enTag="COMMUNICATION_SETTINGS"/>-->
+    <MenuItem chnTag="主管改密" enTag="MASTER_MODIFY_PWD" iconRes="ic_menu_modify_pwd"/>
+    <MenuItem chnTag="操作员管理" enTag="OPERATOR_MANAGE"/>
+    <!--<MenuItem chnTag="获取主密钥" enTag="DOWNLOAD_TMK" iconRes="ic_menu_obtain_tmk" process="online.xml"/>-->
+    <!--<MenuItem chnTag="手工设置主密钥" enTag="MANUAL_SET_TMK" iconRes="ic_menu_obtain_tmk"/>-->
+    <!--<Menu chnTag="IC卡导入主密钥" enTag="IC_IMPORT_TMK_MENU" iconRes="ic_menu_obtain_tmk">-->
+        <!--<MenuItem chnTag="IC卡注入主密钥" enTag="IC_IMPORT_TMK" iconRes="ic_menu_obtain_tmk"/>-->
+        <!--<MenuItem chnTag="手工输入主密钥" enTag="MANUAL_IC_IMPORT_TMK" iconRes="ic_menu_obtain_tmk"/>-->
+    <!--</Menu>-->
+    <!--<MenuItem chnTag="清除交易流水" enTag="CLEAR_TRADE_RECORDS"/>-->
+    <!--<Menu chnTag="其它" enTag="OTHER" iconRes="ic_menu_other_setup" structure="LIST">-->
+        <!--<MenuItem chnTag="优先挥卡开关" enTag="FLAG_PREFER_CLSS" itemStyle="TOGGLE"/>-->
+    <!--</Menu>-->
+</Menu>

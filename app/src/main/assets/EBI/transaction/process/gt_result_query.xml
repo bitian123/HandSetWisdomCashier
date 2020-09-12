@@ -1,0 +1,24 @@
+<!--节点ID为0，代表主界面-->
+<!--绿城认筹消费流程-->
+<process transCode="">
+    <!--电子签名-->
+    <component name="com.centerm.epos.fragment.trade.SignatureFragment" id="1"
+        controller="com.centerm.epos.transcation.pos.controller.ShowSignPadUIController">
+        <condition id="1">8</condition>
+        <condition id="99">7</condition>
+    </component>
+    <!--电话号码-->
+    <component name="com.centerm.epos.fragment.trade.InputPhoneNumberFragment" id="8"
+            controller="com.centerm.epos.transcation.pos.controller.ShowInputPhoneUIController">
+        <condition id="1">7</condition>
+        <condition id="99">7</condition>
+    </component>
+    <!--交易结果-->
+    <component name="com.centerm.epos.ebi.ui.fragment.EbiResultFragment" id="7">
+        <condition id="1">0</condition>
+        <condition id="2">21</condition>
+        <condition id="3">22</condition>
+        <condition id="4">23</condition>
+        <condition id="555">6</condition>
+    </component>
+</process>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/trading_window_bg"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout android:layout_width="500pt"
+        android:layout_height="300pt"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/bg_frame1">
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="40pt"
+            android:text="详情"
+            android:gravity="center_vertical"
+            android:textSize="14pt"
+            android:layout_marginLeft="10pt"
+            android:layout_centerVertical="true"
+            android:textColor="#333333"/>
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layerType="software"
+            android:background="@drawable/dotted_line"/>
+
+        <LinearLayout style="@style/mw_style"
+            android:orientation="horizontal">
+            <LinearLayout android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="30pt"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/mTvRoomId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="项目名称"
+                    android:layout_marginLeft="35pt"
+                    android:textSize="12pt"
+                    android:textColor="#333333" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="30pt"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/mTvAmtReceivable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12pt"
+                    android:layout_marginLeft="35pt"
+                    android:gravity="center_vertical"
+                    android:text="应收金额"
+                    android:textColor="#333333"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/mw_style"
+            android:orientation="horizontal">
+            <LinearLayout android:layout_width="0dp"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/mTvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="姓名"
+                    android:layout_marginLeft="35pt"
+                    android:textSize="12pt"
+                    android:textColor="#333333" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/mTvPaidAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12pt"
+                    android:text="已收金额"
+                    android:layout_marginLeft="35pt"
+                    android:textColor="#333333"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/mw_style"
+            android:orientation="horizontal">
+            <LinearLayout android:layout_width="0dp"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/mTvBillId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="房间名称"
+                    android:layout_marginLeft="35pt"
+                    android:textSize="12pt"
+                    android:textColor="#333333" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/mTvUnpaidAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12pt"
+                    android:text="本次应收"
+                    android:layout_marginLeft="35pt"
+                    android:textColor="#333333"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/mw_style"
+            android:orientation="horizontal">
+            <LinearLayout android:layout_width="0dp"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/mTvMoneyType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="款项名称"
+                    android:layout_marginLeft="35pt"
+                    android:textSize="12pt"
+                    android:textColor="#333333" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12pt"
+                    android:text="本次付款金额: "
+                    android:layout_marginLeft="35pt"
+                    android:textColor="#333333"/>
+                <EditText
+                    android:id="@+id/mEtPayAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25pt"
+                    android:minWidth="30dp"
+                    android:textSize="12pt"
+                    android:text="0.00"
+                    android:paddingLeft="15pt"
+                    android:maxLength="12"
+                    android:inputType="numberDecimal"
+                    android:textColor="#333333"
+                    android:textCursorDrawable="@drawable/edittext_cursor"
+                    android:background="@drawable/bg_login_et"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/mw_style"
+            android:orientation="horizontal">
+            <LinearLayout android:layout_width="0dp"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/mTvSettlement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="结算帐号"
+                    android:layout_marginLeft="35pt"
+                    android:textSize="12pt"
+                    android:textColor="#333333" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/mw_style"
+            android:orientation="horizontal"
+            android:layout_marginTop="30pt"
+            android:gravity="center_horizontal">
+            <Button
+                style="@style/OperatorButtonStyle"
+                android:id="@+id/mBtnCanel"
+                android:layout_width="100pt"
+                android:text="返回"
+                android:textSize="12pt"
+                android:layout_height="30pt"
+                android:background="@drawable/btn_login_bg_gray"/>
+            <Button
+                android:id="@+id/mBtnOk"
+                style="@style/OperatorButtonStyle"
+                android:textSize="12pt"
+                android:layout_width="100pt"
+                android:layout_height="30pt"
+                android:background="@drawable/btn_login_bg"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

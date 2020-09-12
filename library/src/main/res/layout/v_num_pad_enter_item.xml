@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<Button
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/num_item"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_columnWeight="1"
+             android:layout_rowWeight="1"
+             android:background="@drawable/button_selector"
+             android:textSize="@dimen/font_30"
+            android:text="@string/label_confirm"
+    android:textColor="@android:color/white">
+</Button>
+
+
+

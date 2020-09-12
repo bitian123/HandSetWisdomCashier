@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+    android:background="@color/font_white">
+
+    <LinearLayout
+        android:id="@+id/refund_input_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="60dp">
+        <TextView
+            style="@style/BaseText.Tip"
+            android:textSize="12pt"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="操作员号"/>
+        <EditText
+            android:id="@+id/opt_no"
+            style="@style/BaseEditBox.Number"
+            android:textSize="12pt"
+            android:paddingLeft="15pt"
+            android:layout_width="200pt"
+            android:layout_height="30pt"
+            android:background="@drawable/bg_login_et"
+            android:layout_marginTop="@dimen/margin_20"
+            android:inputType="number"
+            android:maxLength="2"/>
+        <TextView
+            style="@style/BaseText.Tip"
+            android:layout_marginTop="@dimen/margin_30"
+            android:textSize="12pt"
+            android:text="@string/label_opt_pwd"/>
+        <EditText
+            android:id="@+id/pwd"
+            android:textSize="12pt"
+            style="@style/BaseEditBox.Number"
+            android:paddingLeft="15pt"
+            android:layout_width="200pt"
+            android:layout_height="30pt"
+            android:background="@drawable/bg_login_et"
+            android:layout_marginTop="@dimen/margin_20"
+            android:inputType="numberPassword"
+            android:maxLength="4"/>
+        <TextView
+            style="@style/BaseText.Tip"
+            android:textSize="12pt"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/label_consume_opt_pwd"/>
+        <EditText
+            android:id="@+id/pwd_confirm"
+            android:textSize="12pt"
+            style="@style/BaseEditBox.Number"
+            android:layout_width="200pt"
+            android:layout_height="30pt"
+            android:paddingLeft="15pt"
+            android:background="@drawable/bg_login_et"
+            android:layout_marginTop="@dimen/margin_20"
+            android:inputType="numberPassword"
+            android:maxLength="4"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/mw_style"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_60"
+        android:gravity="center_horizontal">
+        <Button
+            style="@style/OperatorButtonStyle"
+            android:id="@+id/mBtnBack"
+            android:layout_width="100pt"
+            android:text="返回"
+            android:textSize="12pt"
+            android:layout_height="30pt"
+            android:background="@drawable/btn_login_bg_gray"/>
+        <Button
+            android:id="@+id/confirm_change"
+            style="@style/OperatorButtonStyle"
+            android:textSize="12pt"
+            android:layout_width="100pt"
+            android:layout_height="30pt"
+            android:background="@drawable/btn_login_bg"/>
+    </LinearLayout>
+
+
+</LinearLayout>

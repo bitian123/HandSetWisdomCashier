@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_title_layout"/>
+
+    <LinearLayout
+        android:id="@+id/tip_block"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_20"
+        android:background="@drawable/bg_popup"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/BaseText.Tip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_60"
+            android:text="@string/tip_check_card"/>
+
+
+        <include
+            android:id="@+id/tip1"
+            layout="@layout/v_check_card_hint_item"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/margin_40"
+            android:layout_marginRight="@dimen/margin_40"
+            android:layout_marginTop="@dimen/margin_60"
+            android:layout_weight="1"/>
+
+        <include
+            android:id="@+id/tip2"
+            layout="@layout/v_check_card_hint_item"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/margin_40"
+            android:layout_marginRight="@dimen/margin_40"
+            android:layout_marginTop="@dimen/margin_40"
+            android:layout_weight="1"/>
+
+        <include
+            android:id="@+id/tip3"
+            layout="@layout/v_check_card_hint_item"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/margin_40"
+            android:layout_weight="1"
+            android:visibility="invisible"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

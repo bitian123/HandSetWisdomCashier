@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/login_bg">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="50pt"
+        android:id="@+id/mTopBar">
+
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo_gt"
+            android:layout_marginLeft="15pt"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10pt"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_exit_bg"
+            android:layout_marginRight="15pt"
+            android:text="退出系统"
+            android:textSize="12pt"
+            android:paddingLeft="13pt"
+            android:paddingRight="13pt"
+            android:paddingTop="5pt"
+            android:paddingBottom="5pt"
+            android:textColor="@color/font_white"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10pt"
+            android:id="@+id/mBtnExit"
+            android:layout_alignParentRight="true"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mHotLine"
+            android:textColor="@color/e10_hotline_color"
+            android:drawableLeft="@drawable/hotline_icon"
+            android:drawablePadding="7pt"
+            android:text="4007008010"
+            android:layout_toLeftOf="@id/mBtnExit"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10pt"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="25dp"
+            android:textSize="12pt"/>
+    </RelativeLayout>
+
+    <LinearLayout android:layout_width="100pt"
+        android:layout_height="match_parent"
+        android:id="@+id/mLlMenuList"
+        android:layout_below="@id/mTopBar"
+        android:background="#F3F3F3"
+        android:orientation="vertical">
+        <RadioGroup style="@style/mm_style"
+            android:id="@+id/mRadioGroup"
+            android:orientation="vertical"
+            android:paddingTop="10pt">
+            <RadioButton style="@style/e10_sys_menu_item_btn"
+                android:id="@+id/mRb1"
+                android:text="系统管理" />
+            <RadioButton style="@style/e10_sys_menu_item_btn"
+                android:id="@+id/mRb2"
+                android:text="商户信息" />
+            <RadioButton style="@style/e10_sys_menu_item_btn"
+                android:id="@+id/mRb3"
+                android:text="修改密码" />
+            <RadioButton style="@style/e10_sys_menu_item_btn"
+                android:id="@+id/mRb4"
+                android:text="录入指纹" />
+            <RadioButton style="@style/e10_sys_menu_item_btn"
+                android:id="@+id/mRb5"
+                android:text="下载密钥" />
+            <RadioButton style="@style/e10_sys_menu_item_btn"
+                android:id="@+id/mRb6"
+                android:text="操作员管理" />
+            <RadioButton style="@style/e10_sys_menu_item_btn"
+                android:id="@+id/mRb7"
+                android:text="单据补打" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mTopBar"
+        android:layout_toRightOf="@id/mLlMenuList"
+        android:background="#F3F3F3">
+
+        <FrameLayout
+            android:id="@+id/frag_container"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/font_white"
+            android:layout_marginBottom="12pt"
+            android:layout_marginTop="12pt"
+            android:layout_marginRight="12pt"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

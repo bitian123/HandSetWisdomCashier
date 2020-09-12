@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="@dimen/width_560"
+             android:layout_height="@dimen/height_500"
+             android:background="@drawable/bg_popup"
+             android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/hint_icon_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/pic_lock"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_60"
+        android:layout_marginBottom="@dimen/margin_40"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_20"
+        android:paddingRight="@dimen/margin_20">
+
+
+        <TextView
+            android:id="@+id/dialog_msg"
+            style="@style/BaseText.Tip.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_80"
+            android:gravity="center"
+            android:text="@string/tips_had_bean_lock"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/font_30" />
+
+        <EditText
+            android:id="@+id/et_opt_id"
+            style="@style/BaseEditBox.Number"
+            android:background="@color/common_bg"
+            android:layout_height="@dimen/height_80"
+            android:layout_marginTop="@dimen/margin_50"
+            android:layout_marginStart="@dimen/margin_40"
+            android:layout_marginEnd="@dimen/margin_40"
+            android:hint="@string/label_login_please_input_account"
+            android:maxLength="2"
+            android:textSize="@dimen/font_30"
+            android:paddingBottom="0dp"/>
+
+        <EditText
+            android:id="@+id/et_opt_psw"
+            style="@style/BaseEditBox.Number"
+            android:background="@color/common_bg"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginStart="@dimen/margin_40"
+            android:layout_marginEnd="@dimen/margin_40"
+            android:layout_height="@dimen/height_80"
+            android:hint="@string/label_login_please_input_pwd"
+            android:inputType="numberPassword"
+            android:maxLength="8"
+            android:textSize="@dimen/font_32"
+            android:paddingBottom="0dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:orientation="horizontal"
+            android:layout_marginEnd="@dimen/margin_78"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/unlock"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/font_32"
+                android:text="@string/label_confirm"
+
+                android:layout_marginEnd="0dp"
+                android:background="@android:color/white"
+                android:textColor="@color/colorPrimaryBlue"
+                android:gravity="end"
+                style="?android:attr/borderlessButtonStyle"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

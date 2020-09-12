@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30pt">
+
+    <TextView style="@style/ww_style"
+        android:id="@+id/mTv1"
+        android:text="商户名:"
+        android:textSize="12pt"
+        android:textColor="#666666"/>
+
+    <TextView style="@style/ww_style"
+        android:id="@+id/extxt_merchant_name"
+        android:layout_toRightOf="@id/mTv1"
+        android:text=""
+        android:textSize="12pt"
+        android:layout_marginLeft="10pt"
+        android:textColor="#333333"/>
+
+    <TextView style="@style/ww_style"
+        android:id="@+id/mTv2"
+        android:text="商户号:"
+        android:layout_below="@id/mTv1"
+        android:layout_marginTop="15pt"
+        android:textSize="12pt"
+        android:textColor="#666666"/>
+
+    <TextView style="@style/ww_style"
+        android:id="@+id/extxt_marchant_number"
+        android:layout_toRightOf="@id/mTv1"
+        android:text=""
+        android:layout_below="@id/mTv1"
+        android:layout_marginTop="15pt"
+        android:textSize="12pt"
+        android:layout_marginLeft="10pt"
+        android:textColor="#333333"/>
+
+    <TextView style="@style/ww_style"
+        android:id="@+id/mTv3"
+        android:text="终端号:"
+        android:layout_below="@id/mTv2"
+        android:layout_marginTop="15pt"
+        android:textSize="12pt"
+        android:textColor="#666666"/>
+
+    <TextView style="@style/ww_style"
+        android:id="@+id/extxt_bank_term_no"
+        android:layout_toRightOf="@id/mTv1"
+        android:text=""
+        android:layout_below="@id/mTv2"
+        android:layout_marginTop="15pt"
+        android:textSize="12pt"
+        android:layout_marginLeft="10pt"
+        android:textColor="#333333"/>
+
+    <TextView style="@style/ww_style"
+        android:id="@+id/mTv4"
+        android:text="序列号:"
+        android:layout_below="@id/mTv3"
+        android:layout_marginTop="15pt"
+        android:textSize="12pt"
+        android:textColor="#666666"/>
+
+    <TextView style="@style/ww_style"
+        android:id="@+id/extxt_term_no"
+        android:layout_toRightOf="@id/mTv1"
+        android:text=""
+        android:layout_below="@id/mTv3"
+        android:layout_marginTop="15pt"
+        android:textSize="12pt"
+        android:layout_marginLeft="10pt"
+        android:textColor="#333333"/>
+
+</RelativeLayout>

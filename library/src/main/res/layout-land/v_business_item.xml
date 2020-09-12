@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="horizontal">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30pt"
+        android:paddingBottom="2pt"
+        android:paddingTop="2pt"
+        android:orientation="horizontal">
+        <LinearLayout style="@style/e10_business_title_item"
+            android:layout_weight="0.8">
+            <CheckBox
+                android:id="@+id/mCbItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="  1"
+                android:textSize="10pt"
+                android:button="@drawable/check_box_"
+                android:clickable="false"
+                android:focusable="false"
+                style="@style/MyCheckBox"/>
+        </LinearLayout>
+        <LinearLayout style="@style/e10_business_title_item"
+            android:layout_weight="1.2">
+            <TextView style="@style/e10_business_title_item_text2"
+                android:text=""
+                android:id="@+id/mName"/>
+        </LinearLayout>
+        <LinearLayout style="@style/e10_business_title_item">
+            <TextView style="@style/e10_business_title_item_text2"
+                android:text=""
+                android:id="@+id/mBillId"/>
+        </LinearLayout>
+        <LinearLayout style="@style/e10_business_title_item">
+            <TextView style="@style/e10_business_title_item_text2"
+                android:text=""
+                android:id="@+id/mMoneyType"/>
+        </LinearLayout>
+        <LinearLayout style="@style/e10_business_title_item">
+            <TextView style="@style/e10_business_title_item_text2"
+                android:text=""
+                android:id="@+id/mTvSettlement"/>
+        </LinearLayout>
+        <LinearLayout style="@style/e10_business_title_item">
+            <TextView style="@style/e10_business_title_item_text2"
+                android:text=""
+                android:id="@+id/mAmountReceivable"/>
+        </LinearLayout>
+        <LinearLayout style="@style/e10_business_title_item">
+            <TextView style="@style/e10_business_title_item_text2"
+                android:text=""
+                android:id="@+id/mAmountReceived"/>
+        </LinearLayout>
+        <LinearLayout style="@style/e10_business_title_item">
+            <TextView style="@style/e10_business_title_item_text2"
+                android:text=""
+                android:id="@+id/mUnpaidAmount"/>
+        </LinearLayout>
+        <LinearLayout style="@style/e10_business_title_item">
+            <TextView style="@style/e10_business_title_item_text2"
+                android:text=""
+                android:layout_width="130dp"
+                android:id="@+id/mTvPayAmt"
+                android:gravity="center"
+                android:paddingTop="1.5pt"
+                android:paddingBottom="1.5pt"
+                android:lines="1"
+                android:background="@drawable/bg_frame7"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

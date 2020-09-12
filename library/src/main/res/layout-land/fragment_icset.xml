@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/cardTypeTX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/positionNoSpinner"
+            android:layout_alignEnd="@+id/btn_Poweron"
+            android:layout_column="1"
+            android:text="Type:"
+            android:textSize="30sp" />
+
+        <Spinner
+            android:id="@+id/cardTypeSpinner"
+            android:layout_width="600dp"
+            android:layout_height="50dp"
+            android:layout_alignBaseline="@+id/cardTypeTX"
+            android:layout_alignBottom="@+id/cardTypeTX"
+            android:layout_alignEnd="@+id/btn_Poweroff"
+            android:layout_column="2"
+            android:layout_toEndOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/positionNoTx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btn_DeviceExist"
+            android:layout_alignTop="@+id/positionNoSpinner"
+            android:layout_column="3"
+            android:layout_marginStart="40dp"
+            android:text=""
+            android:textSize="30sp"
+            android:visibility="gone"/>
+
+        <Spinner
+            android:id="@+id/positionNoSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_column="4"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@+id/positionNoTx"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/TagListLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/UserInfoLabel"
+            android:layout_below="@+id/cardTypeSpinner"
+            android:layout_marginTop="39dp"
+            android:text="APDU Input data"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/et_apduin"
+            android:layout_width="500dp"
+            android:layout_height="75dp"
+            android:layout_alignBaseline="@+id/TagListLabel"
+            android:layout_alignBottom="@+id/TagListLabel"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="101dp"
+            android:gravity="top"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/UserInfoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/et_apduout"
+            android:layout_alignBottom="@+id/et_apduout"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="12dp"
+            android:text="APDU Output data"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/et_apduout"
+            android:layout_width="500dp"
+            android:layout_height="75dp"
+            android:layout_alignStart="@+id/et_apduin"
+            android:layout_below="@+id/et_apduin"
+            android:layout_marginTop="52dp"
+            android:gravity="top"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/UserInfoLabel"
+            android:layout_below="@+id/et_apduout"
+            android:layout_marginTop="51dp"
+            android:text="Result"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/et_reuslt"
+            android:layout_width="500dp"
+            android:layout_height="75dp"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_alignStart="@+id/et_apduout"
+            android:gravity="top"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btn_sendApdu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btn_Poweron"
+            android:layout_alignBottom="@+id/btn_Poweron"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/textView"
+            android:text="send apdu command" />
+
+        <Button
+            android:id="@+id/btn_Poweron"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView"
+            android:layout_below="@+id/et_reuslt"
+            android:layout_marginTop="33dp"
+            android:text="Power uo" />
+
+        <Button
+            android:id="@+id/btn_Poweroff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btn_DeviceExist"
+            android:layout_alignBottom="@+id/btn_DeviceExist"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/btn_sendApdu"
+            android:text="Power down" />
+
+        <Button
+            android:id="@+id/btn_DeviceExist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btn_sendApdu"
+            android:layout_alignBottom="@+id/btn_sendApdu"
+            android:layout_marginStart="13dp"
+            android:layout_toEndOf="@+id/btn_Poweroff"
+            android:text="Device Check" />
+
+    </RelativeLayout>
+
+</LinearLayout>

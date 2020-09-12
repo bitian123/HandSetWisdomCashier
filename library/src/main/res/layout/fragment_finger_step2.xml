@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/font_white">
+
+    <RelativeLayout style="@style/mw_style"
+        android:layout_marginTop="10pt">
+
+        <LinearLayout style="@style/ww_style"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_centerHorizontal="true">
+            <ImageView style="@style/ww_style"
+                android:background="@drawable/finger"
+                />
+            <TextView style="@style/ww_style"
+                android:text="请在下方指纹区域录入 第"
+                android:layout_marginLeft="12pt"
+                android:textSize="12pt"
+                android:textColor="#333333"/>
+
+            <TextView style="@style/ww_style"
+                android:layout_width="25pt"
+                android:layout_height="29pt"
+                android:id="@+id/mTvNum"
+                android:text="1"
+                android:layout_marginLeft="2pt"
+                android:layout_marginRight="2pt"
+                android:gravity="center"
+                android:textSize="15pt"
+                android:textColor="#A22C2C"
+                android:background="@drawable/bg_finger_num"/>
+
+            <TextView style="@style/ww_style"
+                android:text="次 指纹"
+                android:textSize="12pt"
+                android:textColor="#333333"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <ImageView style="@style/ww_style"
+        android:background="@drawable/icon_finger"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15pt"
+        android:layout_marginBottom="5pt"/>
+
+    <Button
+        style="@style/LoginLayoutStyle.Button2"
+        android:textSize="14pt"
+        android:layout_marginTop="10dp"
+        android:text="取消录入"
+        android:id="@+id/mBtnCancel"
+        android:background="@drawable/btn_login_bg_gray"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="100pt"
+        android:layout_height="30pt"/>
+
+</LinearLayout>

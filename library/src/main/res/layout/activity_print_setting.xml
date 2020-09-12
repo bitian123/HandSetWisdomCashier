@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <include layout="@layout/common_title_layout"/>
+
+
+    <TextView
+            android:id="@+id/textView"
+            style="@style/ConfigureItemTextStyle"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/printnum"
+            />
+
+    <EditText
+            android:id="@+id/extxt_print_num"
+            style="@style/ConfigureItemTextKeyStyle.Edit123"
+            android:maxLength="1"
+            />
+
+    <Button
+            android:onClick="onSureClick"
+            style="@style/ConfigureItemLayoutStyle.Button"
+            />
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <android.inputmethodservice.KeyboardView
+                android:id="@+id/keyboard_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@android:color/black"
+                android:keyBackground="@drawable/btn_keyboard_key"
+                android:keyPreviewLayout="@layout/key_preview_layout"
+                android:keyTextColor="@android:color/white"
+                android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/root_view"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#00f5f6f7"
+              android:orientation="vertical"
+              >
+
+    <!--<GridView
+        style="@style/MenuGrid"
+        android:id="@+id/adapter_view"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:horizontalSpacing="40dp"
+        android:verticalSpacing="45dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+
+    <com.centerm.epos.view.GridViewPager
+        android:id="@+id/menu_view"
+        style="@style/MenuGrid"
+        android:background="#00F5F6F7"
+        />
+
+
+</LinearLayout>

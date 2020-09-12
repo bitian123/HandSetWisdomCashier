@@ -1,0 +1,19 @@
+<!--项目改动点配置信息
+    TAG说明：
+    operation：根节点，标识该文件是作为项目改动配置信息
+    action：改动点
+
+    属性说明：
+    version：版本号
+    tag：标签
+    id：id
+-->
+<Redevelop version="1.0.0">
+    <Item tag="messageProcess" index="1" class="com.centerm.epos.msg.PosISO8583Message"/>
+    <Item tag="tradeProcess" index="2" class="com.centerm.epos.xml.bean.process.TradeProcess"/>
+    <Item tag="posSlipHelper" index="3" class="com.centerm.epos.print.BaseSlipHelper"/>
+    <Item tag="redevelop_menu_helper" index="4" class="com.centerm.epos.helper.BaseMenuHelper"/>
+    <Item tag="redevelop_pay_entry_presenter" index="5" class="com.centerm.component.pay.mvp.presenter.PayEntryPresenter"/>
+    <Item tag="redevelop_print_data" index="6" class="com.centerm.epos.printer.BasePrintTransData"/>
+
+</Redevelop>

@@ -1,0 +1,124 @@
+<Map>
+    <String key="project" value="common"/><!--项目名称-->
+
+    <String key="net_license" value="3519"/><!--银联入网许可证编号-->
+
+    <Int key="max_storage" value="1000"/><!--最大流水存储量-->
+    <Int key="KEY_MAX_TRANSACTIONS" value="1000"/><!--最大流水存储量-->
+    <Int key="msg_retry" value="3"/><!--最大消息重发次数-->
+    <Int key="KEY_MAX_MESSAGE_RETRY_TIMES" value="3"/><!--最大消息重发次数-->
+    <Int key="reverse_retry" value="3"/><!--最大冲正次数-->
+    <Int key="KEY_TIP_PERCENTAGE" value="15"/><!--小费比例-->
+    <Long key="card_timeout" value="60000"/><!--检卡超时时间-->
+    <Long key="pin_timeout" value="60000"/><!--输密超时时间-->
+    <Int key="pin_retry" value="3"/><!--输密重试次数-->
+    <Double key="max_amt" value="99999999.99"/><!--所能允许的最大交易金额-->
+    <Double key="max_refund_amt" value="99999999.99"/><!--所能允许的最大退货金额-->
+
+    <Long key="net_connect_time" value="10000"/><!--网络连接超时时间-->
+    <Long key="net_resp_time" value="50000"/><!--网络响应超时时间-->
+
+    <Boolean key="flag_auto_sign_out" value="true"/><!--是否自动签退-->
+    <Boolean key="flag_void_need_pin" value="false"/><!--消费撤销是否需要PIN，默认为不输密-->
+    <Boolean key="flag_void_need_card" value="true"/><!--消费撤销是否需要检卡，默认为不检卡-->
+
+    <Boolean key="is_mobile_net_only" value="false"/><!--是否只使用移动网络，默认为不使用-->
+
+
+    <String key="comm_tpdu" value="6011280000"/> <!-- 通讯参数TPDU -->
+    <String key="comm_ip" value="211.144.212.72"/><!-- 通讯参数IP -->
+    <Int key="comm_port" value="3500"/><!-- 通讯参数PORT -->
+    <Boolean key="is_msg_encrypt" value="false"/> <!-- 通讯参数报文是否加密 -->
+    <String key="comm_type" value="tcp"/> <!-- 通讯方式 http、https、tcp、tcps、uart -->
+
+    <String key="comm_cpay_tpdu" value="6006010000"/> <!-- 管理平台通讯参数TPDU -->
+    <String key="comm_cpay_ip" value="10.129.41.151"/><!-- 管理平台通讯参数IP -->
+    <Int key="comm_cpay_port" value="8080"/><!-- 管理平台通讯参数PORT -->
+    <Boolean key="is_cpay_msg_encrypt" value="false"/> <!-- 管理平台通讯参数报文是否加密 -->
+    <String key="comm_cpay_type" value="https"/> <!-- 通讯方式 -->
+    <Boolean key="track_encrypt" value="true"/> <!-- 磁道是否加密 -->
+    <Boolean key="TOGGLE_TRACK_ENCRYPT" value="true"/>  <!-- 磁道是否加密 -->
+    <String key="encrypt_algorithm" value="3DES"/> <!-- 加密算法 -->
+    <String key="VERSIONPREFIX" value="程序版本：V"/> <!-- 程序版本前缀 -->
+    <Int key="printnum" value="2"/> <!-- 打印联数 -->
+
+    <String key="operator_99_pwd" value="12345678"/> <!-- 99管理员的默认密码 -->
+
+    <Boolean key="FLAG_PREFER_CLSS" value="false"/>   <!-- 优先挥卡 -->
+    <Boolean key="FLAG_AUTO_SIGN_OUT" value="true"/>    <!-- 结算后是否自动签退 -->
+    <Boolean key="prefer_wave_card" value="true"/>  <!-- 优先挥卡 -->
+    <Int key="MAINKEYINDEX" value="6"/> <!-- 主密钥索引号 -->
+    <String key="SECURITYPWD" value="888888"/> <!-- 安全密码，控制修改商户号/终端号/商户名称 -->
+
+    <!-- 交易开关， false 默认关闭, true 默认开启-->
+    <Boolean key="TOGGLE_SALE" value="true"/>
+    <Boolean key="TOGGLE_VOID" value="true"/>
+    <Boolean key="TOGGLE_BALANCE" value="true"/>
+    <Boolean key="TOGGLE_REFUND" value="true"/>
+    <Boolean key="TOGGLE_AUTH" value="true"/>
+    <Boolean key="TOGGLE_CANCEL" value="true"/>
+    <Boolean key="TOGGLE_AUTH_COMPLETE" value="true"/>
+    <Boolean key="TOGGLE_COMPLETE_VOID" value="true"/>
+    <Boolean key="TOGGLE_SALE_SCAN" value="true"/>
+    <Boolean key="TOGGLE_ECASH_MENU" value="true"/>
+
+    <Boolean key="TOGGLE_SALE_PROPERTY" value="true"/>
+
+    <!-- 刷卡开关， false 默认关闭, true 默认开启-->
+    <Boolean key="TOGGLE_VOID_CHECKCARD" value="true"/>
+    <Boolean key="TOGGLE_AUTH_COMPLETE_CHECKCARD" value="true"/>
+    <Boolean key="TOGGLE_COMPLETE_VOID_CHECKCARD" value="true"/>
+
+    <!-- 输密开关， false 默认关闭, true 默认开启-->
+    <Boolean key="TOGGLE_VOID_INPUTWD" value="true"/>
+    <Boolean key="TOGGLE_AUTH_VOID_INPUTWD" value="true"/>
+    <Boolean key="TOGGLE_AUTH_COMPLETE_INPUTWD" value="true"/>
+    <Boolean key="TOGGLE_COMPLETE_VOID_INPUTWD" value="true"/>
+
+    <!-- 其它交易控制开关（输入主管密码，支持手输卡号）， false 默认关闭, true 默认开启-->
+    <Boolean key="TOGGLE_MASTER_PWD_INPUT" value="true"/>
+    <Boolean key="TOGGLE_CARD_NUM_BY_HAND" value="true"/>
+
+    <Boolean key="KEEP_CONNECT_ALIVE" value="false"/>   <!-- 是否保持通讯的长连接 -->
+    <String key="REFUND_AMOUNT_LIMITED" value="10000.00"/>    <!-- 最大退货金额 -->
+
+    <Boolean key="TOGGLE_TIP_SUPPORT" value="false"/>   <!-- 小费支持开关 -->
+    <Boolean key="TOGGLE_REVERSE_NOW" value="false"/>   <!-- 当笔交易冲正 -->
+    <Boolean key="TOGGLE_SLIP_ENGLISH" value="false"/>   <!-- 签购单打印英文 -->
+    <Boolean key="TOGGLE_BATCH_UPLOAD" value="true"/>   <!-- 批上送开关 -->
+    <Boolean key="TOGGLE_SYNC_TIME" value="false"/>     <!-- 签到同步平台时间开关 -->
+    <Boolean key="TOGGLE_EMV_SM" value="true"/>         <!-- EMV内核是否支持国密 -->
+    <Boolean key="TOGGLE_OFFLINE_AUTH" value="true"/>         <!-- 离线交易小额代授权 -->
+
+    <Boolean key="TOGGLE_AUTO_PRINT_DETAILS" value="false"/>   <!-- 批结算后是否自动打印交易明细 -->
+    <Boolean key="TOGGLE_SLIP_TITLE_DEFAULT" value="true"/>    <!-- 签购单抬头内容默认 -->
+
+    <String key="NFC_TRADE_CHANNEL" value="联机借贷记"/> <!-- 非接通道开关 -->
+    <Int key="KEY_TRADE_VIEW_OP_TIMEOUT" value="60"/>    <!-- 交易界面超时时间 -->
+    <String key="KEY_SLIP_TITLE_CONTENT" value="POS签购单"/>   <!-- 签购单抬头内容 -->
+
+    <Boolean key="TOGGLE_ESIGN_SUPPORT" value="true"/>       <!-- 电子签名开关 -->
+    <Boolean key="TOGGLE_ESIGN_MUL_PACKAGE" value="false"/>  <!-- 电子签名上送多包支持 -->
+    <Boolean key="TOGGLE_SIGN_PAD_INNER" value="true"/>      <!-- 内置电子签名板 -->
+    <Boolean key="TOGGLE_ESING_PHONE_NUMBER" value="false"/>  <!-- 是否输入电话号码 -->
+
+    <Int key="ESIGN_PACKAGE_LEN_MAX" value="900"/>  <!-- 电子签名上送时的最大包大小 -->
+    <Int key="ESIGN_BATCH_REQ_RETRY_TIMES" value="3"/>  <!-- 批量请求重试次数 -->
+    <Int key="ESIGN_STORE_MAX" value="100"/>    <!-- 最大存储笔数 -->
+    <Int key="ESIGN_INPUT_TIMEOUT" value="150"/>    <!-- 签字输入等待时间 -->
+
+    <Int key="ECASH_ERR_RETRY_TIMEOUT" value="10"/> <!-- 当笔重刷处理时间T1 -->
+    <Int key="ECASH_ERR_RECORD_TIMEOUT" value="60"/>    <!-- 闪卡记录可处理时间T2 -->
+    <Int key="ECASH_ERR_RECORD_MAX" value="3"/> <!-- 闪卡记录最大值 -->
+
+    <String key="APN_ACCESS" value=""/> <!-- APN接入点 -->
+    <String key="APN_USER_NAME" value=""/> <!-- APN用户名 -->
+    <String key="APN_USER_PASSWORD" value=""/> <!-- APN密码 -->
+    <Boolean key="APN_ENABLE" value="false"/> <!-- 使用APN专用网络 -->
+
+    <Boolean key="TOGGLE_APP_UPGRADE_SUPPORT" value="true"/>   <!--  程序自动更新  -->
+    <Boolean key="TOGGLE_APP_UPGRADE_WIFI_ONLY" value="false"/> <!--  仅支持WIFI网络下更新 -->
+    <Int key="APP_UPGRADE_CONNECT_TIMEOUT" value="3"/>  <!--  服务器连接超时时间  -->
+
+    <String key="APP_THEME_TAG" value="blue"/> <!--  使用蓝色新UI主题，其它值为旧UI红色主题  -->
+</Map>

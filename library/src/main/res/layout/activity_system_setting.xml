@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_layout" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/ConfigureItemTextStyle"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_50"
+        android:text="@string/label_batch_no" />
+
+    <EditText
+        android:id="@+id/extxt_batch_no"
+        style="@style/ConfigureItemTextStyle.Edit"
+        android:inputType="number"
+        android:maxLength="6" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/ConfigureItemTextStyle"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_50"
+        android:text="@string/label_batch_flow_no" />
+    <EditText
+        android:id="@+id/extxt_batch_flow_no"
+        style="@style/ConfigureItemTextStyle.Edit"
+        android:inputType="number"
+        android:maxLength="6"
+        />
+
+    <TextView
+            style="@style/ConfigureItemTextStyle"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_50"
+            android:text="@string/label_max_count"/>
+
+    <EditText
+            android:id="@+id/extxt_max_count"
+            style="@style/ConfigureItemTextStyle.Edit"
+            android:inputType="number"
+            android:maxLength="4"/>
+
+    <TextView
+            style="@style/ConfigureItemTextStyle"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_50"
+            android:text="@string/label_slip_copys" />
+    <EditText
+            android:id="@+id/extxt_slip_copys"
+            style="@style/ConfigureItemTextStyle.Edit"
+            android:inputType="number"
+            android:maxLength="1"
+            />
+
+
+    <Button android:id="@+id/modify_system" style="@style/ConfigureItemLayoutStyle.Button" />
+
+</LinearLayout>

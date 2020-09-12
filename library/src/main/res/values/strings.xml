@@ -1,0 +1,718 @@
+<resources>
+    <string name="app_name">银行卡支付</string>
+    <string name="menu">未知菜单</string>
+    <string name="menu_sale">消费</string>
+    <string name="menu_balance">余额查询</string>
+    <string name="menu_void">消费撤销</string>
+    <string name="menu_refund">退货</string>
+    <string name="menu_auth">预授权</string>
+    <string name="menu_auth_complete">预授权完成</string>
+    <string name="menu_auth_settlement">预授权完成（通知）</string>
+    <string name="menu_cancel">预授权撤销</string>
+    <string name="menu_complete_void">预授权完成撤销</string>
+    <string name="menu_print">打印</string>
+    <string name="menu_print_last">重打最后一笔</string>
+    <string name="menu_print_any">重打任意一笔</string>
+    <string name="menu_print_detail">打印交易明细</string>
+    <string name="menu_print_summary">打印交易汇总</string>
+    <string name="menu_print_batch_summary">打印上批总计</string>
+    <string name="menu_manage">管理</string>
+    <string name="menu_other">其它</string>
+    <!--电子现金类交易-->
+    <string name="e_quick">快速支付</string>
+    <string name="e_common">普通支付</string>
+    <string name="e_load">圈存</string>
+    <string name="e_unload">圈提</string>
+    <string name="e_balance">余额查询</string>
+    <string name="e_refund">脱机退货</string>
+    <string name="ec_trans_records">明细查询</string>
+
+
+    <string name="e_quick_en">EC SALE</string>
+    <string name="e_common_en">EC SALE</string>
+    <string name="e_load_en">EC LOAD</string>
+    <string name="e_balance_en">EC BALANCE</string>
+    <string name="e_refund_en">EC REFUND</string>
+    <string name="ec_trans_records_en">QUERY</string>
+
+    <!--电子现金类圈存-->
+    <string name="ec_load_cash">现金充值</string>
+    <string name="ec_load_inner">指定账户圈存</string>
+    <string name="ec_load_outer">非指定账户圈存</string>
+    <string name="ec_void_cash_load">现金充值撤销</string>
+    <string name="ec_load_records">电子现金圈存日志</string>
+
+    <string name="ec_load_cash_en">EC LOAD</string>
+    <string name="ec_load_inner_en">EC LOAD</string>
+    <string name="ec_load_outer_en">EC LOAD</string>
+    <string name="ec_void_cash_load_en">EC LOAD VOID</string>
+
+
+
+    <string name="title_factory_mode">出厂设置</string>
+    <string name="title_input_money">输入金额</string>
+    <string name="title_input_info">输入原交易信息</string>
+    <string name="title_input_pos_serial">输入凭证号</string>
+    <string name="title_input_pwd">输入密码</string>
+    <string name="title_check_card">请读卡</string>
+    <string name="title_result">交易结果</string>
+    <string name="title_input_director_pwd">主管密码</string>
+    <string name="title_input_admin_pwd">系统管理员密码</string>
+    <string name="title_origin_trade_info">原始交易信息</string>
+    <string name="title_query_trade">交易查询</string>
+    <string name="title_trade_summary">交易汇总</string>
+    <string name="title_trade_detail">交易详情</string>
+    <string name="title_trade_down">交易已完成，请签名</string>
+    <string name="title_upload_log">日志上传</string>
+
+
+    <!--所有的界面提示信息都定义在此，加前缀【tip】-->
+    <string name="tip_remove_contact_card">读卡成功,请拔卡</string>
+    <string name="tip_function_undefined">功能未定义</string>
+    <string name="tip_network_unavailable">网络未连接，请检查！</string>
+    <string name="tip_menu_undefined">菜单未定义</string>
+    <string name="tip_process_undefined">开发中，敬请期待！</string>
+    <string name="tip_menu_init_failed">菜单初始化失败</string>
+    <string name="tip_device_not_ready">终端未就绪，请稍候或重启</string>
+    <string name="tip_card_retry_limited">读卡次数已超限</string>
+    <string name="tip_read_card_timeout">读卡超时</string>
+    <string name="tip_input_pwd_timeout">输密超时</string>
+    <string name="tip_read_card_failed">读卡失败，请重试或使用其它卡片</string>
+    <string name="tip_read_card_failed2">读卡失败，请重试或使用其它卡片</string>
+    <string name="tip_read_card_failed3">读卡失败，请使用其它卡片</string>
+    <string name="tip_read_card_failed4">挥卡金额超限，请使用插卡方式</string>
+    <string name="tip_goto_prestep_unenable">上一步骤不支持重复执行</string>
+    <string name="tip_prestep_not_exist">上一个步骤不存在</string>
+    <string name="tip_force_ic">请插卡或挥卡</string>
+    <string name="tip_force_clss">请挥卡</string>
+    <string name="tip_force_insert_ic">请插入IC卡</string>
+    <string name="tip_if_load_tmk">是否进行主密钥下载？</string>
+    <string name="tip_load_tmk_success">下载主密钥成功</string>
+    <string name="tip_load_tmk_failed">下载主密钥失败！</string>
+    <string name="tip_terminal_init_success">终端初始化成功</string>
+    <string name="tip_terminal_init_failed">终端初始化失败！</string>
+    <string name="tip_upload_esign_success">上传电子签名成功</string>
+    <string name="tip_upload_esign_failed">上传电子签名失败！</string>
+    <string name="tip_load_capk_success">下载IC卡公钥成功</string>
+    <string name="tip_load_capk_failed">下载IC卡公钥失败！</string>
+    <string name="tip_load_aid_success">下载IC卡参数成功</string>
+    <string name="tip_load_aid_failed">下载IC卡参数失败！</string>
+    <string name="tip_load_clss_params_success">下载非接参数成功</string>
+    <string name="tip_load_clss_params_failed">下载非接参数失败！</string>
+    <string name="tip_load_card_bin_success">下载卡BIN参数成功</string>
+    <string name="tip_load_card_bin_failed">下载卡BIN参数失败！</string>
+    <string name="tip_trade_success">交易成功</string>
+    <string name="tip_trade_success2">交易成功！</string>
+    <string name="tip_trade_failed">交易失败</string>
+    <string name="tip_trade_failed2">交易失败！</string>
+    <string name="tip_trade_refused">交易拒绝</string>
+    <string name="tip_card_interaction_failed">卡片交互失败，请重试</string>
+    <string name="tip_trade_fallback">交易降级，请刷卡</string>
+    <string name="tip_trade_fallback2">交易降级，请重试</string>
+    <string name="tip_sign_in_success">签到成功</string>
+    <string name="tip_sign_in_failed">签到失败！</string>
+    <string name="tip_old_pwd_empty">旧密码为空</string>
+    <string name="tip_new_pwd_empty">新密码为空</string>
+    <string name="tip_renew_pwd_empty">确认新密码为空</string>
+    <string name="tip_pwd_not_same">前后两次输入的新密码不一致</string>
+    <string name="tip_pwd_suc">修改密码成功</string>
+    <string name="tip_pwd_old_pwd_error">旧密码有误</string>
+    <string name="tip_please_input_opt_no">请输入正确的操作员号</string>
+    <string name="tip_opt_no_limit">操作员号只能在01～98之间</string>
+    <string name="tip_please_input_opt_pwd">请输入正确的操作员密码</string>
+    <string name="tip_opt_pwd_not_same">两次密码输入不一致</string>
+    <string name="tip_opt_create_suc">新建成功</string>
+    <string name="tip_opt_create_failure">新建失败</string>
+    <string name="tip_opt_exsit">操作员已存在！</string>
+    <string name="tip_opt_update_suc">修改成功</string>
+    <string name="tip_opt_update_failure">修改失败</string>
+    <string name="tip_opt_delete_suc">删除成功</string>
+    <string name="tip_opt_delete_failure">删除失败</string>
+    <string name="tip_opt_not_exsit">操作员不存在</string>
+    <string name="tip_sign_in_again">终端信息更新，请重新签到</string>
+    <string name="tip_download_tmk">请下载主密钥</string>
+    <string name="tip_pakcage_msg_error">组包异常</string>
+    <string name="tip_ic_data_error">IC卡数据处理异常</string>
+    <string name="tip_amount_get_error">金额获取异常</string>
+    <string name="tip_user_cancel">用户取消</string>
+
+    <string name="prue_plz_select_rc_trans">纯电子现金卡，请选择电子现金交易</string>
+    <string name="tip_auth_amount_prue_ec">授权交易不可使用纯电子现金</string>
+
+    <string name="tip_sign_in_before_trading">请签到后再做交易</string>
+    <string name="tip_please_input_account">请输入正确的账号</string>
+    <string name="tip_account_not_exist">操作员不存在</string>
+    <string name="tip_login_pwd_error">密码出错，请重新输入！</string>
+    <string name="tip_login_admin_suc">系统管理员,登录成功!</string>
+    <string name="tip_login_msn_suc">主管操作员,登录成功!</string>
+    <string name="tip_login_opt_suc">操作员登录成功!</string>
+    <string name="tip_login_to_down">请登录主管操作员进行密钥下载!</string>
+    <string name="tip_down_tmk">请先获取主密钥!</string>
+    <string name="tip_mac_verify_failed">MAC校验失败!</string>
+    <string name="tip_pin_timeout">输入密码超时!</string>
+    <string name="tip_input_money">请输入金额：</string>
+    <string name="tip_input_money2">请输入金额</string>
+    <string name="tip_no_pwd">无密码请直接点击确定</string>
+    <string name="tip_on_reversing">冲正中，请稍候&#8230;</string>
+    <string name="tip_reverse_success">冲正成功，请重新交易</string>
+    <string name="tip_input_director_pwd">请输入主管密码：</string>
+    <string name="tip_input_admin_pwd">请输入系统管理员密码：</string>
+    <string name="tip_confirm_origin_info">请确认原始交易信息</string>
+    <string name="tip_refund_over_limited">退货金额超出上限</string>
+    <string name="tip_no_trade_info">暂无交易流水！</string>
+    <string name="tip_no_more_trade_info">无更多交易流水</string>
+    <string name="tip_cannot_query_the_trade">无法查找到对应流水！</string>
+    <string name="tip_has_bean_void">该流水已撤销！</string>
+    <string name="tip_ic_on_processing">IC卡处理中，请勿拔卡！</string>
+    <string name="tip_ic_Read_processing">正在读取卡信息，请勿拔卡&#8230;</string>
+    <string name="tip_dialog_title">失败</string>
+    <string name="tip_send_data_fail">数据批上送失败，是否重新上送？</string>
+    <string name="tip_comfirm_batch">确认进行结算？</string>
+    <string name="tip_clear_trans_data">确认清除交易数据？</string>
+    <string name="tip_clear_reverse_data">确认冲正信息数据？</string>
+    <string name="tip_clear_data_over">交易流水已清空！</string>
+    <string name="tip_clear_data_error">清空失败,请重试！</string>
+    <string name="tip_clear_reverse_over">冲正信息已清空！</string>
+    <string name="tip_clear_reverse_error">清空冲正信息，请重试！</string>
+    <string name="tip_batch_down_fail">批上送完成请求失败，是否重新请求？</string>
+    <string name="tip_batch_fail">批结算请求失败，是否重新上送？</string>
+    <string name="tip_sign_out_fail">签退请求失败，请重新手动签退</string>
+    <string name="tip_batch_over_please_sign_out">已完成批结算，请手动签退!</string>
+    <string name="tip_can_not_modify">非签退状态，不能修改系统参数!</string>
+    <string name="tip_batch_fail_please_continue">结算中断，请继续结算！</string>
+    <string name="tip_no_trans_flow">目前没有需上送流水，无需结算!</string>
+    <string name="tip_query_flow">正在查询终端交易流水……</string>
+    <string name="tip_import_parameter">正在导入终端参数……</string>
+    <string name="tip_no_sign_in_status">未签到状态!</string>
+    <string name="tip_no_pre_batch_total">未生成上批次总计数据</string>
+    <string name="tip_print_next">点击“确定”继续打印下一联</string>
+    <string name="tip_notification">提示</string>
+    <string name="tip_sign">请签名</string>
+    <string name="tip_input_phone">请输入电话号码</string>
+    <string name="tips_nosdcard">SD卡已卸载，无法进行电子签名！</string>
+    <string name="tips_errorwhilesigning">在保存签名时出错</string>
+    <string name="tips_please_finish_sign">请先完成电子签名</string>
+    <string name="tips_init_bin_data">正在初始化数据，请稍候！</string>
+    <string name="tips_need_auto_sign_out">主管或管理员账号解锁，会自动签退</string>
+    <string name="tips_need_unlock">请先解除锁定状态！</string>
+    <string name="tips_had_bean_lock">终端被锁定,请通过原操作员\n或主管账号进行解锁</string>
+    <string name="tip_take_out_card">请取走卡片</string>
+    <string name="tip_pwd_times_over_limited">重输密码次数超限!</string>
+    <string name="tip_data_exchange_error">数据交换失败</string>
+    <string name="tip_confirm_exit">确认退出？</string>
+    <string name="tip_exit">退出</string>
+    <string name="tip_confirm_del_opt">确认删除该操作员？</string>
+    <string name="tip_printing">正在打印凭条，请稍等</string>
+    <string name="tip_print_over">打印完成</string>
+    <string name="tip_query_success">查询成功！</string>
+    <string name="tip_query_value">账户余额</string>
+    <string name="tip_query_failed">查询失败！</string>
+    <string name="tip_check_card">请根据您的卡种进行选择操作</string>
+    <string name="tip_mag_card">磁条卡请刷卡</string>
+    <string name="tip_clss_card">非接卡请挥卡</string>
+    <string name="tip_insert_card">芯片卡请插卡</string>
+    <string name="tip_insert_card2">请插芯片卡</string>
+    <string name="tip_trading_default">通讯中，请稍候&#8230;</string>
+    <string name="tip_input_pos_serial">请输入凭证号(6位)</string>
+    <string name="tip_input_pos_batch">请输入批次号(6位)</string>
+    <string name="tip_input_pos_scan_voucher">请输入原交易付款凭证码</string>
+    <string name="tip_input_plat_serial">请输入原交易参考号(12位)</string>
+    <string name="tip_input_pos_term_no">请输入原终端号(8位)</string>
+    <string name="tip_input_auth_code">请输入原授权码(6位)</string>
+    <string name="tip_input_date">请输入原交易日期(格式MMDD)</string>
+    <string name="tip_pwd_illegal">密码错误，请重新输入</string>
+    <string name="tip_auto_sign_out">正在自动签退</string>
+    <string name="tip_sign_out">已签退</string>
+    <string name="tip_batch_send_down">批上送结束</string>
+    <string name="hint_date_format">日期格式MMDD</string>
+    <string name="hint_trade_ref">12位交易参考号</string>
+    <string name="hint_pos_serial">6位凭证号</string>
+    <string name="tip_input_phone_number">请输入手机号码</string>
+    <string name="tip_plz_input_reservation_number">请输入预约号码</string>
+
+    <string name="tip_transfer_mag_card">磁条卡请刷卡转出卡</string>
+    <string name="tip_transfer_insert_card">请插芯片卡转出卡</string>
+
+    <string name="tip_into_insert_card">请插芯片卡转入卡</string>
+
+    <!-- 通讯参数 -->
+    <string name="tip_configure_comms_service_empty">服务器地址不为空！</string>
+    <string name="tip_configure_comms_service_illegal">服务器地址不合法！</string>
+    <string name="tip_configure_comms_service_illegal_reserve">备用服务器地址不合法！</string>
+    <string name="tip_configure_comms_port_empty">端口号不为空！</string>
+    <string name="tip_configure_comms_port_empty_reserve">备用端口号不为空！</string>
+    <string name="tip_configure_comms_port_illegal">端口号只能在0～65535之间！</string>
+    <string name="tip_batch_number_not_null">批次号不能为空！</string>
+    <string name="tip_batch_number">批次号长度为6！</string>
+    <string name="tip_batch_number_not_zero">批次号不能为0！</string>
+    <string name="tip_batch_number_not_more">批次号不能为999999！</string>
+    <string name="tip_batch_flow_not_null">流水号不能为空！</string>
+    <string name="tip_slip_copys_not_null">凭条打印联数不能为空！</string>
+    <string name="tip_batch_flow">流水号长度为6！</string>
+    <string name="tip_batch_flow_not_zero">流水号不能为0！</string>
+    <string name="tip_batch_flow_not_more">流水号不能为999999！</string>
+    <string name="tip_resend_msg_count">消息重发次数不能为空！</string>
+    <string name="tip_trade_view_op_timeout">交易界面超时不能为空！</string>
+    <string name="tip_slip_title_not_null">凭条抬头内容不能为空！</string>
+    <string name="tip_resend_msg_times">消息重发次数只能1-3！</string>
+    <string name="tip_max_tran_count">最大交易笔数不能为空！</string>
+    <string name="tip_max_tran_not_zero">最大交易笔数不能为0！</string>
+    <string name="tip_save_success">设置成功！</string>
+    <!-- 本地流水号查询 -->
+    <string name="tip_serial_num_empty">交易流水号为空！</string>
+    <string name="tip_serial_num_not_exist">该交易流水号不存在！</string>
+
+    <string name="label_change_pwd_sys">管理员修改密码</string>
+    <string name="label_change_pwd_msn">主管修改密码</string>
+    <string name="label_change_opt_pwd">修改操作员密码</string>
+    <string name="label_please_input_old_pwd">请输入旧密码</string>
+    <string name="label_please_input_new_pwd">请输入新密码</string>
+    <string name="label_please_input_renew_pwd">请输入确认新密码</string>
+    <string name="label_sure_change_pwd">确 认</string>
+    <string name="label_opt_pwd">操作员密码（4位）：</string>
+    <string name="label_consume_opt_pwd">确认操作员密码（4位）：</string>
+    <string name="label_sure_operator">确定</string>
+    <string name="label_update_operator">修改操作员密码</string>
+    <string name="label_create_operator">增加操作员</string>
+    <string name="label_opt_no">操作员号（01-98）：</string>
+    <string name="label_opt_query">操作员管理</string>
+    <string name="label_opt_del">删除操作员</string>
+    <string name="label_opt_add">新增</string>
+
+    <string name="label_login_please_input_account">请输入操作员号</string>
+    <string name="label_login_please_input_pwd">请输入密码</string>
+    <string name="label_login_input_pwd_empth">密码不能为空</string>
+    <string name="label_login">登  录</string>
+
+    <string name="label_message_label_sure">确认</string>
+    <string name="label_message_label_cancel">取消</string>
+
+    <string name="label_configure_qps">QPS参数设置</string>
+    <string name="label_configure_comms">通讯参数设置</string>
+    <string name="label_configure_esign">电子签名参数设置</string>
+    <string name="label_marchant">商户参数</string>
+    <string name="label_system">系统参数设置</string>
+    <string name="label_transation">交易功能设置</string>
+    <string name="label_other_trade_control">其它交易功能控制</string>
+    <string name="label_configure_comms_service">服务器地址：</string>
+    <string name="label_marchant_number">商户号：</string>
+    <string name="label_bank_term_number">终端号：</string>
+    <string name="label_merchant_name">商户名(中文)：</string>
+    <string name="label_merchant_name_english">商户名(英文)：</string>
+    <string name="label_batch_marchant_number">结算商户号：</string>
+    <string name="label_batch_marchant_name">结算商户名：</string>
+    <string name="label_batch_term_number">结算终端号：</string>
+    <string name="label_batch_no">批次号：</string>
+    <string name="label_batch_flow_no">流水号：</string>
+    <string name="label_slip_copys">凭条打印联数：</string>
+    <string name="label_resend_time">消息重发次数：</string>
+    <string name="label_trade_view_timeout">交易界面超时时间(S)：</string>
+    <string name="label_refund_amount_max">最大退货金额：</string>
+    <string name="label_max_count">最大交易笔数：</string>
+    <string name="label_auto_sign_out">批结算后自动签退：</string>
+    <string name="label_auto_print_details">批结算后自动打印交易明细：</string>
+    <string name="label_slip_title_default">签购单抬头内容默认：</string>
+    <string name="label_slip_title">签购单抬头:</string>
+    <string name="label_master_pwd">主管密码(撤销/退货类)</string>
+    <string name="label_manual_card_no">手输卡号(预授权完成/撤销)</string>
+    <string name="label_communication_encrypt">通讯加密</string>
+    <string name="label_communication_alive">通讯长连接</string>
+    <string name="label_configure_comms_port">端口：</string>
+    <string name="label_configure_slip_port">签购单上送地址：</string>
+    <string name="label_configure_version_port">版本检测地址：</string>
+    <string name="label_configure_sure">确定</string>
+    <string name="label_tmk">主密钥参数</string>
+    <string name="label_tmk_index">主密钥索引：</string>
+    <string name="label_tmk_data">主密钥明文：</string>
+    <string name="label_esign_open">支持电子签名：</string>
+    <string name="label_esign_multi_package">开启分包功能：</string>
+    <string name="label_esign_package_max">数据包大小：</string>
+    <string name="label_signpad_inner">签名板内置：</string>
+    <string name="label_esign_phone_num">输入手机号码：</string>
+    <string name="label_sign_timeout">签字输入超时时间：</string>
+    <string name="label_request_time_max">批量请求重发次数：</string>
+    <string name="label_esign_store_max">签名信息最大笔数：</string>
+
+
+    <string name="tip_esign_multi_package_null">数据包大小不能为空</string>
+    <string name="tip_sign_timeout_null">输入超时时间不能为空</string>
+    <string name="tip_request_time_max_null">批量请求重发次数不能为空</string>
+    <string name="tip_esign_store_max_null">签名信息最大笔数不能为空</string>
+
+    <string name="tip_user_aid_select">请选择应用</string>
+    <!-- 流水号查询  -->
+    <string name="label_serial_num_please_input_serial_num">请输入凭证号</string>
+    <string name="label_serial_num_query">搜索</string>
+    <string name="label_serial_num_num">凭证号</string>
+    <string name="label_serial_num_type">交易类型</string>
+    <string name="label_serial_num_money">交易金额</string>
+    <string name="label_serial_num">按交易流水查询</string>
+    <string name="label_serial_num_detail">交易明细</string>
+    <string name="label_serial_num_detail_type">消费类型：</string>
+    <string name="label_serial_num_detail_money">交易金额：</string>
+    <string name="label_serial_num_detail_no">凭证号：</string>
+    <string name="label_serial_num_detail_orderid">订单号：</string>
+    <string name="label_serial_num_detail_time">交易时间：</string>
+    <string name="label_main_title">钱宝支付</string>
+    <string name="label_operator_please_input_opt_no">请输入操作员ID</string>
+
+    <string name="label_trade_summary">汇总</string>
+    <string name="label_print_slip">打印凭条</string>
+
+    <string name="label_back">返&#160;&#160;回</string>
+    <string name="label_confirm">确&#160;&#160;定</string>
+    <string name="label_cancel">取&#160;&#160;消</string>
+    <string name="label_trans_type">交易类型：</string>
+    <string name="label_trans_amt">交易金额：</string>
+    <string name="label_trans_card">交易卡号：</string>
+    <string name="label_resp_code">状态码</string>
+    <string name="label_resp_msg">提示信息</string>
+    <string name="label_balance">可用余额</string>
+    <string name="label_card_no">卡号</string>
+    <string name="label_scan_no">支付码</string>
+    <string name="label_scan_voucher">支付号</string>
+    <string name="label_trans_type2">交易类型</string>
+    <string name="label_org_trans_type2">原交易类型</string>
+    <string name="label_trans_amt2">交易金额</string>
+    <string name="label_trans_card2">交易卡号</string>
+    <string name="label_trans_time">交易时间</string>
+    <string name="label_pos_serial">凭证号</string>
+    <string name="label_trans_total_counts">总笔数</string>
+    <string name="label_trans_total_amt">总金额</string>
+    <string name="label_auth_num">授权号</string>
+    <string name="label_sys_ref_no">系统参考号</string>
+
+    <string name="success">成功</string>
+    <string name="error_unknown_host">未知主机异常</string>
+    <string name="error_unknown">未知异常</string>
+    <string name="error_socket_timeout">连接超时</string>
+    <string name="error_connection_exception">连接主机异常</string>
+    <string name="error_key_verify_failed">密钥校验失败，请重新下载主密钥</string>
+    <string name="error_unknown_reason">未知原因</string>
+    <string name="error_trading_terminate">交易终止，请重试</string>
+    <string name="error_trading_refused">交易拒绝，请重试</string>
+    <string name="error_trading_fallback">交易降级，请重试</string>
+    <string name="error_change_other_face">请采用其它用户界面</string>
+    <string name="error_kernel_exception">内核异常，请重试</string>
+    <string name="error_print">打印出错</string>
+
+    <string name="tip_iso0">交易成功</string>
+    <string name="tip_iso1">请持卡人与发卡银行联系</string>
+    <string name="tip_iso3">无效商户</string>
+    <string name="tip_iso4">没收卡</string>
+    <string name="tip_iso5">身份认证失败</string>
+    <string name="tip_iso6">终端信息更新，请重新签到</string>
+    <string name="tip_iso7">需要更新POS机程序，请结算后，更新POS程序</string>
+    <string name="tip_iso8">无效的SN号码</string>
+    <string name="tip_iso9">路由疑似异常</string>
+    <string name="tip_iso10">部分批准金额</string>
+    <string name="tip_iso11">此为VIP客户</string>
+    <string name="tip_iso12">无效的关联交易</string>
+    <string name="tip_iso13">无效金额</string>
+    <string name="tip_iso14">无效卡号</string>
+    <string name="tip_iso15">无此发卡方</string>
+    <string name="tip_iso17">账户系统记账失败</string>
+    <string name="tip_iso18">重新下载主密钥</string>
+    <string name="tip_iso19">向TMS发起联机报道</string>
+    <string name="tip_iso20">事中风控拒绝</string>
+    <string name="tip_iso21">该卡未初始化或睡眠卡</string>
+    <string name="tip_iso22">故障怀疑，关联交易有误</string>
+    <string name="tip_iso23">提现超出允许提现的时间和金额范围</string>
+    <string name="tip_iso25">没有原始交易，请联系发卡方</string>
+    <string name="tip_iso26">没非接验证失败</string>
+    <string name="tip_iso29">疑似路由异常</string>
+    <string name="tip_iso30">报文格式错误</string>
+    <string name="tip_iso34">有作弊嫌疑</string>
+    <string name="tip_iso38">密码错误次数超限，请与发卡方联系</string>
+    <string name="tip_iso40">请求的功能尚不支持</string>
+    <string name="tip_iso41">挂失卡</string>
+    <string name="tip_iso43">被窃卡</string>
+    <string name="tip_iso45">请使用芯片卡</string>
+    <string name="tip_iso51">资金不足</string>
+    <string name="tip_iso54">过期的卡</string>
+    <string name="tip_iso55">不正确的密码</string>
+    <string name="tip_iso57">不允许持卡人进行的交易</string>
+    <string name="tip_iso58">发卡方不允许该卡在本终端进行此交易</string>
+    <string name="tip_iso59">卡片校验错</string>
+    <string name="tip_iso61">超出金额限制</string>
+    <string name="tip_iso62">受限制的卡</string>
+    <string name="tip_iso64">原始金额错误</string>
+    <string name="tip_iso65">超出取款/消费次数限制</string>
+    <string name="tip_iso68">发卡行响应超时</string>
+    <string name="tip_iso75">允许的输入密码次数超限</string>
+    <string name="tip_iso90">正在日终处理</string>
+    <string name="tip_iso91">发卡方不能操作</string>
+    <string name="tip_iso92">金融机构或中间网络设施找不到或无法达到</string>
+    <string name="tip_iso94">重复交易</string>
+    <string name="tip_iso96">拒绝，交换中心异常</string>
+    <string name="tip_iso97">POS终端号找不到</string>
+    <string name="tip_iso98">银联处理中心收不到发卡方应答</string>
+    <string name="tip_iso99">PIN格式错误</string>
+    <string name="tip_isoA0">MAC鉴别失败</string>
+    <string name="tip_isoA1">转账货币不一致</string>
+    <string name="tip_isoA2">交易失败，联系客服4007008010</string>
+    <string name="tip_isoA3">交易失败，联系客服4007008010</string>
+    <string name="tip_isoA4">交易失败，联系客服4007008010</string>
+    <string name="tip_isoA5">交易失败，联系客服4007008010</string>
+    <string name="tip_isoA6">交易失败，联系客服4007008010</string>
+    <string name="tip_isoA7">安全处理失败</string>
+    <string name="tip_iso_unknown">交易失败</string>
+    <string name="tip_pwd_length_illegal">位数不足，请重输</string><!--ISO-->
+    <string name="tip_invalid_sn">无效的SN</string><!--ISO-->
+
+
+    <!--签购单模块-->
+    <string name="printer_header">抬头</string>
+    <string name="printer_name">商户名</string>
+    <string name="printer_num">商户号</string>
+    <string name="printer_term_num">终端号</string>
+    <string name="tip_sn">SN号</string>
+    <string name="tip_version">版本号</string>
+    <string name="printer_send_card_brank">发卡行</string>
+    <string name="printer_receive_brank">收单行</string>
+    <string name="printer_card_num">卡号</string>
+    <string name="printer_batch_num">批次号</string>
+    <string name="printer_tran_flow_num">交易流水号</string>
+    <string name="printer_permision_code">授权码</string>
+    <string name="printer_reference_code">参考号</string>
+    <string name="printer_date_time">日期时间</string>
+    <string name="printer_amount">金额</string>
+    <string name="printer_comment">备注</string>
+    <string name="printer_describe">说明文字</string>
+    <string name="printer_not_used1">保留1</string>
+    <string name="printer_not_used2">保留2</string>
+    <string name="printer_not_used3">保留3</string>
+    <string name="printer_not_used4">保留4</string>
+    <string name="printer_not_used5">保留5</string>
+
+
+    <!--交易类型-->
+    <string name="trans_sale">消费</string>
+    <string name="trans_sale_en">SALE</string>
+    <string name="trans_sale_scan">扫码消费</string>
+    <string name="trans_sale_scan_en">SCAN SALE</string>
+    <string name="trans_balance">余额查询</string>
+    <string name="trans_balance_en">BALANCE</string>
+    <string name="trans_void">消费撤销</string>
+    <string name="trans_void_en">VOID</string>
+    <string name="trans_void_scan">扫码消费撤销</string>
+    <string name="trans_refund">退货</string>
+    <string name="trans_refund_en">REFUND</string>
+    <string name="trans_refund_scan">扫码退货</string>
+    <string name="trans_auth">预授权</string>
+    <string name="trans_auth_en">AUTH</string>
+    <string name="trans_auth_complete">预授权完成</string>
+    <string name="trans_auth_complete_en"> AUTH COMPLETE</string>
+
+    <string name="trans_auth_complete_notify">预授权完成（通知）</string>
+    <string name="trans_auth_complete_notify_en">AUTH SETTLEMENT</string>
+    <!--  <string name="trans_auth_settlement">预授权完成通知</string>-->
+    <string name="trans_cancel">预授权撤销</string>
+    <string name="trans_cancel_en">CANCEL</string>
+    <string name="trans_complete_void">预授权完成撤销</string>
+    <string name="trans_complete_void_en">COMPLETE VOID</string>
+    <string name="trans_offline_settlement">离线结算</string>
+    <string name="trans_offline_settlement_en">OFFLINE</string>
+
+    <string name="trans_offline_adjust">离线调整</string>
+    <string name="trans_offline_adjust_en">ADJUST</string>
+    <string name="unknown">未知</string>
+    <string name="unknown_en">unknown</string>
+
+    <string name="pull_to_refresh_release_label">Release to refresh…</string>
+    <!--管理类业务-->
+    <string name="trans_sign_in">签到</string>
+    <string name="trans_download_capk">IC卡公钥下载</string>
+    <string name="trans_download_aid">IC卡参数下载</string>
+    <string name="trans_download_card_bin">卡BIN信息下载</string>
+    <string name="trans_download_qps">非接业务参数下载</string>
+
+    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
+    <string name="trans_sale_insert">插卡消费</string>
+    <string name="trans_sale_need_pin">消费凭密</string>
+    <string name="trans_auth_need_pin">预授权凭密</string>
+    <string name="lable_key_index">密钥序列号：</string>
+    <string name="lable_key_encrypted">主密钥密文(32)：</string>
+    <string name="lable_key_check">主密钥校验值(8)：</string>
+    <string name="lable_key_card_pwd">密钥存储卡密码：</string>
+    <string name="pls_insert_key_card">请插入密钥存储卡...</string>
+    <string name="label_configure_comms_tpdu">TPDU：</string>
+    <string name="tip_configure_comms_tpdu_empty">TPDU不能为空</string>
+    <string name="tip_configure_comms_tpdu_short">请输入10数字TPDU</string>
+    <string name="pls_insert_weihu_card">请插入密钥维护卡...</string>
+    <string name="pls_input_weihu_pwd">维护密钥卡密码：</string>
+    <string name="no_paper_tips">打印机缺纸, 请安装好打印纸按确认继续,取消退出！</string>
+    <string name="error_title_tip">错误</string>
+    <string name="error_tips_scan_timeout">交易超时，交易结果未知</string>
+    <string name="error_tip_no_print_fun">获取打印方法失败！</string>
+    <string name="tip_configure_comms_resptimeout_empty">超时时间不能为空</string>
+    <string name="printnum">打印联数</string>
+    <string name="printnumsetting">打印联数设置</string>
+    <string name="label_reverse_time">冲正最大次数</string>
+    <string name="ip_reverse_msg_count">消息重发次数不能为空！</string>
+    <string name="tip_reverse_msg_times">消息重发次数只能1-5！</string>
+
+    <string name="label_configure_qps_amount_no_pwd">免密限额：</string>
+    <string name="label_configure_qps_amount_no_sign">免签限额：</string>
+    <string name="label_wave_bankcard_prefer">优先挥卡</string>
+    <string name="label_qps_toggle">QPS功能</string>
+    <string name="label_qps_bin_switch">BIN表</string>
+    <string name="label_qps_bin_a_toggle">BIN A</string>
+    <string name="label_qps_bin_b_toggle">BIN B</string>
+    <string name="label_qps_bin_c_toggle">BIN C</string>
+    <string name="label_qps_cdcvm_toggle">CDCVM</string>
+    <string name="label_qps_no_sign_toggle">免签</string>
+    <string name="tip_pls_set_trade_info">请先设置商户号和终端号！</string>
+
+    <string name="tip_empty">不能为空！</string>
+    <string name="label_ecash_retry_timeout">当笔重刷处理时间T1</string>
+    <string name="label_ecash_error_record_timeout">闪卡记录可处理时间T2</string>
+    <string name="label_ecash_error_record_max">闪卡记录最大值</string>
+    <string name="label_ecash_error">闪卡参数</string>
+
+    <string name="label_configure_apn_access">APN接入点：</string>
+    <string name="label_configure_apn_username">用户名：</string>
+    <string name="label_configure_apn_password">密码：</string>
+    <string name="label_configure_apn_enable">使用专用网络</string>
+    <string name="label_configure_net">网络设置</string>
+
+    <string name="app_upgrade_setting">程序更新设置</string>
+    <string name="label_connect_timeout">连接超时</string>
+    <string name="label_upgrade_wifi_onley">仅WIFI网络更新</string>
+    <string name="label_app_upgrade_enable">程序自动更新</string>
+    <string name="btn_tip_check_new_verison">立即检测新版本</string>
+    <string name="pay_all">一次性支付</string>
+    <string name="pay_installment">分期支付</string>
+    <string name="pls_input_installment_code">请输入商品项目编码</string>
+    <string name="pls_input_installment_period">请输入分期期数</string>
+    <string name="select_installment_mode">手续费支付方式</string>
+    <string name="trans_sale_installment">分期付款消费</string>
+    <string name="trans_sale_installment_en">INSTALLMENT</string>
+    <string name="trans_void_installment">分期消费撤销</string>
+    <string name="trans_void_installment_en">VOID</string>
+    <string name="tip_input_card_number">手输卡号</string>
+    <string name="tip_use_bank_card">银行卡</string>
+    <string name="plz_input_card_No">请输入卡号:</string>
+    <string name="pls_input_card_valide_date">请输入卡有效期(格式YYMM):</string>
+    <string name="tip_un_pakcage_msg_error">解包异常</string>
+    <string name="tip_scan_code">将取景框对准二维码，即可自动扫描</string>
+    <string name="label_ec_balance">电子现金余额</string>
+    <string name="pls_input_goods_code">请输入商品项目编码</string>
+    <!--UNION_INTEGRAL_BALANCE-->
+    <!--UNION_INTEGRAL_REFUND-->
+    <string name="iss_integral_sale">发卡行积分消费</string>
+    <string name="iss_integral_void">发卡行积分撤销</string>
+    <string name="union_integral_sale">联盟积分消费</string>
+    <string name="union_integral_void">联盟积分撤销</string>
+    <string name="union_integral_balance">联盟积分查询</string>
+    <string name="union_integral_refund">联盟积分退货</string>
+
+    <string name="iss_integral_sale_en">BONUS SALE</string>
+    <string name="iss_integral_void_en">VOID</string>
+    <string name="union_integral_sale_en">BONUS SALE</string>
+    <string name="union_integral_void_en">VOID</string>
+    <string name="union_integral_balance_en">BALANCE</string>
+    <string name="union_integral_refund_en">REFUND</string>
+
+    <string name="mag_account_load_en">ACCOUNT LOAD</string>
+    <string name="mag_cash_load_en">ACCOUNT LOAD</string>
+    <string name="mag_cash_load">磁条卡现金充值</string>
+    <string name="mag_account_load">磁条卡账户充值</string>
+    <string name="mag_cash_load_confirm">磁条卡现金充值确认</string>
+    <string name="mag_account_verify">持卡人身份验证</string>
+
+    <string name="reservation_sale">预约消费</string>
+    <string name="reservation_void">预约消费撤销</string>
+    <string name="reservation_sale_en">RESERVATION SALE</string>
+    <string name="reservation_void_en">VOID</string>
+
+
+    <!-- 磁条卡充值所用的数据 不能修改 -->
+    <string name="tip_id_id"> 身份证</string>
+    <string name="tip_id_coo"> 军官证</string>
+    <string name="tip_id_passport"> 护照</string>
+    <string name="tip_id_rp"> 回乡证</string>
+    <string name="tip_id_mtp"> 台胞证</string>
+    <string name="tip_id_poc"> 警官证</string>
+    <string name="tip_id_sc"> 士兵证</string>
+
+    <!-- 磁条卡充值所用的数据 不能修改 -->
+    <string name="tip_id_id_value">01</string>
+    <string name="tip_id_coo_value">02</string>
+    <string name="tip_id_passport_value">03</string>
+    <string name="tip_id_rp_value">04</string>
+    <string name="tip_id_mtp_value">05</string>
+    <string name="tip_id_poc_value">06</string>
+    <string name="tip_id_sc_value">07</string>
+
+
+    <string name="label_cert_type">请选择证件类别</string>
+    <string name="label_auth_mode">请选授权方式</string>
+    <string name="label_plz_input_cert_no">请输入证件编号</string>
+
+    <string name="tip_auth_mode_pos">POS</string>
+    <string name="tip_auth_mode_telephone">电话</string>
+    <string name="tip_auth_mode_auth">小额代授权</string>
+
+
+    <string name="label_plz_select_credit_card_company_code">选择国际信用卡公司代码</string>
+    <string name="label_plz_input_ori_auth_code">请输入原授权码</string>
+    <string name="label_plz_input_auth_organization_code">提示输入授权机构代码</string>
+
+    <!--国际卡组织英文简写 不能随意修改-->
+    <string name="tip_credit_card_company_code_cup">CUP</string>
+    <string name="tip_credit_card_company_code_vis">VIS</string>
+    <string name="tip_credit_card_company_code_mcc">MCC</string>
+    <string name="tip_credit_card_company_code_mae">MAE</string>
+    <string name="tip_credit_card_company_code_jcb">JCB</string>
+    <string name="tip_credit_card_company_code_dcc">DCC</string>
+    <string name="tip_credit_card_company_code_amx">AMX</string>
+
+
+    <string name="tip_reservation_phone_num_less">手机号码长度不能小于%d</string>
+    <string name="tip_reservation_num_less">预约号长度必须为%d</string>
+
+    <string name="tip_plz_select_auth_mode">请选择授权方式</string>
+    <string name="tip_plz_select_credit_card_company_code">请选择国际信用卡公司代码</string>
+
+    <string name="tip_plz_select_right_auth_mode">请选择正确的授权方式</string>
+
+
+
+    <string name="tip_trans_adjust_yet">该交易已调整</string>
+    <string name="tip_trans_void_yet">该交易已撤销</string>
+    <string name="tip_plz_input_voucher">请输入凭证号</string>
+
+    <string name="tip_warn_voucher_max_len">凭证号长度为6</string>
+
+    <string name="tip_warn_can_not_adjust">原交易不能调整</string>
+    <string name="tip_warn_not_support_tip">不支持小费交易</string>
+    <string name="tip_warn_cup_not_support_tip">小费交易仅支持外卡</string>
+
+
+    <string name="label_plz_input_adjust_amount">请输入调整后金额:</string>
+    <string name="label_plz_input_adjust_tip_amount">请输入小费金额:</string>
+
+    <string name="label_configure_comms_service_scan">扫码服务器地址：</string>
+    <string name="label_configure_comms_port_scan">扫码端口：</string>
+    <string name="label_set_sn_hand">手动设置SN号</string>
+    <string name="label_configure_comms_scan">扫码通讯参数设置</string>
+    <string name="tip_sn_not_null">SN号不能为空！</string>
+
+    <string name="settlement_name">结算</string>
+    <string name="trans_detail_upload_name">交易明细上送</string>
+
+
+    <string name="tip_confirm_info">确认信息</string>
+    <string name="tip_contract_query_failed">该合同号不存在\n请确认后再验证</string>
+
+    <string name="tip_contract_query_wrong">杭州房管局客户信息与收支单客户信息不一致,请确认后重试</string>
+
+    <string name="tip_super_flag_wrong">监管地区错误</string>
+
+    <string-array name="CardType">
+        <item>Contact IC card</item>
+        <item>Non-Contacted IC card</item>
+    </string-array>
+
+</resources>

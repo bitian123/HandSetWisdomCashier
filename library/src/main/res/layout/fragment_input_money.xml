@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              style="@style/TradeFragment">
+
+    <!--<include layout="@layout/common_title_layout"/>-->
+    <include layout="@layout/common_title_layout_sp"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/BaseText.Tip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_60"
+        android:text="@string/tip_input_money"
+        android:textSize="@dimen/font_32"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_60"
+        android:layout_marginRight="@dimen/margin_60"
+        android:layout_marginTop="@dimen/margin_20"
+        android:gravity="center"
+        android:orientation="horizontal"
+        style="@style/input_under_line"
+        >
+        <TextView
+            style="@style/BaseText.Money"
+            android:gravity="center"
+            android:text="¥"
+            android:textSize="@dimen/font_36"
+            android:background="@color/white_divider"
+            />
+        <TextView
+            android:id="@+id/money_show"
+            style="@style/BaseText.Money"
+            android:gravity="center"
+            android:text="0.00" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/positive_btn"
+        style="@style/BaseButton.Positive"
+        android:layout_marginLeft="@dimen/margin_60"
+        android:layout_marginRight="@dimen/margin_60"
+        android:layout_marginTop="@dimen/margin_60"
+        android:text="@string/label_confirm" />
+
+    <com.centerm.epos.view.NumberPad
+        android:id="@+id/number_pad_show"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_120"
+        android:layout_weight="0.67"/>
+
+</LinearLayout>

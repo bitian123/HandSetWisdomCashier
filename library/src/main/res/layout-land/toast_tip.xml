@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50pt"
+    android:orientation="vertical"
+    style="@style/TipToastStyle"
+    android:gravity="center">
+    <TextView
+        android:id="@+id/message"
+        style="@style/TipToastTextStyle"
+        android:textSize="12pt"
+        android:text=""/>
+</LinearLayout>

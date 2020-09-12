@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:background="@android:color/white"
+    android:orientation="horizontal">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <CheckBox
+            android:id="@+id/mCbItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:clickable="false"
+            android:focusable="false"
+            style="@style/MyCheckBox"/>
+
+        <TextView
+            android:id="@+id/mMoneyType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text=""
+            android:layout_alignParentRight="true"
+            android:textColor="#40AFFF"/>
+
+        <TextView
+            android:id="@+id/mTvPayTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="付款日期: 2019-09-05"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/mCbItem"
+            android:textColor="@color/tip4D"/>
+
+        <TextView
+            android:id="@+id/mBillId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="xxxx"
+            android:layout_marginTop="@dimen/v_business_item_margin_top"
+            android:layout_below="@id/mTvPayTime"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/mMoneyType"
+            android:layout_toRightOf="@id/mCbItem"
+            android:textColor="@color/font_black"/>
+
+        <TextView
+            android:id="@+id/mName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_below="@id/mBillId"
+            android:text="yyyy"
+            android:layout_marginTop="@dimen/v_business_item_margin_top"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/mCbItem"
+            android:textColor="@color/tip4D"/>
+
+        <TextView
+            android:id="@+id/mTvSettlement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_below="@id/mName"
+            android:text="结算账户"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/v_business_item_margin_top"
+            android:layout_toRightOf="@id/mCbItem"
+            android:textColor="@color/tip4D"/>
+
+        <TextView
+            android:id="@+id/mTvPaidAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_below="@id/mTvSettlement"
+            android:text="付款金额: "
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/v_business_item_margin_top"
+            android:layout_toRightOf="@id/mCbItem"
+            android:textColor="@color/tip4D"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

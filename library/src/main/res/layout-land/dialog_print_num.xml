@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/trading_window_bg"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout android:layout_width="250pt"
+        android:layout_height="150pt"
+        android:orientation="vertical"
+        android:paddingTop="20pt"
+        android:background="@drawable/bg_frame1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择打印份数"
+            android:layout_gravity="center_horizontal"
+            android:textSize="14pt"
+            android:textColor="#333333" />
+
+        <RelativeLayout style="@style/mw_style"
+            android:layout_margin="20dp">
+            <ImageView style="@style/ww_style"
+                android:layout_marginLeft="40pt"
+                android:id="@+id/mBtnLess"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_less"/>
+
+            <ImageView style="@style/ww_style"
+                android:id="@+id/mBtnAdd"
+                android:layout_marginRight="40pt"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_add"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mTvPrintNum"
+                android:text="1"
+                android:layout_centerInParent="true"
+                android:textSize="25pt"
+                android:textColor="#4D4D4D" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/mw_style"
+            android:layout_marginTop="5pt"
+            android:layout_marginLeft="13pt"
+            android:layout_marginRight="13pt">
+            <TextView
+                android:id="@+id/mTvCancel"
+                android:layout_width="100pt"
+                android:layout_height="30pt"
+                android:text="取消"
+                android:gravity="center"
+                android:textSize="14pt"
+                android:textColor="@color/font_white"
+                android:background="@drawable/btn_login_bg_gray"/>
+
+            <TextView
+                android:id="@+id/mTvOK"
+                android:layout_width="100pt"
+                android:layout_height="30pt"
+                android:text="确定"
+                android:gravity="center"
+                android:textSize="14pt"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/font_white"
+                android:background="@drawable/btn_login_bg"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

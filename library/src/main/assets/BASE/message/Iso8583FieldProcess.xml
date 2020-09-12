@@ -1,0 +1,133 @@
+<!--
+	数据域处理对应的实现类配置
+-->
+<process version="1">
+    <!-- 交易类型 -->
+    <field index="0" name="TradeCode" class="com.centerm.epos.transcation.pos.data.BaseField0"/>
+	<!-- 2域处理类 -->
+	<field index="2" name="BankCardNo" class="com.centerm.epos.transcation.pos.data.BaseField2"/>
+	<!-- 3域处理类 -->
+	<field index="3" name="ProcessCode" class="com.centerm.epos.transcation.pos.data.BaseField3"/>
+	<!-- 4域处理类 -->
+	<field index="4" class="com.centerm.epos.transcation.pos.data.BaseField4"/>
+
+    <field index="5" class="com.centerm.epos.transcation.pos.data.BaseField5"/>
+
+    <field index="6" class="com.centerm.epos.transcation.pos.data.BaseField6"/>
+
+    <field index="7" class="com.centerm.epos.transcation.pos.data.BaseField7"/>
+
+    <field index="8" class="com.centerm.epos.transcation.pos.data.BaseField8"/>
+
+    <field index="9" class="com.centerm.epos.transcation.pos.data.BaseField9"/>
+
+    <field index="10" class="com.centerm.epos.transcation.pos.data.BaseField10"/>
+
+    <field index="11" class="com.centerm.epos.transcation.pos.data.BaseField11"/>
+
+    <field index="12" class="com.centerm.epos.transcation.pos.data.BaseField12"/>
+
+    <field index="13" class="com.centerm.epos.transcation.pos.data.BaseField13"/>
+
+    <field index="14" class="com.centerm.epos.transcation.pos.data.BaseField14"/>
+
+    <field index="15" class="com.centerm.epos.transcation.pos.data.BaseField15"/>
+
+    <field index="16" class="com.centerm.epos.transcation.pos.data.BaseField16"/>
+
+    <field index="17" class="com.centerm.epos.transcation.pos.data.BaseField17"/>
+
+    <field index="18" class="com.centerm.epos.transcation.pos.data.BaseField18"/>
+
+    <field index="19" class="com.centerm.epos.transcation.pos.data.BaseField19"/>
+
+    <field index="20" class="com.centerm.epos.transcation.pos.data.BaseField20"/>
+
+    <field index="21" class="com.centerm.epos.transcation.pos.data.BaseField21"/>
+
+    <field index="22" class="com.centerm.epos.transcation.pos.data.BaseField22"/>
+
+    <field index="23" class="com.centerm.epos.transcation.pos.data.BaseField23"/>
+
+    <field index="24" class="com.centerm.epos.transcation.pos.data.BaseField24"/>
+
+    <field index="25" class="com.centerm.epos.transcation.pos.data.BaseField25"/>
+
+    <field index="26" class="com.centerm.epos.transcation.pos.data.BaseField26"/>
+
+    <field index="27" class="com.centerm.epos.transcation.pos.data.BaseField27"/>
+
+    <field index="28" class="com.centerm.epos.transcation.pos.data.BaseField28"/>
+
+    <field index="29" class="com.centerm.epos.transcation.pos.data.BaseField29"/>
+
+    <field index="30" class="com.centerm.epos.transcation.pos.data.BaseField30"/>
+
+    <field index="31" class="com.centerm.epos.transcation.pos.data.BaseField31"/>
+
+    <field index="32" class="com.centerm.epos.transcation.pos.data.BaseField32"/>
+
+    <field index="33" class="com.centerm.epos.transcation.pos.data.BaseField33"/>
+
+    <field index="34" class="com.centerm.epos.transcation.pos.data.BaseField34"/>
+
+    <field index="35" class="com.centerm.epos.transcation.pos.data.BaseField35"/>
+
+    <field index="36" class="com.centerm.epos.transcation.pos.data.BaseField36"/>
+
+    <field index="37" class="com.centerm.epos.transcation.pos.data.BaseField37"/>
+
+    <field index="38" class="com.centerm.epos.transcation.pos.data.BaseField38"/>
+
+    <field index="39" class="com.centerm.epos.transcation.pos.data.BaseField39"/>
+
+    <field index="40" class="com.centerm.epos.transcation.pos.data.BaseField40"/>
+
+    <field index="41" class="com.centerm.epos.transcation.pos.data.BaseField41"/>
+
+    <field index="42" class="com.centerm.epos.transcation.pos.data.BaseField42"/>
+
+    <field index="43" class="com.centerm.epos.transcation.pos.data.BaseField43"/>
+
+    <field index="44" class="com.centerm.epos.transcation.pos.data.BaseField44"/>
+
+    <field index="45" class="com.centerm.epos.transcation.pos.data.BaseField45"/>
+
+    <field index="46" class="com.centerm.epos.transcation.pos.data.BaseField46"/>
+
+    <field index="47" class="com.centerm.epos.transcation.pos.data.BaseField47"/>
+
+    <field index="48" class="com.centerm.epos.transcation.pos.data.BaseField48"/>
+
+    <field index="49" class="com.centerm.epos.transcation.pos.data.BaseField49"/>
+
+    <field index="50" class="com.centerm.epos.transcation.pos.data.BaseField50"/>
+
+    <field index="51" class="com.centerm.epos.transcation.pos.data.BaseField51"/>
+
+    <field index="52" class="com.centerm.epos.transcation.pos.data.BaseField52"/>
+
+    <field index="53" class="com.centerm.epos.transcation.pos.data.BaseField53"/>
+
+    <field index="54" class="com.centerm.epos.transcation.pos.data.BaseField54"/>
+
+    <field index="55" class="com.centerm.epos.transcation.pos.data.BaseField55"/>
+
+    <field index="56" class="com.centerm.epos.transcation.pos.data.BaseField56"/>
+
+    <field index="57" class="com.centerm.epos.transcation.pos.data.BaseField57"/>
+
+    <field index="58" class="com.centerm.epos.transcation.pos.data.BaseField58"/>
+
+    <field index="59" class="com.centerm.epos.transcation.pos.data.BaseField59"/>
+
+    <field index="60" class="com.centerm.epos.transcation.pos.data.BaseField60"/>
+
+    <field index="61" class="com.centerm.epos.transcation.pos.data.BaseField61"/>
+
+    <field index="62" class="com.centerm.epos.transcation.pos.data.BaseField62"/>
+
+    <field index="63" class="com.centerm.epos.transcation.pos.data.BaseField63"/>
+
+    <field index="64" class="com.centerm.epos.transcation.pos.data.BaseField64"/>
+</process>

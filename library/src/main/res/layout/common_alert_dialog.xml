@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/bg_popup"
+             android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/hint_icon_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/pic_warn"/>
+
+    <LinearLayout
+        android:layout_width="@dimen/width_560"
+        android:layout_height="@dimen/height_360"
+        android:minHeight="@dimen/common_dialog_min_height"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_dialog_title_min_height"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/dialog_title"
+                style="@style/BaseText.Tip"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_40"
+                android:layout_marginTop="@dimen/margin_40"
+                android:gravity="center"
+                android:text="标题"
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/font_36"
+                />
+
+            <TextView
+                android:id="@+id/dialog_time"
+                style="@style/BaseText.Tip"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_40"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/font_black"
+                android:textSize="@dimen/font_36" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_30"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_60"
+        android:paddingRight="@dimen/margin_60">
+
+        <TextView
+            android:id="@+id/dialog_msg"
+            style="@style/BaseText.Tip.Dark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="内容内容时发生地方发生的放水电费水电费是否"
+            android:textColor="@color/font_tip_info"
+            android:textSize="@dimen/font_32" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity=""
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_marginRight="10dp"
+            android:paddingStart="@dimen/margin_200"
+            android:paddingEnd="0dp">
+
+            <!--style="@style/BaseButton.Negative"-->
+            <Button
+                android:id="@+id/negative_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="0dp"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:text="@string/label_cancel"
+                android:textColor="@color/font_tip"
+                android:textSize="@dimen/font_32" />
+
+            <Button
+                android:id="@+id/positive_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:text="@string/label_confirm"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/font_32" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

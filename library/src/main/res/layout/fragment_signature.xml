@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+        style="@style/TradeFragment"
+    android:background="@color/secondary_bg">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/common_title_layout"/>
+
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mIvTip"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/card_step4"/>
+
+    <TextView
+        android:id="@+id/mTvTip"
+        style="@style/ww_style"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:layout_margin="15dp"
+        android:textColor="@color/tip4D"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="请在下方区域进行代付人（持卡人）签名\n（签名用于签购单）"/>
+
+    <com.centerm.epos.view.HandwrittenPad
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:id="@+id/hand_write_pad"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="@color/secondary_bg">
+        <RelativeLayout style="@style/mw_style"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/resign_btn"
+                style="@style/ww_style"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:textColor="@color/tip4D"
+                android:text="清除"/>
+
+            <TextView
+                android:id="@+id/positive_btn"
+                style="@style/ww_style"
+                android:textSize="18sp"
+                android:textColor="@color/colorAccent"
+                android:text="确认"
+                android:padding="5dp"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

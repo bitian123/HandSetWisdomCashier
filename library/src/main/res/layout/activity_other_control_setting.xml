@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_title_layout"/>
+
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/ConfigureItemTextStyle"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_50"
+        android:text="@string/label_refund_amount_max"/>
+
+    <EditText
+        android:id="@+id/extxt_refund_max"
+            style="@style/ConfigureItemTextStyle.Edit"
+            android:digits="0123456789."
+            android:maxLength="13"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_50"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/ConfigureItemTextStyle"
+            android:text="@string/label_master_pwd"/>
+
+        <CheckBox
+            android:layout_marginEnd="@dimen/margin_60"
+            android:id="@+id/cb_master_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_alignParentEnd="true"
+            android:button="@drawable/sel_toggle"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:gravity="center_vertical">
+
+        <TextView
+                style="@style/ConfigureItemTextStyle"
+                android:text="@string/label_manual_card_no"/>
+
+        <CheckBox
+                android:layout_marginEnd="@dimen/margin_60"
+                android:id="@+id/cb_manual_card_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:layout_alignParentEnd="true"
+                android:button="@drawable/sel_toggle"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:visibility="gone"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/ConfigureItemTextStyle"
+            android:text="上送基站信息"/>
+
+        <CheckBox
+            android:layout_marginEnd="@dimen/margin_60"
+            android:id="@+id/cb_upload_apn_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_alignParentEnd="true"
+            android:button="@drawable/sel_toggle"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/ConfigureItemTextStyle"
+            android:text="交易完成后是否打印单据"/>
+
+        <CheckBox
+            android:layout_marginEnd="@dimen/margin_60"
+            android:id="@+id/cb_print_document"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_alignParentEnd="true"
+            android:button="@drawable/sel_toggle"/>
+    </RelativeLayout>
+
+    <TextView
+        style="@style/ConfigureItemTextStyle"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_50"
+        android:text="交易记录保存时间（天）"/>
+
+    <EditText
+        android:id="@+id/extxt_trade_time"
+        style="@style/ConfigureItemTextStyle.Edit"
+        android:inputType="number"
+        android:maxLength="3"/>
+
+    <Button
+        android:id="@+id/modify_trans"
+        style="@style/ConfigureItemLayoutStyle.Button"/>
+</LinearLayout>

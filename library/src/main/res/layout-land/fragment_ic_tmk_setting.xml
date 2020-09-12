@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+    android:background="@color/font_white">
+
+    <TextView
+            android:id="@+id/tx_pwd"
+            style="@style/ConfigureItemTextStyle"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_30"
+            android:focusable="false"
+            android:text="@string/lable_key_card_pwd"
+            android:visibility="gone"
+            android:textSize="12pt"/>
+
+    <EditText
+            android:id="@+id/extxt_key_card_pwd"
+            style="@style/ConfigureItemTextStyle.Edit"
+            android:maxLength="6"
+            android:inputType="numberPassword"
+            android:visibility="gone"
+            android:textSize="12pt"
+            android:layout_height="35pt"
+            android:layout_width="300pt"
+            android:layout_marginTop="10pt"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="15pt"
+            android:background="@drawable/bg_login_et"/>
+
+    <TextView
+            android:id="@+id/textView"
+            style="@style/ConfigureItemTextStyle"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/lable_key_index"
+            android:visibility="gone"
+            android:textSize="12pt"/>
+
+    <EditText
+            android:id="@+id/extxt_key_index"
+            style="@style/ConfigureItemTextStyle.Edit"
+            android:maxLength="10"
+            android:visibility="gone"
+            android:textSize="12pt"/>
+
+
+    <TextView
+            android:id="@+id/textView_input_key"
+            style="@style/ConfigureItemTextStyle"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/lable_key_encrypted"
+            android:visibility="gone"
+            android:textSize="12pt"/>
+
+    <EditText
+            android:id="@+id/extxt_key_encrypted"
+            style="@style/ConfigureItemTextKeyStyle.Edit"
+            android:visibility="gone"
+            android:textSize="12pt"/>
+
+    <TextView
+            android:id="@+id/textView_input_check"
+            style="@style/ConfigureItemTextStyle"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/lable_key_check"
+            android:visibility="gone"
+            android:textSize="12pt" />
+
+    <EditText
+            android:id="@+id/extxt_key_check"
+            style="@style/ConfigureItemTextKeyStyle.Edit"
+            android:maxLength="8"
+            android:visibility="gone"
+        android:textSize="12pt"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mTvTip"
+        android:padding="10dp"
+        android:textSize="12pt"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"/>
+
+
+
+    <LinearLayout style="@style/mw_style"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="130pt"
+            android:layout_gravity="center_horizontal"
+            style="@style/ConfigureItemLayoutStyle.Button"
+            android:text="返回"
+            android:background="@drawable/btn_login_bg_gray"/>
+        <Button
+            android:id="@+id/btn_tips"
+            android:onClick="onSureClick"
+            android:layout_width="130pt"
+            android:layout_gravity="center_horizontal"
+            style="@style/ConfigureItemLayoutStyle.Button"
+            android:enabled="false"
+            android:text="@string/pls_insert_key_card"
+            android:background="@drawable/btn_login_bg"/>
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <android.inputmethodservice.KeyboardView
+                android:id="@+id/keyboard_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@android:color/black"
+                android:keyBackground="@drawable/btn_keyboard_key"
+                android:keyPreviewLayout="@layout/key_preview_layout"
+                android:keyTextColor="@android:color/white"
+                android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+        style="@style/TradeFragment">
+
+    <include layout="@layout/common_title_layout"/>
+
+    <LinearLayout
+        android:id="@+id/integral_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_50"
+        android:visibility="gone">
+        <TextView
+            style="@style/BaseText.Tip"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/pls_input_goods_code"/>
+        <EditText
+            android:id="@+id/edit_integral_code"
+            style="@style/BaseEditBox.NumberAndLetter"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_20"
+            android:maxLength="@integer/integral_goods_code_max_len"
+            android:text=""
+            android:textSize="@dimen/font_40" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/mag_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_50"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_80"
+            android:visibility="visible">
+            <TextView
+                style="@style/BaseText.Tip"
+                android:text="@string/label_cert_type"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/font_40"/>
+
+            <RadioGroup
+                android:id="@+id/radiogroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_30">
+
+                <RadioButton
+                    android:id="@+id/id_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radion_button"
+                    android:text="@string/tip_id_id"
+                    android:textSize="@dimen/font_30"
+                    />
+
+                <RadioButton
+                    android:id="@+id/id_coo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radion_button"
+                    android:text="@string/tip_id_coo"
+                    android:textSize="@dimen/font_30"
+                    android:layout_marginStart="@dimen/margin_30"/>
+
+                <RadioButton
+                    android:id="@+id/id_passport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radion_button"
+                    android:text="@string/tip_id_passport"
+                    android:textSize="@dimen/font_30"
+                    android:layout_marginStart="@dimen/margin_30"/>
+                <RadioButton
+                    android:id="@+id/id_rp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radion_button"
+                    android:textSize="@dimen/font_30"
+                    android:text="@string/tip_id_rp"
+                    android:layout_marginStart="@dimen/margin_30"/>
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radiogroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_50">
+                <RadioButton
+                    android:id="@+id/id_mtp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radion_button"
+                    android:text="@string/tip_id_mtp"
+                    android:textSize="@dimen/font_30"/>
+
+                <RadioButton
+                    android:id="@+id/id_poc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radion_button"
+                    android:layout_marginStart="@dimen/margin_30"
+                    android:text="@string/tip_id_poc"
+                    android:textSize="@dimen/font_30"/>
+
+                <RadioButton
+                    android:id="@+id/id_sc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radion_button"
+                    android:text="@string/tip_id_sc"
+                    android:textSize="@dimen/font_30"
+                    android:layout_marginStart="@dimen/margin_30"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_50">
+
+            <TextView
+                style="@style/BaseText.Tip"
+                android:text="@string/label_plz_input_cert_no"
+                android:textSize="@dimen/font_40"
+                android:layout_gravity="center_horizontal"/>
+
+            <EditText
+                android:id="@+id/edit_cardholder"
+                style="@style/BaseEditBox.NumberAndLetter"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_20"
+                android:gravity="center_horizontal"
+                android:maxLength="@integer/cardholder_info_max_len"
+                android:text=""
+                android:textSize="@dimen/font_48" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/reservation_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_50"
+        android:visibility="gone">
+        <TextView
+            style="@style/BaseText.Tip"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/tip_input_phone_number"/>
+        <EditText
+            android:id="@+id/edit_number"
+            style="@style/BaseEditBox.Number"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_20"
+            android:maxLength="@integer/phone_number_max_len"
+            android:text=""
+            android:textSize="@dimen/font_40" />
+        <TextView
+            style="@style/BaseText.Tip"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/tip_plz_input_reservation_number"/>
+        <EditText
+            android:id="@+id/edit_reservation_number"
+            style="@style/BaseEditBox.Number"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_20"
+            android:maxLength="@integer/reservation_number_max_len"
+            android:text=""
+            android:textSize="@dimen/font_40" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/offline_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_30"
+        android:layout_marginStart="@dimen/margin_30"
+        android:layout_marginTop="@dimen/margin_80"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/BaseText.Tip"
+                android:text="@string/label_auth_mode" />
+
+            <RadioGroup
+                android:id="@+id/offline_auth_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/margin_30"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/offline_auth_mode_pos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radion_button"
+                    android:checked="true"
+                    android:text="@string/tip_auth_mode_pos"
+                    android:textSize="@dimen/font_30" />
+
+                <RadioButton
+                    android:id="@+id/offline_auth_mode_telephone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_60"
+                    android:button="@drawable/radion_button"
+                    android:text="@string/tip_auth_mode_telephone"
+                    android:textSize="@dimen/font_30" />
+
+                <RadioButton
+                    android:id="@+id/offline_auth_mode_auth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_60"
+                    android:button="@drawable/radion_button"
+                    android:text="@string/tip_auth_mode_auth"
+                    android:textSize="@dimen/font_30" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/offline_telephone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                style="@style/BaseText.Tip"
+                android:text="@string/label_plz_input_auth_organization_code" />
+
+            <EditText
+                android:id="@+id/edit_auth_org_code"
+                style="@style/BaseEditBox.NumberAndLetter"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_20"
+                android:text=""
+                android:textSize="@dimen/font_40"
+                android:digits="1234567890abcdefABCDEF"
+                android:maxLength="@integer/offline_original_code_max_len"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/offline_pos_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                style="@style/BaseText.Tip"
+                android:text="@string/label_plz_input_ori_auth_code" />
+            <EditText
+                android:id="@+id/edit_ori_auth_code"
+                style="@style/BaseEditBox.NumberAndLetter"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_20"
+                android:text=""
+                android:textSize="@dimen/font_40"
+                android:maxLength="@integer/offline_auth_code_max_len"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                style="@style/BaseText.Tip"
+                android:text="@string/label_plz_select_credit_card_company_code" />
+
+            <RadioGroup
+                android:id="@+id/credit_card_company_code1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_30"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cupRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radion_button"
+                    android:text="@string/tip_credit_card_company_code_cup"
+                    android:textSize="@dimen/font_30" />
+
+                <RadioButton
+                    android:id="@+id/visRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_30"
+                    android:button="@drawable/radion_button"
+                    android:text="@string/tip_credit_card_company_code_vis"
+                    android:textSize="@dimen/font_30" />
+
+                <RadioButton
+                    android:id="@+id/mccRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_30"
+                    android:button="@drawable/radion_button"
+                    android:text="@string/tip_credit_card_company_code_mcc"
+                    android:textSize="@dimen/font_30" />
+
+                <RadioButton
+                    android:id="@+id/maeRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_30"
+                    android:button="@drawable/radion_button"
+                    android:text="@string/tip_credit_card_company_code_mae"
+                    android:textSize="@dimen/font_30" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/credit_card_company_code2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_50"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/jcbRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radion_button"
+                    android:text="@string/tip_credit_card_company_code_jcb"
+                    android:textSize="@dimen/font_30" />
+
+                <RadioButton
+                    android:id="@+id/dccRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_30"
+                    android:button="@drawable/radion_button"
+                    android:text="@string/tip_credit_card_company_code_dcc"
+                    android:textSize="@dimen/font_30" />
+
+                <RadioButton
+                    android:id="@+id/amxRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_30"
+                    android:button="@drawable/radion_button"
+                    android:text="@string/tip_credit_card_company_code_amx"
+                    android:textSize="@dimen/font_30" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/positive_btn"
+        style="@style/BaseButton.Positive"
+        android:layout_marginLeft="@dimen/margin_60"
+        android:layout_marginRight="@dimen/margin_60"
+        android:layout_marginTop="@dimen/margin_60"/>
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/check_card_layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              style="@style/TradeFragment"
+    android:background="@color/e10_f3_color">
+
+    <include layout="@layout/common_title_layout" />
+
+    <RelativeLayout style="@style/mw_style"
+        android:layout_marginTop="10pt">
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/card_step2"/>
+        <TextView style="@style/ww_style"
+            android:id="@+id/mTvShowTimeOut"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="60秒"
+            android:gravity="center"
+            android:paddingLeft="30pt"
+            android:textSize="15pt"
+            android:background="@drawable/icon_time"
+            android:textColor="@color/font_white"/>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/mm_style">
+        <RelativeLayout style="@style/e10_content_style"
+            android:id="@+id/mViewFinger">
+            <ImageView style="@style/ww_style"
+                android:id="@+id/mIvTipPic"
+                android:layout_marginLeft="25pt"
+                android:background="@drawable/read_icccard"
+                android:layout_centerVertical="true"/>
+            <LinearLayout style="@style/mm_style"
+                android:orientation="vertical"
+                android:layout_toRightOf="@id/mIvTipPic">
+
+                <LinearLayout style="@style/ww_style"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="50pt"
+                    android:gravity="center_vertical">
+                    <ImageView style="@style/ww_style"
+                        android:background="@drawable/icon_tip"
+                        />
+                    <TextView
+                        style="@style/ww_style"
+                        android:text="请刷您的银行卡"
+                        android:textSize="12pt"
+                        android:layout_marginLeft="10pt"
+                        android:textColor="#333333"/>
+                </LinearLayout>
+
+                <TextView android:layout_width="280pt"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="15pt"
+                    android:layerType="software"
+                    android:background="@drawable/dotted_line"/>
+
+                <TextView
+                    style="@style/ww_style"
+                    android:text="温馨提示：\n\n1、请根据左方提示进行操作，请勿离开！"
+                    android:textSize="12pt"
+                    android:layout_marginTop="10pt"
+                    android:textColor="#333333"/>
+
+                <TextView
+                    style="@style/ww_style"
+                    android:id="@+id/mTvShowAmtTip1"
+                    android:text="款项总额10000元，已收1000元，本次应收1000元"
+                    android:textSize="10pt"
+                    android:layout_marginTop="30pt"
+                    android:textColor="#B74B4D"/>
+
+                <TextView
+                    style="@style/ww_style"
+                    android:text="本次付款总金额10000元"
+                    android:id="@+id/mTvShowAmtTip2"
+                    android:textSize="12pt"
+                    android:layout_marginTop="10pt"
+                    android:textColor="#B74B4D"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageButton style="@style/ww_style"
+            android:id="@+id/mBtnFinish"
+            android:background="@drawable/btn_exit"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15pt"/>
+
+        <ImageButton style="@style/ww_style"
+            android:id="@+id/imgbtn_back"
+            android:background="@drawable/btn_back"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15pt"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,106 @@
+import java.text.SimpleDateFormat
+
+apply plugin: 'com.android.application'
+
+//获取git最新版本信息
+def gitVersion() {
+    def cmd = 'git rev-parse --short HEAD'
+    return cmd.execute().text.trim().toString()
+}
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.centerm.epos.ebi.gt"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 21
+        versionName "1.1.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    signingConfigs {
+        debug {
+            //keystore文件的存放位置
+            storeFile file('../system.keystore')
+        }
+        release {
+            //keystore文件的存放位置
+            storeFile file('../system.keystore')
+            //keystore密码
+            storePassword 'android'
+            //Key别名
+            keyAlias 'androiddebugkey'
+            //Key密码
+            keyPassword 'android'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+//    applicationVariants.all { variant ->
+//        def time = new SimpleDateFormat("yyyyMMdd").format(new Date())
+//        variant.outputs.all { output ->
+//            outputFileName = "EBIGT_S${defaultConfig.versionName}B${defaultConfig.versionCode}_" +
+//                    time + "_release_proc.apk"
+//        }
+//    }
+
+
+    applicationVariants.all { variant ->
+        def time = new SimpleDateFormat("yyyyMMdd").format(new Date())
+        variant.outputs.all { output ->
+            outputFileName = "DY_HandSetCashier_${variant.buildType.name}-${variant.versionName}-G_${gitVersion()}_" +
+                    time + ".apk"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':library')
+}
+
+//复制Release版本到指定文件夹
+task makeReleaseVersion(type: Copy, dependsOn: "assembleRelease") {
+    def versionName = android.defaultConfig.versionName
+    from "${buildDir}/outputs/apk/"
+    into "../Release/Payment/" + versionName + "/"
+
+    // 不拷贝未签名和Debug的文件.
+    exclude { details ->
+        details.file.name.contains('-unaligned') ||
+                details.file.name.contains('-unsigned') ||
+                !details.file.name.contains(versionName)
+    }
+    include "**/*.apk"
+}

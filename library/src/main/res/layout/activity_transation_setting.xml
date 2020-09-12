@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_title_layout"/>
+
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/ConfigureItemTextStyle"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_50"
+        android:text="@string/label_resend_time"/>
+
+    <EditText
+        android:id="@+id/extxt_resend_time"
+        style="@style/ConfigureItemTextStyle.Edit"
+        android:inputType="number"
+        android:maxLength="1"/>
+
+    <TextView
+            style="@style/ConfigureItemTextStyle"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_50"
+            android:text="@string/label_trade_view_timeout"/>
+
+    <EditText
+            android:id="@+id/extxt_trade_view_timeout"
+            style="@style/ConfigureItemTextStyle.Edit"
+            android:inputType="number"
+            android:maxLength="3"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_50"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/ConfigureItemTextStyle"
+            android:text="@string/label_auto_sign_out"/>
+
+        <CheckBox
+            android:layout_marginRight="@dimen/margin_60"
+            android:id="@+id/auto_sign_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_alignParentRight="true"
+            android:button="@drawable/sel_toggle"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_10"
+            android:gravity="center_vertical">
+
+        <TextView
+                style="@style/ConfigureItemTextStyle"
+                android:text="@string/label_auto_print_details"/>
+
+        <CheckBox
+                android:layout_marginEnd="@dimen/margin_60"
+                android:id="@+id/auto_print_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_alignParentEnd="true"
+                android:button="@drawable/sel_toggle"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_10"
+            android:gravity="center_vertical">
+
+        <TextView
+                style="@style/ConfigureItemTextStyle"
+                android:text="@string/label_slip_title_default"/>
+
+        <CheckBox
+                android:layout_marginEnd="@dimen/margin_60"
+                android:id="@+id/cb_slip_title_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_alignParentEnd="true"
+                android:button="@drawable/sel_toggle"/>
+    </RelativeLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_slip_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            >
+        <TextView
+                style="@style/ConfigureItemTextStyle"
+                android:layout_marginRight="@dimen/margin_4"
+                android:text="@string/label_slip_title"/>
+
+        <EditText
+                android:id="@+id/extxt_slip_title"
+                style="@style/ConfigureItemTextStyle.Edit"
+                android:layout_height="@dimen/height_80"
+                android:paddingLeft="@dimen/margin_4"
+                android:inputType="text"
+                android:maxLength="20"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/modify_trans"
+        style="@style/ConfigureItemLayoutStyle.Button"/>
+</LinearLayout>

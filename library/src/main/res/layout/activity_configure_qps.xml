@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <include layout="@layout/common_title_layout"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:gravity="center_vertical"
+            >
+
+        <TextView
+                style="@style/ConfigureItemTextStyle"
+                android:text="@string/label_wave_bankcard_prefer"
+                />
+
+        <CheckBox
+                android:layout_marginEnd="@dimen/margin_60"
+                android:id="@+id/cb_wave_prefer_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:layout_alignParentEnd="true"
+                android:button="@drawable/sel_toggle"
+                />
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/textView"
+            style="@style/ConfigureItemTextStyle"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_20"
+            android:text="@string/label_configure_qps_amount_no_pwd"
+            />
+
+    <EditText
+            android:id="@+id/et_confiure_amount_no_pwd"
+            style="@style/ConfigureItemTextStyle.Edit"
+            android:digits="0123456789."
+            android:maxLength="13"
+            />
+
+    <TextView
+            style="@style/ConfigureItemTextStyle"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/label_configure_qps_amount_no_sign"
+            />
+
+    <EditText
+            android:id="@+id/et_confiure_amount_no_sign"
+            android:digits="0123456789."
+            android:maxLength="13"
+            style="@style/ConfigureItemTextStyle.Edit"
+            />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:gravity="center_vertical"
+                >
+
+            <TextView
+                    style="@style/ConfigureItemTextStyle"
+                    android:text="@string/label_qps_toggle"
+                    />
+
+            <CheckBox
+                    android:layout_marginEnd="@dimen/margin_60"
+                    android:id="@+id/cb_qps_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_alignParentEnd="true"
+                    android:button="@drawable/sel_toggle"
+                    />
+        </RelativeLayout>
+
+        <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/margin_20"-->
+                <!--android:gravity="center_vertical"-->
+                <!--&gt;-->
+
+            <!--<TextView-->
+                    <!--style="@style/ConfigureItemTextStyle"-->
+                    <!--android:text="@string/label_qps_bin_a_toggle"-->
+                    <!--/>-->
+
+            <!--<CheckBox-->
+                    <!--android:layout_marginEnd="@dimen/margin_60"-->
+                    <!--android:id="@+id/cb_qps_bin_a"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:checked="false"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:button="@drawable/sel_toggle"-->
+                    <!--/>-->
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/margin_20"-->
+                <!--android:gravity="center_vertical"-->
+                <!--&gt;-->
+
+            <!--<TextView-->
+                    <!--style="@style/ConfigureItemTextStyle"-->
+                    <!--android:text="@string/label_qps_bin_b_toggle"-->
+                    <!--/>-->
+
+            <!--<CheckBox-->
+                    <!--android:layout_marginEnd="@dimen/margin_60"-->
+                    <!--android:id="@+id/cb_qps_bin_b"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:checked="false"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:button="@drawable/sel_toggle"-->
+                    <!--/>-->
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/margin_20"-->
+                <!--android:gravity="center_vertical"-->
+                <!--&gt;-->
+
+            <!--<TextView-->
+                    <!--style="@style/ConfigureItemTextStyle"-->
+                    <!--android:text="@string/label_qps_bin_c_toggle"-->
+                    <!--/>-->
+
+            <!--<CheckBox-->
+                    <!--android:layout_marginEnd="@dimen/margin_60"-->
+                    <!--android:id="@+id/cb_qps_bin_c"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:checked="false"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:button="@drawable/sel_toggle"-->
+                    <!--/>-->
+        <!--</RelativeLayout>-->
+
+        <RelativeLayout
+                android:id="@+id/rl_qps_bin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:gravity="center_vertical"
+                >
+
+            <TextView
+                    style="@style/ConfigureItemTextStyle"
+                    android:layout_marginTop="@dimen/margin_14"
+                    android:text="@string/label_qps_bin_switch"
+                    />
+
+            <RadioGroup
+                    android:id="@+id/rg_qps_bin"
+                    android:layout_marginEnd="@dimen/margin_60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal"
+                    >
+
+                <RadioButton
+                    android:id="@+id/rb_qps_bin_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radion_button"
+                    android:text="@string/label_qps_bin_a_toggle" />
+
+                <RadioButton
+                        android:id="@+id/rb_qps_bin_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_qps_bin_b_toggle"
+                    android:button="@drawable/radion_button"
+                        />
+                <RadioButton
+                        android:id="@+id/rb_qps_bin_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_qps_bin_c_toggle"
+                    android:button="@drawable/radion_button"
+                        />
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:gravity="center_vertical"
+                >
+
+            <TextView
+                    style="@style/ConfigureItemTextStyle"
+                    android:text="@string/label_qps_cdcvm_toggle"
+                    />
+
+            <CheckBox
+                    android:layout_marginEnd="@dimen/margin_60"
+                    android:id="@+id/cb_qps_cdcvm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_alignParentEnd="true"
+                    android:button="@drawable/sel_toggle"
+                    />
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:gravity="center_vertical"
+                >
+
+            <TextView
+                    style="@style/ConfigureItemTextStyle"
+                    android:text="@string/label_qps_no_sign_toggle"
+                    />
+
+            <CheckBox
+                    android:layout_marginEnd="@dimen/margin_60"
+                    android:id="@+id/cb_qps_no_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_alignParentEnd="true"
+                    android:button="@drawable/sel_toggle"
+                    />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+            android:onClick="onSureClick"
+            style="@style/ConfigureItemLayoutStyle.Button"
+            />
+
+</LinearLayout>

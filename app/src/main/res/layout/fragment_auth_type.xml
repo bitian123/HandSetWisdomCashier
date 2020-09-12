@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/TradeFragment"
+    android:gravity="center_horizontal">
+
+    <include layout="@layout/common_title_layout" />
+
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/auth_step_3"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="28dp"
+        android:paddingRight="28dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mBtnType1"
+            android:background="@drawable/auth_type1"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mBtnType2"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/auth_type2"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:paddingLeft="28dp"
+        android:paddingRight="28dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mBtnType3"
+            android:background="@drawable/auth_type3"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mBtnType4"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/auth_type4"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:paddingLeft="28dp"
+        android:paddingRight="28dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mBtnType5"
+            android:background="@drawable/auth_type5"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mBtnType6"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/auth_type6"
+            />
+    </RelativeLayout>
+
+    <include layout="@layout/view_bottom_time_out"/>
+
+</LinearLayout>

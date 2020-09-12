@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/TradeFragment"
+    android:background="@color/e10_f3_color">
+
+    <include layout="@layout/common_title_layout" />
+
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mIvTip"
+        android:layout_marginTop="10pt"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/print_step1"/>
+
+    <RelativeLayout style="@style/mm_style">
+        <LinearLayout style="@style/e10_content_style"
+            android:orientation="vertical">
+            <RelativeLayout style="@style/mw_style">
+                <TextView style="@style/ww_style"
+                    android:id="@+id/mTvRoomId"
+                    android:textSize="10pt"
+                    android:textColor="#333333"
+                    android:text=""
+                    android:layout_marginLeft="12pt"
+                    android:layout_marginTop="8pt"
+                    android:layout_marginBottom="8pt"/>
+
+                <TextView style="@style/ww_style"
+                    android:id="@+id/mTvName"
+                    android:textSize="10pt"
+                    android:textColor="#333333"
+                    android:text=""
+                    android:layout_toRightOf="@id/mTvRoomId"
+                    android:layout_marginLeft="15pt"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout style="@style/ww_style"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="12pt"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+                    <TextView style="@style/ww_style"
+                        android:text="已选择"
+                        android:textColor="#333333"
+                        android:textSize="9pt" />
+                    <TextView style="@style/ww_style"
+                        android:id="@+id/mTvPrintNum"
+                        android:text="0笔"
+                        android:layout_marginLeft="1pt"
+                        android:layout_marginRight="1pt"
+                        android:textColor="#FFC02C"
+                        android:textSize="12pt" />
+                    <TextView style="@style/ww_style"
+                        android:text="需要打印的款项"
+                        android:textColor="#333333"
+                        android:textSize="9pt" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="30pt"
+                android:orientation="horizontal"
+                android:background="#3EA958">
+                <LinearLayout style="@style/e10_business_title_item"
+                    android:layout_weight="0.8"
+                    android:visibility="invisible">
+                    <CheckBox android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mCheckBox"
+                        android:textColor="@color/font_white"
+                        android:textSize="9pt"
+                        style="@style/MyCheckBox"
+                        android:text="   全选"/>
+                </LinearLayout>
+                <LinearLayout style="@style/e10_business_title_item"
+                    android:layout_weight="1.2">
+                    <TextView style="@style/e10_business_title_item_text"
+                        android:text="缴费日期"/>
+                </LinearLayout>
+                <LinearLayout style="@style/e10_business_title_item">
+                    <TextView style="@style/e10_business_title_item_text"
+                        android:text="款项名称"/>
+                </LinearLayout>
+                <LinearLayout style="@style/e10_business_title_item">
+                    <TextView style="@style/e10_business_title_item_text"
+                        android:text="票据号码"/>
+                </LinearLayout>
+                <LinearLayout style="@style/e10_business_title_item">
+                    <TextView style="@style/e10_business_title_item_text"
+                        android:text="打印次数"/>
+                </LinearLayout>
+                <LinearLayout style="@style/e10_business_title_item">
+                    <TextView style="@style/e10_business_title_item_text"
+                        android:text="付款金额"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout style="@style/mm_style">
+                <LinearLayout style="@style/mw_style"
+                    android:orientation="horizontal"
+                    android:id="@+id/mLlBottom"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_horizontal">
+                    <TextView android:layout_width="100pt"
+                        android:layout_height="30pt"
+                        android:id="@+id/mBtnPrint"
+                        android:text="打印单份"
+                        android:gravity="center"
+                        android:layout_marginTop="10pt"
+                        android:layout_marginBottom="10pt"
+                        android:background="@drawable/btn_login_bg"
+                        android:textColor="@color/font_white"
+                        android:textSize="14pt"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"/>
+
+                    <TextView android:layout_width="100pt"
+                        android:layout_height="30pt"
+                        android:id="@+id/mBtnPrintMore"
+                        android:text="打印多份"
+                        android:gravity="center"
+                        android:layout_marginLeft="25pt"
+                        android:layout_marginTop="10pt"
+                        android:layout_marginBottom="10pt"
+                        android:background="@drawable/btn_login_bg"
+                        android:textColor="@color/font_white"
+                        android:textSize="14pt"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"/>
+                </LinearLayout>
+
+
+                <ListView android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/mListView"
+                    android:scrollbarFadeDuration="0"
+                    android:fadeScrollbars="false"
+                    android:layout_above="@id/mLlBottom"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ImageButton style="@style/ww_style"
+            android:id="@+id/mBtnFinish"
+            android:background="@drawable/btn_exit"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15pt"/>
+
+        <ImageButton style="@style/ww_style"
+            android:id="@+id/imgbtn_back"
+            android:background="@drawable/btn_back"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15pt"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/font_white">
+
+    <LinearLayout style="@style/mw_style"
+        android:orientation="vertical"
+        android:paddingTop="60pt"
+        android:paddingLeft="120pt">
+        <LinearLayout style="@style/mw_style"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView style="@style/ww_style"
+                android:id="@+id/mTv1"
+                android:text="帐号:"
+                android:textSize="12pt"
+                android:textColor="#666666"/>
+
+            <com.centerm.epos.view.ClearEditText
+                android:id="@+id/edtxt_account"
+                style="@style/LoginItemStyle.Pwd"
+                android:layout_width="200pt"
+                android:layout_height="35pt"
+                android:hint=""
+                android:inputType="text"
+                android:layout_marginLeft="8pt"
+                android:paddingRight="10pt"
+                android:textSize="12pt"
+                android:maxLength="30"
+                android:paddingLeft="15pt"
+                android:background="@drawable/bg_login_et"/>
+        </LinearLayout>
+
+        <LinearLayout style="@style/mw_style"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20pt">
+            <TextView style="@style/ww_style"
+                android:text="密码:"
+                android:textSize="12pt"
+                android:textColor="#666666"/>
+
+            <com.centerm.epos.view.ClearEditText
+                android:id="@+id/edtxt_pwd"
+                style="@style/LoginItemStyle.Pwd"
+                android:layout_width="200pt"
+                android:hint=""
+                android:inputType="textPassword"
+                android:layout_marginLeft="8pt"
+                android:paddingRight="10pt"
+                android:layout_height="35pt"
+                android:textSize="12pt"
+                android:maxLength="20"
+                android:paddingLeft="15pt"
+                android:background="@drawable/bg_login_et"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        style="@style/LoginLayoutStyle.Button2"
+        android:layout_marginTop="50pt"
+        android:textSize="14pt"
+        android:text="确认"
+        android:id="@+id/mBtnModify"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="100pt"
+        android:layout_height="30pt"/>
+
+</LinearLayout>

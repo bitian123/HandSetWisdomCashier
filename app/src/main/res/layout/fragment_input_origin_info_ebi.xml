@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+        style="@style/TradeFragment">
+
+    <include layout="@layout/common_title_layout_sp" />
+
+    <LinearLayout
+        android:id="@+id/scan_void_input_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/margin_60"
+        android:paddingEnd="@dimen/margin_60"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/BaseText.Tip"
+            android:layout_marginTop="@dimen/margin_40"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/tip_input_ori_order"
+            />
+
+        <EditText
+            android:id="@+id/ori_pos_order_edit"
+            style="@style/BaseEditBox.NumberAndLetter"
+            android:layout_marginTop="@dimen/margin_34"
+            android:maxLength="19"
+            android:textSize="25sp"
+            android:gravity="center_horizontal"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/void_input_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/margin_60"
+        android:paddingEnd="@dimen/margin_60"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/BaseText.Tip"
+            android:layout_marginTop="@dimen/margin_40"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/tip_input_pos_serial"
+            />
+
+        <EditText
+            android:id="@+id/ori_pos_serial_edit"
+            style="@style/BaseEditBox.Number"
+            android:layout_marginTop="@dimen/margin_34"
+            android:maxLength="6"
+            android:textSize="@dimen/font_60"
+            android:gravity="center_horizontal"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/void_input_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/margin_60"
+            android:paddingEnd="@dimen/margin_60"
+            android:visibility="gone">
+
+        <TextView
+                style="@style/BaseText.Tip"
+                android:layout_marginTop="@dimen/margin_40"
+                android:text="@string/tip_input_pos_scan_voucher"/>
+
+        <EditText
+                android:id="@+id/ori_pos_scan_code_edit"
+                style="@style/BaseEditBox.Number"
+                android:layout_marginTop="@dimen/margin_20"
+                android:maxLength="@integer/scan_code_max_len"
+                android:textSize="@dimen/font_48"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/margin_20"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/refund_input_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/margin_60"
+            android:paddingEnd="@dimen/margin_60"
+            android:visibility="gone">
+
+        <TextView
+                style="@style/BaseText.Tip"
+                android:layout_marginTop="@dimen/margin_40"
+                android:text="@string/tip_input_pos_scan_voucher"/>
+
+        <EditText
+                android:id="@+id/et_ori_pos_scan_code"
+                style="@style/BaseEditBox.Number"
+                android:layout_marginTop="@dimen/margin_20"
+                android:maxLength="20"/>
+        <TextView
+                style="@style/BaseText.Tip"
+                android:layout_marginTop="@dimen/margin_30"
+                android:text="@string/tip_input_plat_serial"/>
+
+        <EditText
+                android:id="@+id/et_trade_ref_no"
+                style="@style/BaseEditBox.Number"
+                android:layout_marginTop="@dimen/margin_20"
+                android:maxLength="12"
+                />
+
+        <TextView
+                style="@style/BaseText.Tip"
+                android:layout_marginTop="@dimen/margin_30"
+                android:text="@string/tip_input_date" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="39dp">
+            <EditText
+                android:id="@+id/et_origin_date"
+                style="@style/BaseEditBox.Number"
+                android:layout_marginTop="@dimen/margin_20"
+                android:maxLength="4"
+                android:layout_toStartOf="@+id/calendarRefundScan"/>
+
+            <RelativeLayout
+                android:id="@+id/calendarRefundScan"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2.5dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/textview_under_line_style">
+                <Button
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/arrow_list"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="5dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:clickable="false"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/refund_input_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/margin_60"
+        android:paddingEnd="@dimen/margin_60"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/BaseText.Tip"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/tip_input_plat_serial"/>
+
+        <EditText
+            android:id="@+id/trade_ref_no_edit"
+            style="@style/BaseEditBox.NumberAndLetter"
+            android:layout_marginTop="@dimen/margin_20"
+            android:maxLength="12"/>
+
+        <TextView
+            style="@style/BaseText.Tip"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/tip_input_date"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="39dp">
+
+            <EditText
+                android:id="@+id/origin_date_edit"
+                style="@style/BaseEditBox.Number"
+                android:layout_marginTop="@dimen/margin_20"
+                android:maxLength="4"
+                android:layout_toStartOf="@+id/calendarRefund"/>
+
+            <RelativeLayout
+                android:id="@+id/calendarRefund"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2.5dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/textview_under_line_style">
+                <Button
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/arrow_list"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="5dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:clickable="false"/>
+            </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/auth_input_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/margin_60"
+        android:paddingStart="@dimen/margin_60"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_card_date"
+            style="@style/BaseText.Tip"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/pls_input_card_valide_date"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/orig_card_date_edit"
+            style="@style/BaseEditBox.Number"
+            android:layout_marginTop="@dimen/margin_20"
+            android:maxLength="4"
+            android:visibility="gone"/>
+
+        <TextView
+            style="@style/BaseText.Tip"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/tip_input_pos_serial" />
+
+        <EditText
+            android:id="@+id/orig_pos_serial2"
+            style="@style/BaseEditBox.Number"
+            android:layout_marginTop="@dimen/margin_20"
+            android:maxLength="6" />
+
+        <TextView
+            style="@style/BaseText.Tip"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/tip_input_pos_batch" />
+
+        <EditText
+            android:id="@+id/orig_pos_batch_edit"
+            style="@style/BaseEditBox.Number"
+            android:layout_marginTop="@dimen/margin_20"
+            android:maxLength="6" />
+
+        <TextView
+            style="@style/BaseText.Tip"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/tip_input_auth_code" />
+
+        <EditText
+            android:id="@+id/orig_auth_code_edit"
+            style="@style/BaseEditBox.Number"
+            android:layout_marginTop="@dimen/margin_20"
+            android:maxLength="6" />
+
+        <TextView
+            style="@style/BaseText.Tip"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/tip_input_date" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="39dp">
+
+            <EditText
+                android:id="@+id/orig_auth_date_edit"
+                style="@style/BaseEditBox.Number"
+                android:layout_marginTop="@dimen/margin_20"
+                android:maxLength="@integer/date_max_len"
+                android:layout_toStartOf="@+id/calendarRelativeLayout" />
+
+            <RelativeLayout
+                android:id="@+id/calendarRelativeLayout"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2.5dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/textview_under_line_style">
+            <Button
+                android:id="@+id/calendarButton"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/arrow_list"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="5dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:clickable="false"/>
+            </RelativeLayout>
+            <!--<Button-->
+            <!--android:id="@+id/dateButton"-->
+            <!--android:background="@drawable/bottom_right_radius"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_marginTop="@dimen/margin_20"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--style="?android:attr/borderlessButtonStyle" />-->
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/positive_btn"
+        style="@style/BaseButton.Positive"
+        android:layout_marginLeft="@dimen/margin_60"
+        android:layout_marginRight="@dimen/margin_60"
+        android:layout_marginTop="@dimen/margin_60"/>
+
+
+    <com.centerm.epos.view.NumberPad
+        android:id="@+id/number_pad_show"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_120"
+        android:layout_weight="1"
+        android:visibility="gone"/>
+
+</LinearLayout>

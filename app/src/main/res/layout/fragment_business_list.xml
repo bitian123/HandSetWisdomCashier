@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/TradeFragment">
+
+    <include layout="@layout/common_title_layout" />
+
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mIvTip"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/step_4"/>
+
+    <RelativeLayout style="@style/mw_style"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="20dp">
+        <CheckBox android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mCheckBox"
+            style="@style/MyCheckBox"
+            android:textSize="16sp"
+            android:textColor="@color/font_black"
+            android:text="  全选"/>
+        <TextView style="@style/ww_style"
+            android:id="@+id/mTvRoomId"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:textColor="@color/font_black"
+            android:text=""/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#00B77C"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="10dp"/>
+
+    <RelativeLayout style="@style/mm_style">
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/mView"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="暂无数据"
+            android:gravity="center"
+            android:textSize="25sp"/>
+
+        <ListView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mListView"
+            android:scrollbars="none"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp"
+            android:scrollbarFadeDuration="0"
+            android:fadeScrollbars="false"/>
+
+        <RelativeLayout style="@style/mw_style"
+            android:id="@+id/mRlTotal"
+            android:layout_alignParentBottom="true"
+            android:background="@color/tran70"
+            android:visibility="gone"
+            android:clickable="true"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp">
+            <TextView style="@style/ww_style"
+                android:id="@+id/mTv1"
+                android:text="本次付款总金额"
+                android:textColor="@color/font_white"
+                android:textSize="13sp" />
+            <TextView style="@style/ww_style"
+                android:id="@+id/mTvTotalAmt"
+                android:text="20000.00元"
+                android:layout_below="@id/mTv1"
+                android:layout_marginTop="2dp"
+                android:textColor="#FFC02C"
+                android:textSize="13sp" />
+            <TextView style="@style/ww_style"
+                android:id="@+id/mAmtDetail"
+                android:text="款项详情"
+                android:layout_below="@id/mTvTotalAmt"
+                android:textColor="@color/font_white"
+                android:paddingTop="8dp"
+                android:paddingBottom="2dp"
+                android:drawablePadding="3dp"
+                android:drawableRight="@drawable/business_icon1"
+                android:textSize="13sp" />
+
+            <TextView android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:id="@+id/mTvCardSale"
+                android:text="银行卡支付"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_login_bg"
+                android:textColor="@color/font_white"
+                android:textSize="17sp" />
+
+            <LinearLayout style="@style/ww_style"
+                android:id="@+id/mLlDetail"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_below="@id/mAmtDetail">
+
+                <TextView style="@style/ww_style"
+                    android:id="@+id/mTotalAmountReceivable"
+                    android:text="应收总金额: 100000.00元"
+                    android:textColor="@color/font_white"
+                    android:textSize="13sp" />
+
+                <TextView style="@style/ww_style"
+                    android:id="@+id/mTotalAmountReceived"
+                    android:text="已收总金额: 100000.00元"
+                    android:textColor="@color/font_white"
+                    android:layout_marginTop="2dp"
+                    android:textSize="13sp" />
+
+                <TextView style="@style/ww_style"
+                    android:id="@+id/mTotalUnpaidAmount"
+                    android:text="本次应收总金额: 100000.00元"
+                    android:textColor="@color/font_white"
+                    android:layout_marginTop="2dp"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_50"
+    android:gravity="center"
+    android:background="@color/common_main_bg"
+    android:orientation="horizontal">
+
+    <TextView
+        style="@style/BaseText.Money"
+        android:id="@+id/curTextView"
+        android:gravity="center"
+        android:text="¥"
+        android:textSize="@dimen/font_36"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/amtTextView"
+        style="@style/BaseText.Money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_60"
+        android:layout_marginStart="@dimen/margin_20"
+        android:visibility="gone"
+        />
+
+
+</LinearLayout>

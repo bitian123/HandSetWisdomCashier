@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/bg_popup"
+             android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="450dp"
+        android:layout_height="310dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标题"
+                android:textColor="#4D4D4D"
+                android:textSize="@dimen/e10_common_txt_size"
+                />
+
+            <TextView
+                android:id="@+id/dialog_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#4D4D4D"
+                android:textSize="@dimen/e10_common_txt_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:paddingLeft="@dimen/margin_60"
+            android:paddingRight="@dimen/margin_60">
+
+            <TextView
+                android:id="@+id/dialog_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="内容内容时发生地方发生的放水电费水电费是否"
+                android:textColor="#4D4D4D"
+                android:textSize="@dimen/e10_common_txt_size" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/positive_btn"
+            android:layout_width="100pt"
+            android:layout_height="30pt"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_login_bg"
+            android:layout_marginTop="40dp"
+            android:textSize="@dimen/e10_common_txt_size"
+            android:textColor="@color/font_white"
+            android:text="@string/label_confirm"/>
+
+        <Button
+            android:id="@+id/negative_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

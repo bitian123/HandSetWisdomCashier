@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout style="@style/mm_style"
+        android:orientation="horizontal"
+        android:paddingTop="25pt"
+        android:paddingLeft="35pt">
+
+        <ImageView style="@style/ww_style"
+            android:background="@drawable/icon_tmk_dy"
+            android:id="@+id/mBtnDy"/>
+
+        <ImageView style="@style/ww_style"
+            android:background="@drawable/icon_tmk_union"
+            android:id="@+id/mBtnUnion"
+            android:layout_marginLeft="30pt"/>
+
+    </LinearLayout>
+
+</LinearLayout>
