@@ -343,8 +343,9 @@ public class BatchSendComplete implements ManageTransaction, IPrinterCallBack {
         if (FileUtils.getFileSize(path) > 0) {
             FileUtils.deleteAllFiles(path);
         }
-        EventBus.getDefault().post(new PrinteEvent(TradeMessage.GO_LOGIN));
         mTradePresent.gotoNextStep("1234");
+
+        EventBus.getDefault().post(new PrinteEvent(TradeMessage.GO_LOGIN));
 
 //        boolean isAutoSignOut = BusinessConfig.getInstance().getFlag(mTradingView.getHostActivity(), BusinessConfig.Key
 //                .FLAG_AUTO_SIGN_OUT);

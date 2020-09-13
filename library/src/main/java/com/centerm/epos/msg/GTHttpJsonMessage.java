@@ -1,7 +1,6 @@
 package com.centerm.epos.msg;
 
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.alibaba.fastjson.JSON;
 import com.centerm.epos.base.ReceivedQueryBean;

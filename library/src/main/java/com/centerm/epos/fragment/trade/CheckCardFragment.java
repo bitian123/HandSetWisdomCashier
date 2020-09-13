@@ -302,8 +302,8 @@ public class CheckCardFragment extends BaseTradeFragment {
     public void onPause() {
         super.onPause();
         if( TransCode.MAG_ACCOUNT_LOAD.equals(mTradePresent.getTradeCode())
-            ||TransCode.MAG_ACCOUNT_LOAD_VERIFY.equals(mTradePresent.getTradeCode())
-            ||( !getHostActivity().isIccSecondUseCard() && TransCode.EC_LOAD_OUTER.equals(mTradePresent.getTradeCode())) ){
+                ||TransCode.MAG_ACCOUNT_LOAD_VERIFY.equals(mTradePresent.getTradeCode())
+                ||( !getHostActivity().isIccSecondUseCard() && TransCode.EC_LOAD_OUTER.equals(mTradePresent.getTradeCode())) ){
             mTradePresent.onExit();
         }
     }

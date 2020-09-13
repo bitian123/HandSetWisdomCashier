@@ -141,9 +141,8 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
 
     @Override
     protected void onInitView(View view) {
-        EventBus.getDefault().register(this);
         presenter.initTopView();
-
+        EventBus.getDefault().register(this);
         mHotLine = (TextView) view.findViewById(R.id.mHotLine);
         String hotLine = BusinessConfig.getInstance().getValue(EposApplication.getAppContext(),
                 BusinessConfig.Key.HOTLINE_KEY);
@@ -178,6 +177,7 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
             AppUpgradeForLiandiShopUtil.getInstance().checkNewVersion(getContext(),new AppUpgradeForLiandiShopUtil.CheckVersion() {
                 @Override
                 public void hasNoNewVersion() {
+
                     if (Looper.myLooper() != Looper.getMainLooper()) {
                         // If we finish marking off of the main thread, we need to
                         // actually do it on the main thread to ensure correct ordering.
@@ -225,6 +225,10 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
             super.onClick(v);
         }
     }
+
+
+
+
 
     private void setDefaultBanner(){
         if(getActivity()==null){
@@ -468,7 +472,6 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
                 intent.putExtra(ITradeParameter.KEY_TRANS_PARAM, parameter.getParam(transCode));
             startActivityForResult(intent, REQ_TRANSACTION);
         }
-
     }
 
     /**
@@ -532,8 +535,10 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
                         .ButtonClickListener() {
                     @Override
                     public void onClick(AlertDialog.ButtonType button, View v) {
+
                         switch (button) {
                             case POSITIVE:
+//                                Settings.setValue(getContext(), Settings.KEY.BATCH_SEND_STATUS, "1");
                                 presenter.beginOnlineProcess(TransCode.SETTLEMENT);
                                 break;
                         }
@@ -546,6 +551,7 @@ public class GTMenuFragment extends BaseFragment implements IMenuView {
         if ("2".equals(batchState) && !TransCode.SIGN_OUT.equals(transCode)) {
             String errTips = getString(R.string.tip_batch_over_please_sign_out);
             logger.debug("^_^ " + errTips + " ^_^");
+//            ViewUtils.showToast(getContext(), errTips);
             getHostActivity().jumpToLogin();
             return true;
         }

@@ -6,7 +6,6 @@ import android.content.SharedPreferences;
 import android.text.TextUtils;
 
 import com.centerm.epos.EposApplication;
-import com.centerm.epos.base.SimpleStringTag;
 import com.centerm.epos.configure.ConfigureManager;
 import com.centerm.epos.redevelop.BaseIsTradeOpened;
 import com.centerm.epos.redevelop.IIsTradeOpened;

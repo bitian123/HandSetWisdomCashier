@@ -582,4 +582,5 @@ public class EbiCheckCardPresent extends CheckCardPresent implements ICheckCard 
         }
         return true;
     }
+
 }

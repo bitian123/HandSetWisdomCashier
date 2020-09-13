@@ -40,7 +40,7 @@ public class ReadIdCardFragment extends BaseTradeFragment implements View.OnClic
             if(cpayaiService!=null){
                 try {
                     present.readIDCard(cpayaiService);
-                } catch (RemoteException e) {
+                } catch (Exception  e) {
                     e.printStackTrace();
                 }
             }else {
@@ -93,7 +93,7 @@ public class ReadIdCardFragment extends BaseTradeFragment implements View.OnClic
                 getActivity().unbindService(conn);
                 cpayaiService.stopDetectIDCard();
             }
-        } catch (Exception e) {
+        } catch (RemoteException e) {
             e.printStackTrace();
         }
         super.onDestroy();

@@ -107,7 +107,6 @@ public class SignatureFragment extends BaseTradeFragment {
             mTvTip.setText("请签名");
             view.findViewById(R.id.mIvTip).setVisibility(View.GONE);
         }
-
     }
 
     @Override

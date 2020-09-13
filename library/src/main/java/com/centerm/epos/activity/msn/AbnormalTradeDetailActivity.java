@@ -50,7 +50,6 @@ import java.util.Map;
 import config.BusinessConfig;
 
 import static com.centerm.epos.common.TransCode.PRINT_IC_INFO;
-import static com.centerm.epos.common.TransCode.fingerRegister;
 
 /**
  * 《基础版本》

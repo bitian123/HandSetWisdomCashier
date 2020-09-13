@@ -108,6 +108,7 @@ public class ReceivedQueryBean {
         private int moneyType;
         private String payMethod;
         private String paymentItemName;
+        private String paymentName;
         private String paymentPlanId;
         private String receivableDate;
         private String roomFullName;
@@ -119,6 +120,14 @@ public class ReceivedQueryBean {
         private double unpaidAmount;
         private List<CustomListBean> customList;
         private boolean checked = false;
+
+        public String getPaymentName() {
+            return paymentName;
+        }
+
+        public void setPaymentName(String paymentName) {
+            this.paymentName = paymentName;
+        }
 
         public String getPayDate() {
             return payDate;

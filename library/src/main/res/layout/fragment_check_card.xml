@@ -26,15 +26,15 @@
 
     <View android:layout_width="match_parent"
         android:layout_height="4dp"
-        android:background="@color/colorAccent"
         android:id="@+id/mViewLine"
+        android:background="@color/colorAccent"
         android:layout_marginTop="3dp"
         android:layout_marginLeft="28dp"
         android:layout_marginRight="28dp"/>
     <LinearLayout style="@style/mw_style"
         android:orientation="vertical"
-        android:id="@+id/mViewShowAmmt"
         android:background="@drawable/bg_frame5"
+        android:id="@+id/mViewShowAmmt"
         android:layout_marginLeft="28dp"
         android:layout_marginRight="28dp"
         android:layout_marginBottom="20dp"
@@ -112,8 +112,8 @@
         android:text="请根据提示放置您的银行卡"
         android:textStyle="bold"
         android:textSize="18sp"
-        android:layout_marginTop="15dp"
         android:textColor="@color/font_black"
+        android:layout_marginTop="15dp"
         android:layout_marginLeft="28dp"/>
 
     <ImageView style="@style/ww_style"

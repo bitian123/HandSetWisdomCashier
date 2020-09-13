@@ -179,13 +179,33 @@ public class BasePrintSlipHelper implements IPrintSlipHelper {
 
         String type = tradeData.get(TradeInformationTag.TEMPLATE_ID);
         String businessType = tradeData.get(TradeInformationTag.SETTLEMENT_INFO);
-        XLogUtil.d("type：", type);
-        XLogUtil.d("打印业务类型：", businessType);
-        if (!TextUtils.isEmpty(type)){
-            if(PrintType.TYPE_2.equals(type)){
-                printData.put("1F31",  businessType);
+        if(businessType!=null){
+            if(businessType.contains("|")){
+                String account = null;
+                String[] accountInfo = null;
+                if (!TextUtils.isEmpty(businessType)) {
+                    accountInfo = businessType.split("[|]");
+                    if (accountInfo[1].contains("公司")) {
+                        account = accountInfo[1].substring(accountInfo[1].indexOf("公司") + 2);
+                    } else {
+                        account = accountInfo[1];
+                    }
+                }
+                if (accountInfo.length > 2) {
+                    businessType= accountInfo[2] + accountInfo[0] + account;
+                } else {
+                    businessType= accountInfo[0] + account;
+                }
+            }
+            XLogUtil.d("type：", type);
+            XLogUtil.d("打印业务类型：", businessType);
+            if (!TextUtils.isEmpty(type)){
+                if(PrintType.TYPE_2.equals(type)){
+                    printData.put("1F31",  businessType);
+                }
             }
         }
+
 
         //添加分期付款信息
         String installmentMsg = null;

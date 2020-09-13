@@ -30,7 +30,6 @@ import com.centerm.epos.db.CommonDao;
 import com.centerm.epos.db.DbHelper;
 import com.centerm.epos.event.PrinteEvent;
 import com.centerm.epos.event.TradeMessage;
-import com.centerm.epos.fragment.LoginFragment;
 import com.centerm.epos.utils.DataHelper;
 import com.centerm.epos.utils.DialogFactory;
 import com.centerm.epos.utils.ViewUtils;
@@ -43,9 +42,9 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
+
 import java.util.List;
 
-import config.BusinessConfig;
 import config.Config;
 
 /**
@@ -110,14 +109,6 @@ public class AbnormalQueryTradeActivity extends BaseActivity {
         }
     };
 
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void handleMessage(PrinteEvent event) {
-        Log.d("===", "handleMessage:"+event.getWhat());
-        //结算完退到登录界面
-        if(event.getWhat()== TradeMessage.EXIT){
-            finish();
-        }
-    }
 
     @Override
     public void onInitLocalData(Bundle savedInstanceState) {
@@ -130,6 +121,15 @@ public class AbnormalQueryTradeActivity extends BaseActivity {
         return true;
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void handleMessage(PrinteEvent event) {
+        Log.d("===", "handleMessage:"+event.getWhat());
+        //结算完退到登录界面
+        if(event.getWhat()== TradeMessage.EXIT){
+            finish();
+        }
+    }
+
     @Override
     public int onLayoutId() {
         return R.layout.activity_query_trade;
@@ -137,8 +137,8 @@ public class AbnormalQueryTradeActivity extends BaseActivity {
 
     @Override
     public void onInitView() {
-        EventBus.getDefault().register(this);
         setTitle(R.string.title_query_trade);
+        EventBus.getDefault().register(this);
         //showRightButton(getString(R.string.label_trade_summary));
         findViewById(R.id.mLlSearch).setVisibility(View.GONE);
         listView = (ListView) findViewById(R.id.list_v);

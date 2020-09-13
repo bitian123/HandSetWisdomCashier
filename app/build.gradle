@@ -2,6 +2,7 @@ import java.text.SimpleDateFormat
 
 apply plugin: 'com.android.application'
 
+
 //获取git最新版本信息
 def gitVersion() {
     def cmd = 'git rev-parse --short HEAD'
@@ -15,7 +16,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 26
         versionCode 22
-        versionName "1.2.0"
+        versionName "1.1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }

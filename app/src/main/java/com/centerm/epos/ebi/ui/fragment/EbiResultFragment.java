@@ -169,7 +169,6 @@ public class EbiResultFragment extends BaseTradeFragment implements View.OnClick
             //添加倒计时
             showingTimeout(mTvShowTimeOut);
         }
-
     }
 
     private void addItemView(String key, String value, boolean addDivider) {

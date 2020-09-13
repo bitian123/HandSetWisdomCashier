@@ -143,21 +143,14 @@ public class GtBusinessListBean {
         private int moneyType;
         private boolean checked = false;
         private String contractNo = "";
+
         private double readyPayAmt;
-        private int position;
-
-        public int getPosition() {
-            return position;
-        }
-
-        public void setPosition(int position) {
-            this.position = position;
-        }
 
         public static MoneyDetailListBean objectFromData(String str) {
 
             return new Gson().fromJson(str, MoneyDetailListBean.class);
         }
+
 
         public int getMoneyType() {
             return moneyType;
@@ -453,7 +446,7 @@ public class GtBusinessListBean {
                 return amountReceivable;
             }
 
-            public void setAmountReceivable(double amountReceivable) {
+            public void setAmountReceivable(int amountReceivable) {
                 this.amountReceivable = amountReceivable;
             }
 
@@ -461,7 +454,7 @@ public class GtBusinessListBean {
                 return amountReceived;
             }
 
-            public void setAmountReceived(double amountReceived) {
+            public void setAmountReceived(int amountReceived) {
                 this.amountReceived = amountReceived;
             }
 

@@ -20,8 +20,8 @@ public class App extends EposApplication{
         ISaveLogo saveLogo = (ISaveLogo) ConfigureManager.getInstance(this).getSubPrjClassInstance(new
                 BaseSaveLogo());
         saveLogo.save(this);
-
         CrashHandler.getInstance().init(this);
+
 
     }
 

@@ -73,6 +73,7 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
     private GtBusinessListBean data;
     private String projectName = "";
     private GtBusinessListBean.MoneyDetailListBean checkedItem;
+    private List<String> HB=new ArrayList<>();
     private String strTemp = "{" +
             "\"companyId\": \"96d550d42d0211e8af88005056b44833\"," +
             "\"moneyDetailList\": [" +
@@ -275,6 +276,65 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
         present = new BusinessPresent(this);
         return present;
     }
+    private boolean checkOrder(int arg){
+        GtBusinessListBean.MoneyDetailListBean moneyDetailListBean = list.get(arg);
+        int  falg=0;//黑色
+       if ( moneyDetailListBean.getSuperviseFlag().equals("1")){
+           falg=1;//红色
+       }else if ("1".equals(moneyDetailListBean.getSign())){
+           falg=2;//黄色
+       }
+       if (HB.size()>0){
+           final GtBusinessListBean.MoneyDetailListBean moneyDetailListBean1 = list.get(Integer.parseInt(HB.get(0)));
+           List<GtBusinessListBean.MoneyDetailListBean.CustomListBean> customList = moneyDetailListBean.getCustomList();
+           List<GtBusinessListBean.MoneyDetailListBean.CustomListBean> customList1 = moneyDetailListBean1.getCustomList();
+           if (customList.size() !=customList1.size()){
+               return false;
+           }
+           List<String> customs=new ArrayList<>();
+           List<String> loctCustoms=new ArrayList<>();
+
+           for (GtBusinessListBean.MoneyDetailListBean.CustomListBean customListBean:customList) {
+               customs.add(customListBean.getIdNo()+customListBean.getName());
+           }
+           for (GtBusinessListBean.MoneyDetailListBean.CustomListBean bean:customList1) {
+               loctCustoms.add( bean.getIdNo()+bean.getName());
+           }
+           for (String custom:customs) {
+                if (!loctCustoms.contains(custom)){
+                    return false;
+                }
+           }
+           int  falg1=0;
+           if ( moneyDetailListBean1.getSuperviseFlag().equals("1")){
+               falg1=1;
+           }else if ("1".equals(moneyDetailListBean1.getSign())){
+               falg1=2;
+           }
+
+               switch (falg1){
+                   case 0:
+                   case 2:
+                      if (falg == 0|| falg == 2){
+                          HB.add(arg+"");
+                          return  true;
+                      }else{
+                          return  false;
+                      }
+
+                   case 1:
+                       return false;
+
+                   default:
+                       return false;
+
+               }
+       }else{
+           HB.add(arg+"");
+           return  true;
+       }
+
+    }
 
     @Override
     protected void onInitView(View view) {
@@ -312,7 +372,6 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
                         for (int i = 0; i < list.size(); i++) {
                             if (!present.isEmpty(list.get(i).getSubjectName())) {
                                 checkedItem = list.get(i);
-                                checkedItem.setPosition(i);
                                 break;
                             }
                         }
@@ -342,6 +401,7 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
                         popToast("包含监管项不支持合并支付");
                         for(int a =0 ;a<list.size(); a++){
                             list.get(a).setChecked(false);
+                            HB.clear();
                         }
                         mCheckBox.setChecked(false);
                     }
@@ -375,9 +435,23 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
         mListView.setAdapter(adapter);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                boolean pre = list.get(position).isChecked();
+                if (!pre){
+                    if (!checkOrder(position)){
+                        popToast("缴费款项信息不一致，无法同时缴费！");
+                        list.get(position).setChecked(false);
+                        HB.remove(position+"");
+                    }else{
+                        list.get(position).setChecked(true);
+                    }
+                }else{
+                    list.get(position).setChecked(false);
+                    HB.remove(position+"");
+                }
+
                 //showDetailDialog(i);
-                boolean pre = list.get(i).isChecked();
+             /*   boolean pre = list.get(i).isChecked();
                 if (!pre) {
                     if (present.isEmpty(list.get(i).getSubjectName())) {
                         popToast("本账单需联系工作人员处理后方可收款！");
@@ -385,7 +459,6 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
                     }
                     if (checkedItem == null) {
                         checkedItem = list.get(i);
-                        checkedItem.setPosition(i);
                     } else {
                         if("1".equals(checkedItem.getSuperviseFlag())){
                             popToast("监管项不支持合并支付");
@@ -404,7 +477,7 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
 
                     }
                 }
-                list.get(i).setChecked(!pre);
+                list.get(i).setChecked(!pre);*/
                 updateList();
             }
         });
@@ -509,7 +582,6 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
                             isSuperVesionCheck = true;
                         }
                     }
-                    break;
                 }
             }
             mTradePresent.getTransData().put(TradeInformationTag.TEMPLATE_ID, data.getTemplateId());
@@ -521,20 +593,20 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
             mTradePresent.getTransData().put(TradeInformationTag.totalReceivable, totalReceivable);
             mTradePresent.getTransData().put(TradeInformationTag.totalReceived, totalReceived);
             mTradePresent.getTransData().put(TradeInformationTag.totalUnpaidAmount, totalUnpaidAmount);
-            if(isHangzhouJg){
-                mTradePresent.gotoNextStep("1");
-            }else {
-                if(isSuperVesionCheck){
+
+            if(isSuperVesionCheck){
+                if(isHangzhouJg){
+                    mTradePresent.gotoNextStep("1");
+                }else{
                     showMessageDialog(R.string.tip_dialog_title, R.string.tip_super_flag_wrong, new AlertDialog.ButtonClickListener() {
                         @Override
                         public void onClick(AlertDialog.ButtonType button, View v) {
                             DialogFactory.hideAll();
                         }
                     });
-                }else{
-                    mTradePresent.gotoNextStep("3");
                 }
-
+            }else{
+                mTradePresent.gotoNextStep("3");
             }
 
         } else {
@@ -556,6 +628,7 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
             public void onClick(AlertDialog.ButtonType button, View v) {
                 switch (button) {
                     case POSITIVE:
+                        HB.clear();
                         getHostActivity().finish();
                         break;
                 }
@@ -649,6 +722,9 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
                 holder.mUnpaidAmount.setTextColor(Color.RED);
                 holder.mEtAmt.setTextColor(Color.RED);
                 holder.mTvSettlement.setTextColor(Color.RED);
+                if("1".equals(bean.getSign())){
+                    holder.mTvTip2.setVisibility(View.GONE);
+                }
             }else if ("1".equals(bean.getSign())) {
                 holder.mBillId.setTextColor(getResources().getColor(R.color.color_yellow));
                 holder.mMoneyType.setTextColor(getResources().getColor(R.color.color_yellow));
@@ -712,7 +788,12 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
             holder.mCbItem.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                    list.get(position).setChecked(b);
+                    if (!b){
+                          HB.remove(position+"");
+                    }else{
+                        list.get(position).setChecked(checkOrder(position));
+                    }
+
                 }
             });
             holder.mTvDeail.setOnClickListener(new View.OnClickListener() {
@@ -723,29 +804,17 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
                     }else{
                         showDetailDialog(position,1);
                     }
+
                 }
             });
             holder.mTvTip2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(checkedItem==null){
-                        if("1".equals(list.get(position).getSign())){
-                            showDetailDialog(position,2);
-                        }else{
-                            showDetailDialog(position,1);
-                        }
-                    }else {
-                        if("1".equals(checkedItem.getSuperviseFlag())&&checkedItem.getPosition()!=position){
-                            popToast("监管项不支持合并支付");
-                        }else {
-                            if("1".equals(list.get(position).getSign())){
-                                showDetailDialog(position,2);
-                            }else{
-                                showDetailDialog(position,1);
-                            }
-                        }
+                    if("1".equals(list.get(position).getSign())){
+                        showDetailDialog(position,2);
+                    }else{
+                        showDetailDialog(position,1);
                     }
-
 //                    holder.mEtAmt.setFocusableInTouchMode(true);
 //                    holder.mEtAmt.setFocusable(true);
 //                    holder.mEtAmt.requestFocus();
@@ -776,8 +845,16 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
                             return true;
                         }
                         list.get(position).setReadyPayAmt(amt);
-                        list.get(position).setChecked(true);
-                        holder.mCbItem.setChecked(true);
+
+                        if (!checkOrder(position)){
+                            popToast("缴费款项信息不一致，无法同时缴费！");
+                            list.get(position).setChecked(false);
+                            holder.mCbItem.setChecked(false);
+                              HB.remove(position+"");
+                        }else{
+                            list.get(position).setChecked(true);
+                            holder.mCbItem.setChecked(true);
+                        }
                         ViewUtils.hintKeyBoard(getActivity());
                         return true;
                     }
@@ -858,7 +935,7 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
     }
 
     public void update(final int position){
-        boolean actionFlag = true;
+    /*    boolean actionFlag = true;
         if (present.isEmpty(list.get(position).getSubjectName())) {
             popToast("本账单需联系工作人员处理后方可收款！");
             actionFlag = false;
@@ -869,10 +946,19 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
         }
         if (checkedItem == null && actionFlag) {
             checkedItem = list.get(position);
-            checkedItem.setPosition(position);
         }
         if (actionFlag) {
             list.get(position).setChecked(true);
+        }*/
+        boolean checked = list.get(position).isChecked();
+        if (!checked){
+            if (!checkOrder(position)){
+                popToast("缴费款项信息不一致，无法同时缴费！");
+                list.get(position).setChecked(false);
+                HB.remove(position+"");
+            }else{
+                list.get(position).setChecked(true);
+            }
         }
         updateList();
     }
@@ -886,6 +972,13 @@ public class BusinessListFragment extends BaseTradeFragment implements View.OnCl
     public void onResume() {
         super.onResume();
         setTitle("选择缴费款项");
+        getHostActivity().closePageTimeout();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        getHostActivity().openPageTimeout();
     }
 
     @Override

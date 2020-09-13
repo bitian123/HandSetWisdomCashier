@@ -21,13 +21,25 @@
     </component>
     <component name="com.centerm.epos.ebi.ui.fragment.BusinessListFragment"
         id="21">
-        <condition id="1">2</condition>
+        <condition id="1">23</condition>
+        <condition id="3">2</condition>
         <condition id="2">20</condition>
+    </component>
+    <component name="com.centerm.epos.ebi.ui.fragment.ContractInfoQueryFragment"
+        id="23">
+        <condition id="1">2</condition>
+        <condition id="2">21</condition>
     </component>
     <component name="com.centerm.epos.ebi.ui.fragment.DocumentListFragment"
         id="22">
         <condition id="1">2</condition>
         <condition id="2">20</condition>
+    </component>
+
+    <component name="com.centerm.epos.ebi.ui.fragment.ContractInfoQueryFragment"
+        id="25">
+        <condition id="1">2</condition>
+        <condition id="2">21</condition>
     </component>
 
     <!--检卡-->

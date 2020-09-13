@@ -394,10 +394,10 @@ public class SignatureAbnormalFragment extends BaseTradeFragment {
             writePad.clear();
         } else if (id == R.id.positive_btn) {
             if (writePad.getStrokeNumber() != 0)
-                if(!isConfirm){
-                    isConfirm = true;
-                    mTradePresent.onConfirm(writePad.getCachebBitmapWithCode());
-                }
+            if(!isConfirm){
+                isConfirm = true;
+                mTradePresent.onConfirm(writePad.getCachebBitmapWithCode());
+            }
             else{
                 //getHostActivity().clearPageTimeout();
                 //mTradePresent.gotoNextStep();

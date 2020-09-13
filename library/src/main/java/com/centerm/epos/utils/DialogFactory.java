@@ -123,6 +123,27 @@ public class DialogFactory {
     }
 
 
+    public static void showSelectDialogNoCancel(Context context, String title, String message, AlertDialog.ButtonClickListener listener) {
+        hideAll();
+        if(context==null){
+            return;
+        }
+        AlertDialog dialog = new AlertDialog(context);
+        dialog.setAutoDismiss(true);
+        if (title == null) {
+            dialog.hideTitle();
+        } else {
+            dialog.showTitle();
+            dialog.setDialogTitle(title);
+        }
+        dialog.hideNegative();
+        dialog.setDialogMsg(message);
+        dialog.setClickListener(listener);
+        current = dialog;
+        current.show();
+    }
+
+
     /**
      * 显示打印的提示框
      *
@@ -175,25 +196,6 @@ public class DialogFactory {
         current.show();
     }
 
-    public static void showSelectDialogNoCancel(Context context, String title, String message, AlertDialog.ButtonClickListener listener) {
-        hideAll();
-        if(context==null){
-            return;
-        }
-        AlertDialog dialog = new AlertDialog(context);
-        dialog.setAutoDismiss(true);
-        if (title == null) {
-            dialog.hideTitle();
-        } else {
-            dialog.showTitle();
-            dialog.setDialogTitle(title);
-        }
-        dialog.hideNegative();
-        dialog.setDialogMsg(message);
-        dialog.setClickListener(listener);
-        current = dialog;
-        current.show();
-    }
 
     public static void showContractInfoDialog(Context context, String title, Map<String,String > message, ContractInfoDialog.ButtonClickListener listener, boolean autoDismiss) {
         hideAll();

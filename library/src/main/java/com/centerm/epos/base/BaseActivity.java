@@ -295,11 +295,17 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         /*OpenDatabase()最开始初始化，防止数据库还未初始化，Fragment使用数据
         *导致程序崩溃，zhouzhihua modify
         * */
         OpenDatabase();
         super.onCreate(savedInstanceState);
+
+        if((getIntent().getFlags()&Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT)!=0){
+            finish();
+            return;
+        }
         /*
         * @author zhouzhihua
         * 状态栏透明化

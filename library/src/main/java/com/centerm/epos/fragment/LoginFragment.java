@@ -121,11 +121,11 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener 
         //隐藏顶栏
         activity.setTopViewType(Menu.TopViewType.NONE);
         setFragmentContainerMargins(0, 0, 0, 0);
-        view.findViewById(R.id.btn_login).setOnClickListener(this);
         mIvBg = (ImageView) view.findViewById(R.id.mIvBg);
         mLl1 = (LinearLayout) view.findViewById(R.id.mLl1);
         mLl2 = (LinearLayout) view.findViewById(R.id.mLl2);
         btn_login = (Button) view.findViewById(R.id.btn_login);
+        btn_login.setOnClickListener(this);
         accountEdit = (EditText) view.findViewById(R.id.account_edit);
         pwdEdit = (EditText) view.findViewById(R.id.pwd_edit);
         accountEdit.addTextChangedListener(new CutPassword());
@@ -270,6 +270,7 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener 
 
     public void onLoginClick() {
         Context context = getContext();
+
         String tagAccount = accountEdit.getText().toString().trim().replace(" ", "");
         String tagPwd = pwdEdit.getText().toString().trim().replace(" ", "");
 
@@ -365,6 +366,12 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener 
         }
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        isLogin = false;
+    }
+
     /**
      * 执行完项目的任务后，恢复执行原功能点的回调处理类
      * @param tagAccount    操作员编号
@@ -378,12 +385,6 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener 
                 switchAfterLoginOK(tagAccount);
             }
         };
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        isLogin = false;
     }
 
     /**
